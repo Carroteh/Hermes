@@ -1,27 +1,45 @@
-from core.Support import Triple
-from core.Support import K_VAL
+import datetime
+from hermes.core.Support import K_VAL
 
 class KBucket:
-    def __init__(self):
-        self._bucket : list[Triple] = []
+    def __init__(self, low=None, high=None):
+        self.timestamp = None
+        self._contacts = []
+        if low is not None and high is not None:
+            self._low = low
+            self._high = high
+        else:
+            self._low = 0
+            self._high = 2 ** 160
 
-    def add(self, triple : Triple) -> bool:
-        if len(self._bucket) == K_VAL:
-            return False
-        self._bucket.append(triple)
-        return True
-    
-    def get_old(self) -> Triple:
-        return self._bucket[0]
-    
-    def refresh_entry(self, triple : Triple) -> None:
-        self._bucket.remove(triple)
-        self._bucket.append(triple)
+    def touch(self):
+        self.timestamp = datetime.datetime.now()
 
-    def evict(self, triple : Triple) -> None:
-        self._bucket.remove(triple)
-        
-    def __repr__(self):
-        s = "\n------K-BUCKET-------"
-        s += "\n".join([repr(triple) for triple in self._bucket])
-        return s
+    def add_contact(self, contact):
+        if len(self._contacts)  >= K_VAL:
+            raise Exception("KBucket is full")
+        self._contacts.append(contact)
+
+    @property
+    def contacts(self):
+        return self._contacts
+
+    @contacts.setter
+    def contacts(self, value):
+        self._contacts = value
+
+    @property
+    def low(self):
+        return self._low
+
+    @low.setter
+    def low(self, value):
+        self._low = value
+
+    @property
+    def high(self):
+        return self._high
+
+    @high.setter
+    def high(self, value):
+        self._high = value

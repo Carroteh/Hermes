@@ -1,0 +1,11 @@
+from hermes.core.Protocol import Protocol
+import datetime
+
+class Contact:
+    def __init__(self, protocol, id):
+        self.protocol = protocol
+        self.id = id
+        self.last_seen = datetime.datetime.now()
+
+    def touch(self):
+        self.last_seen = datetime.datetime.now()

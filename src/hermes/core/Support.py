@@ -4,6 +4,9 @@ K_VAL = 5
 
 @dataclass
 class Triple:
+    '''
+    Triple Data Class represents fundamental reference to other nodes stored in K-Buckets
+    '''
     ip_address : str 
     udp_port : int 
     node_id : bytes 

@@ -2,6 +2,10 @@ import nacl.public
 import nacl.utils
 
 class Crypt:
+    '''
+    Class used for cryptography functionality within Hermes, includes generating
+    public/private key pairs and encrypting/decrypting messages using NaCl
+    '''
     def __init__(self):
         # Key Pair
         self._priv_key = nacl.public.PrivateKey.generate()

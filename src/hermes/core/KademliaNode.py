@@ -9,7 +9,7 @@ class KademliaNode:
     def __init__(self, name : str):
         self._crypt = Crypt()
         pre_hash = bytes(self._crypt.get_public_key()) + name.encode()
-        self._id = hashlib.sha1(pre_hash).hexdigest()
+        self._id = int(hashlib.sha1(pre_hash).hexdigest(),16)
         self._buckets : list[KBucket]  = [KBucket() for i in range(0,160)]
 
         self._buckets[0].add(triple=Triple("localhost", 12, self._id))
