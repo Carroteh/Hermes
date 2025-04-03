@@ -1,4 +1,5 @@
 import pytest
+import logging
 
 from hermes.core.Contact import Contact
 from hermes.core.KBucket import KBucket
@@ -7,6 +8,7 @@ from hermes.core.Support import K_VAL
 from hermes.core.Node import Node
 from hermes.core.Storage import Storage
 
+logging.basicConfig(level=logging.INFO)
 
 def test_kbucket_full():
     k = KBucket()
@@ -49,3 +51,4 @@ async def test_split():
     await bucket_list.add_contact(Contact(None, K_VAL+1))
 
     assert len(bucket_list.buckets) > 1
+

@@ -1,7 +1,11 @@
 from dataclasses import dataclass
 
+# Size of KBuckets essentially
 K_VAL = 5
-B = 3
+# System wide Concurrency Parameter
+A_VAL = K_VAL
+
+B_VAL = 3
 
 @dataclass
 class Triple:

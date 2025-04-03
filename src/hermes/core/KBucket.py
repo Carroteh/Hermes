@@ -1,8 +1,12 @@
 from __future__ import annotations
 
 import datetime
+import logging
+
 from hermes.core.Contact import Contact
 from hermes.core.Support import K_VAL
+
+logger = logging.getLogger(__name__)
 
 class KBucket:
     def __init__(self, low=None, high=None):
@@ -14,6 +18,7 @@ class KBucket:
         else:
             self._low = 0
             self._high = 2 ** 160
+        self._key = high
 
     def touch(self):
         """
@@ -37,6 +42,7 @@ class KBucket:
         if len(self._contacts)  >= K_VAL:
             raise Exception("KBucket is full")
         self._contacts.append(contact)
+        logger.info(">>> Added contact: " + str(contact))
 
     def contains(self, id):
         """
@@ -67,6 +73,8 @@ class KBucket:
 
         Returns (KBucket, KBucket): The two new KBuckets created from the current one.
         """
+        logger.info(">>> Splitting bucket. Reorganizing contacts.")
+
         mid = (self._low + self._high) // 2
         k1 = KBucket(self._low, mid)
         k2 = KBucket(mid + 1, self._high)
@@ -82,7 +90,7 @@ class KBucket:
     def has_in_range(self, id):
         return self._low <= id <= self._high
 
-    def depth(self):
+    def depth(self) -> int:
         """
         Find the number of common bits among all contacts
         If no contacts, or shared bits, return 0
@@ -136,3 +144,7 @@ class KBucket:
     @high.setter
     def high(self, value):
         self._high = value
+
+    @property
+    def key(self):
+        return self._key

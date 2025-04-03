@@ -1,7 +1,11 @@
+import logging
+import asyncio
+
 from hermes.core import Support
 from hermes.core.Contact import Contact
 from hermes.core.KBucket import KBucket
-import asyncio
+
+logger = logging.getLogger(__name__)
 
 class BucketList:
     def __init__(self, id):
@@ -27,6 +31,7 @@ class BucketList:
 
                 # if its already there, refresh it
                 if kbucket.contains(contact.id):
+                    logger.info(">>> Contact already in bucket, refreshing.")
                     kbucket.replace_contact(contact)
                     return
 

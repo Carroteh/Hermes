@@ -24,4 +24,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.pytest.ini_options]
 asyncio_default_fixture_loop_scope = "function"
+log_cli = 1
+log_level = "INFO"
+
 
