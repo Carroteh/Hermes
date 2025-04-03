@@ -1,6 +1,7 @@
 from dataclasses import dataclass
 
 K_VAL = 5
+B = 3
 
 @dataclass
 class Triple:
