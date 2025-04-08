@@ -6,7 +6,7 @@ class Node:
     def __init__(self, our_contact, storage):
         self._our_contact = our_contact
         self._storage = storage
-        self._bucket_list = BucketList(our_contact.id)
+        self._bucket_list: BucketList = BucketList(our_contact.id)
 
     def ping(self, sender):
         return self._our_contact

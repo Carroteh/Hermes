@@ -58,18 +58,27 @@ class BucketList:
                     return
 
     def can_split(self, kbucket: KBucket):
-            return kbucket.has_in_range(self.id) or (kbucket.depth() % Support.B) != 0
+            return kbucket.has_in_range(self.id) or (kbucket.depth() % Support.B_VAL) != 0
 
-    def get_kbucket(self, id) -> KBucket:
-            return self._buckets[self.get_kbucket_index(id)]
+    def get_kbucket(self, key) -> KBucket:
+            return self._buckets[self.get_kbucket_index(key)]
 
-    def get_kbucket_index(self, id) -> int | None:
+    def get_kbucket_index(self, key) -> int | None:
         """
         Find the appropriate k bucket for the given id.
         """
         for i, bucket in enumerate(self._buckets):
-            if bucket.has_in_range(id):
+            if bucket.has_in_range(key):
                 return i
+
+    async def get_close_contacts(self, key, our_id):
+        """"
+        Get at most k contacts in the bucket that are closest the given id.
+        """
+        async with self.lock:
+            contacts = [c for b in self._buckets for c in b.contacts if c.id != our_id]
+            return sorted(contacts, key=lambda c: c.id ^ key)[:Support.K_VAL]
+
 
     @property
     def buckets(self):

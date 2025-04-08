@@ -12,3 +12,8 @@ class Contact:
 
     def __repr__(self):
         return f"ID: {self.id} ~ Last Seen: {self.last_seen}"
+
+    def __eq__(self, other):
+        if not isinstance(other, Contact):
+            return NotImplemented
+        return self.id == other.id
