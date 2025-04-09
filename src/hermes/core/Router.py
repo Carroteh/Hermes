@@ -2,16 +2,18 @@ from typing import Callable
 
 import asyncio
 
-from hermes.core import KademliaNode
+#from hermes.core import KademliaNode
 from hermes.core import KBucket
 from hermes.core import Node
 from hermes.core import Contact
 from hermes.core import Support
+#from hermes.core import DHT
 
 class Router:
 
-    def __init__(self, node: KademliaNode):
+    def __init__(self, node: Node):
         self.node: Node = node
+        #self.dht: DHT = None
         self.lock = asyncio.Lock()
 
     def get_closest_nonempty_kbucket(self, key: int) -> KBucket:
@@ -41,10 +43,14 @@ class Router:
         #TODO null continuation?
         return new_contacts, None, None
 
+    def rpc_find_value(self):
+        #TODO
+        pass
+
     async def get_closer_nodes(self, key: int, node_to_query: Contact,
-                         rpc_call: Callable[[int, Contact], (list[Contact], Contact, str)],
+                         rpc_call: Callable[[int, Contact], tuple[list[Contact], Contact, str]],
                          close_contacts: list[Contact],
-                         farther_contacts: list[Contact]) -> (bool, str, str):
+                         farther_contacts: list[Contact]) -> tuple[bool, list[Contact], Contact, str | None]:
         """
         Exclude ourselves and peers we are contacting, to get a unique list of peers
         """
@@ -73,12 +79,12 @@ class Router:
         return val is not None, val, found_by
 
     async def lookup(self, key: int,
-                     rpc_call: Callable[[int, Contact], (list[Contact], Contact, str)],
+                     rpc_call: Callable[[int, Contact], tuple[list[Contact], Contact, str]],
                      give_all: bool = False) -> (bool, list[Contact], Contact, str):
         """
         Node lookup algorithm for finding the closest nodes to the given key and they target itself if possible.
         """
-        ret = []
+        ret: list[Contact] = []
         have_work = True
 
         all_nodes: list[Contact] = self.node.bucket_list.get_kbucket(key).contacts
@@ -100,8 +106,8 @@ class Router:
         if found:
             return found, contacts, found_by, val
 
-        # otherwise, continue and add the contacts queried to the return
-        ret.extend(c for c in contacts if c.id not in {r.id for r in ret})
+        # otherwise, continue and add the closer contacts to the return
+        ret.extend(c for c in closer_contacts if c.id not in {r.id for r in ret})
 
         # Loop and continue to try and find the target until K nodes have been contacted or no one is left to query
         while len(ret) < Support.K_VAL and have_work:
@@ -119,7 +125,7 @@ class Router:
             # Try close nodes first
             if have_closer:
                 new_nodes_to_query = closer_uncontacted_nodes[:Support.A_VAL]
-                contacted_Nodes.extend(n for n in new_nodes_to_query if n not in contacted_ids)
+                contacted_Nodes.extend(n for n in new_nodes_to_query if n.id not in contacted_ids)
                 contacted_ids.update(n.id for n in new_nodes_to_query)
 
                 # Query again
