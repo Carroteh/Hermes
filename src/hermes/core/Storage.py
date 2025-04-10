@@ -1,7 +1,6 @@
 
 class Storage:
     def __init__(self):
-        self.keys = []
         self.store: dict[int, str] = {}
         pass
 

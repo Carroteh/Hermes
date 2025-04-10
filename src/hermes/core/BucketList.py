@@ -1,8 +1,13 @@
 import logging
 import asyncio
 
-from hermes.core import Support
-from hermes.core.Contact import Contact
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from hermes.core.Contact import Contact
+
+from hermes.core.Support import B_VAL
+from hermes.core.Support import K_VAL
 from hermes.core.KBucket import KBucket
 
 logger = logging.getLogger(__name__)
@@ -14,7 +19,7 @@ class BucketList:
         self.id = id
         self.lock = asyncio.Lock()
 
-    async def add_contact(self, contact: Contact) -> None:
+    async def add_contact(self, contact: 'Contact') -> None:
         """
         Add a contact to the correct bucket.
         If the correct bucket is full, try to split it and try adding again.
@@ -58,7 +63,7 @@ class BucketList:
                     return
 
     def can_split(self, kbucket: KBucket):
-            return kbucket.has_in_range(self.id) or (kbucket.depth() % Support.B_VAL) != 0
+            return kbucket.has_in_range(self.id) or (kbucket.depth() % B_VAL) != 0
 
     def get_kbucket(self, key) -> KBucket:
             return self._buckets[self.get_kbucket_index(key)]
@@ -71,13 +76,13 @@ class BucketList:
             if bucket.has_in_range(key):
                 return i
 
-    async def get_close_contacts(self, key, our_id):
+    async def get_close_contacts(self, key, our_id) -> list['Contact']:
         """"
         Get at most k contacts in the bucket that are closest the given id.
         """
         async with self.lock:
             contacts = [c for b in self._buckets for c in b.contacts if c.id != our_id]
-            return sorted(contacts, key=lambda c: c.id ^ key)[:Support.K_VAL]
+            return sorted(contacts, key=lambda c: c.id ^ key)[:K_VAL]
 
 
     @property

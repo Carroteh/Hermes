@@ -1,7 +1,9 @@
-from typing import Type
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from hermes.core.Contact import Contact
 
 from hermes.core.BucketList import BucketList
-from hermes.core.Contact import Contact
 from hermes.core.Storage import Storage
 
 class Node:
@@ -13,7 +15,7 @@ class Node:
     def ping(self, sender):
         return self._our_contact
 
-    def store(self, sender: Contact, key: int, val: str, expiration: int = 0):
+    def store(self, sender: 'Contact', key: int, val: str, expiration: int = 0):
         """
         Store a key value pair
         """
@@ -23,10 +25,22 @@ class Node:
         self._storage.set(key, val, expiration)
         self.send_key_values_if_new(sender)
 
-    def find_node(self, sender, key):
-        pass
+    async def find_node(self, sender, key) -> (list['Contact'], int):
+        """
+        Finds a node by their key
 
-    def find_value(self, sender, key) -> (list[Contact], str):
+        Returns
+            list of nodes close to the key
+        """
+        assert sender.id != self._our_contact.id, "Sender cannot be us!"
+        self.send_key_values_if_new(sender)
+        await self._bucket_list.add_contact(sender)
+
+        contacts = await self._bucket_list.get_close_contacts(key, sender.id)
+
+        return contacts, None
+
+    def find_value(self, sender, key) -> (list['Contact'], str):
         """
         Find the value associated with the given key. If not found, return a list of close contacts.
         """
@@ -37,9 +51,12 @@ class Node:
         self.send_key_values_if_new(sender)
 
         if self._storage.contains(key):
-            return tuple[None, self._storage.get(key)]
+            return None, self._storage.get(key)
         else:
-            return self._bucket_list.get_close_contacts(key, sender.id)
+            return self._bucket_list.get_close_contacts(key, sender.id), None
+
+    def send_key_values_if_new(self, sender):
+        pass
 
     @property
     def our_contact(self):
@@ -56,6 +73,3 @@ class Node:
     @property
     def bucket_list(self):
         return self._bucket_list
-
-    def send_key_values_if_new(self, sender):
-        pass

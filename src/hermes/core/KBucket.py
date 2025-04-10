@@ -3,7 +3,11 @@ from __future__ import annotations
 import datetime
 import logging
 
-from hermes.core.Contact import Contact
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from hermes.core.Contact import Contact
+
 from hermes.core.Support import K_VAL
 
 logger = logging.getLogger(__name__)
@@ -11,7 +15,7 @@ logger = logging.getLogger(__name__)
 class KBucket:
     def __init__(self, low=None, high=None):
         self.timestamp = None
-        self._contacts: list[Contact] = []
+        self._contacts: list['Contact'] = []
         if low is not None and high is not None:
             self._low = low
             self._high = high
@@ -26,7 +30,7 @@ class KBucket:
         """
         self.timestamp = datetime.datetime.now()
 
-    def add_contact(self, contact: Contact):
+    def add_contact(self, contact: 'Contact'):
         """
         Adds a contact to the list of managed contacts if there is sufficient space
         available in the bucket. Throws an exception if the bucket already contains
