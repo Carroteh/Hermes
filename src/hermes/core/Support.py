@@ -7,6 +7,8 @@ A_VAL = K_VAL
 
 B_VAL = 3
 
+BUCKET_REFRESH_INTERVAL = 1000000000000
+
 @dataclass
 class Triple:
     '''

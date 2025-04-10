@@ -1,3 +1,5 @@
+from importlib.util import source_hash
+
 import pytest
 import logging
 
@@ -93,12 +95,13 @@ async def test_lookup():
     router.rpc_find_nodes.assert_called_with(target_key)
     router.get_closer_nodes.assert_called_with(target_key, [])
 
-def test_local_store_found_value():
+@pytest.mark.asyncio
+async def test_local_store_found_value():
     vp = Protocol()
     dht = DHT(1, vp, Storage(), Router(Node(Contact(vp, 1), Storage())))
     key = 4
     val = "Test"
-    dht.store(key, val)
+    await dht.store(key, val)
     retval = dht.storage.get(key)
     assert retval == val
 
@@ -111,7 +114,7 @@ async def test_value_stored_in_closer_node():
     store2 = Storage()
 
     # Ensure all nodes are closer since our ID is max
-    dht = DHT(2**160, vp1, store1, Router(Node(Contact(vp1, 2**160), store1)))
+    dht = DHT(2**160, vp1, store1, Router(Node(Contact(vp1, 2**160), Storage())))
     vp1.node = dht.router.node
 
     # Make a closer contact
@@ -146,7 +149,7 @@ async def test_value_stored_in_farther_node():
     store2 = Storage()
 
     # Ensure all nodes are farther since our ID is 0
-    dht = DHT(0, vp1, store1, Router(Node(Contact(vp1, 0), store1)))
+    dht = DHT(0, vp1, store1, Router(Node(Contact(vp1, 0), Storage())))
     vp1.node = dht.router.node
 
     # Make a contact
@@ -182,7 +185,7 @@ async def test_value_stored_gets_propagated():
     store1 = Storage()
     store2 = Storage()
 
-    dht = DHT(2**160, vp1, store1, Router(Node(Contact(vp1, 2**160), store1)))
+    dht = DHT(2**160, vp1, store1, Router(Node(Contact(vp1, 2**160), Storage())))
     vp1.node = dht.router.node
 
     # Make a contact
@@ -206,9 +209,59 @@ async def test_value_stored_gets_propagated():
     assert not store2.contains(key)
 
     # Store a key-value pair
-    dht.store(key, val)
+    await dht.store(key, val)
 
     # Now both nodes should have the stored key-value
-    assert not store1.contains(key)
-    assert not store2.contains(key)
+    assert store1.contains(key)
+    assert store2.contains(key)
 
+
+@pytest.mark.asyncio
+async def test_get_value_propagates_to_closer_nodes():
+    vp1 = Protocol()
+    vp2 = Protocol()
+    vp3 = Protocol()
+    store1 = Storage()
+    store2 = Storage()
+    store3 = Storage()
+
+    dht = DHT(2**160, vp1, store1, Router(Node(Contact(vp1, 2**160), Storage())))
+    vp1.node = dht.router.node
+
+    # Setup node 2
+    contact_id2 = 2**159
+    other_contact2 = Contact(vp2, contact_id2)
+    other_node2 = Node(other_contact2, store2)
+    vp2.node = other_node2
+
+    #Add other contact to peer list
+    await dht.router.node.bucket_list.add_contact(other_contact2)
+
+    # Store key in node2
+    ghost_contact = Contact(Protocol(), 777)
+    key = 0
+    val = "Test"
+    other_node2.storage.set(key, val)
+
+    # Setup Node 3
+    contact_id3 = 2**158
+    other_contact3 = Contact(vp3, contact_id3)
+    other_node3 = Node(other_contact3, store3)
+    vp3.node = other_node3
+
+    # Add 3rd contact to peer list
+    dht.router.node.bucket_list.add_contact(other_contact3)
+
+    # Our peer does NOT have the key-value
+    assert not store1.contains(key)
+
+    # Node 3 should NOT have the key-value
+    assert not store3.contains(key)
+
+    # Find the value using the DHT
+    found, a, a = await dht.find_value(key)
+
+    # should be found.
+    assert found
+    # Should not be in node 3
+    assert not store3.contains(key)

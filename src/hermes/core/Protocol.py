@@ -5,24 +5,25 @@ if TYPE_CHECKING:
 
 from hermes.core.Node import Node
 from hermes.core.RPCError import RPCError
+from hermes.core.Support import BUCKET_REFRESH_INTERVAL
 
 class Protocol:
     def __init__(self, responds: bool = True, node: Node = None):
         self._responds = responds
         self._node = node
 
-    def store(self, sender: 'Contact', key: int, val: str, exp_time: int):
+    def store(self, sender: 'Contact', key: int, val: str, exp_time: int = BUCKET_REFRESH_INTERVAL):
         """
         Stores the value on the remote peer.
         """
         self._node.store(sender, key, val, exp_time)
         return self.no_error()
 
-    def find_value(self, sender: 'Contact', key: int) -> (list['Contact'], str, RPCError):
+    async def find_value(self, sender: 'Contact', key: int) -> (list['Contact'], str, RPCError):
         """
         Returns either contacts close to the key or the value if found.
         """
-        contacts, val = self._node.find_value(sender, key)
+        contacts, val = await self._node.find_value(sender, key)
         return contacts, val, self.no_error()
 
     async def find_node(self, sender: 'Contact', key: int) -> (list['Contact'], RPCError):

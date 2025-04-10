@@ -56,7 +56,7 @@ class Router:
         ret_val = None
         found_by = None
 
-        (other_contacts, val, error) = contact.protocol.find_value(self.node.our_contact, key)
+        (other_contacts, val, error) = await contact.protocol.find_value(self.node.our_contact, key)
 
         self.error_handler(error, contact)
 

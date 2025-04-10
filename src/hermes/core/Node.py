@@ -40,20 +40,20 @@ class Node:
 
         return contacts, None
 
-    def find_value(self, sender, key) -> (list['Contact'], str):
+    async def find_value(self, sender, key) -> (list['Contact'], str):
         """
         Find the value associated with the given key. If not found, return a list of close contacts.
         """
 
         assert sender.id != self._our_contact.id, "Sender cannot be us!"
 
-        self._bucket_list.add_contact(sender)
+        await self._bucket_list.add_contact(sender)
         self.send_key_values_if_new(sender)
 
         if self._storage.contains(key):
             return None, self._storage.get(key)
         else:
-            return self._bucket_list.get_close_contacts(key, sender.id), None
+            return await self._bucket_list.get_close_contacts(key, sender.id), None
 
     def send_key_values_if_new(self, sender):
         pass

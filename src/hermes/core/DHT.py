@@ -4,7 +4,9 @@ from hermes.core.RPCError import RPCError
 from hermes.core.Storage import Storage
 from hermes.core.Router import Router
 from hermes.core.Node import Node
+from hermes.core.Support import BUCKET_REFRESH_INTERVAL
 
+import datetime
 
 class DHT:
     def __init__(self, id: int, protocol: Protocol, storage: Storage, router: Router):
@@ -18,13 +20,13 @@ class DHT:
         self._router.set_error_handler(self.handle_error)
 
 
-    def store(self, key: int, val: str):
+    async def store(self, key: int, val: str):
         """
         Store a key value pair on the DHT. (on K closer contacts
         """
         self._touch_bucket_with_key(key)
         self._storage.set(key, val)
-        self._store_on_closer_contacts(key, val)
+        await self._store_on_closer_contacts(key, val)
 
     async def find_value(self, key: int) -> (bool, list[Contact], str):
         self._touch_bucket_with_key(key)
@@ -49,15 +51,33 @@ class DHT:
                 if len(store_to_candidates) > 0:
                     store_to = store_to_candidates[0]
                     separating_nodes = self._get_separating_nodes_count(self._our_contact, store_to)
-                    error = store_to.protocol.store(self._node.our_contact, key, val, 100000)
+                    error = await store_to.protocol.store(self._node.our_contact, key, val, BUCKET_REFRESH_INTERVAL)
                     self.handle_error(error, store_to)
         return ret
 
     def _touch_bucket_with_key(self, key):
         pass
 
-    def _store_on_closer_contacts(self, key, val):
-        pass
+    async def _store_on_closer_contacts(self, key:  int, val: str) -> None:
+        now: datetime = datetime.datetime.now()
+
+        kbucket = self._node.bucket_list.get_kbucket(key)
+        contacts = []
+
+        if (now - kbucket.timestamp).total_seconds()*1000 < BUCKET_REFRESH_INTERVAL:
+            contacts = await self._node.bucket_list.get_close_contacts(key, self._node.our_contact.id)
+        else:
+            found, contacts, found_by, val = await self.router.lookup(key, self._router.rpc_find_nodes)
+
+        for c in contacts:
+            error = c.protocol.store(self._node.our_contact, key, val)
+            self.handle_error(error, c)
+
+
+
+
+
+
 
     def _get_separating_nodes_count(self, contact1, contact2):
         return 0

@@ -14,7 +14,7 @@ logger = logging.getLogger(__name__)
 
 class KBucket:
     def __init__(self, low=None, high=None):
-        self.timestamp = None
+        self.timestamp: datetime = datetime.datetime.now()
         self._contacts: list['Contact'] = []
         if low is not None and high is not None:
             self._low = low
