@@ -93,4 +93,9 @@ class BucketList:
     def buckets(self, value):
         self._buckets = value
 
+    def __eq__(self, other):
+        if not isinstance(other, BucketList):
+            return False
+        return self.id == other.id
+
 

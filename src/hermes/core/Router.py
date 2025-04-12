@@ -193,7 +193,7 @@ class Router:
                     closer_contacts: list[Contact], farther_contacts: list[Contact]) -> (
             bool, list[Contact], Contact, str):
 
-        for node in nodes_to_query:
+        for node in list(nodes_to_query):
             found, val, found_by = await self.get_closer_nodes(key, node, rpc_call, closer_contacts, farther_contacts)
             if found:
                 return found, closer_contacts, found_by, val

@@ -1,7 +1,7 @@
 from core.Support import Triple
 from core.Support import K_VAL
 
-class KBucket:
+class KBucket_old:
     def __init__(self):
         self._bucket : list[Triple] = []
 

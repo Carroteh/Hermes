@@ -84,7 +84,7 @@ class KBucket:
         k2 = KBucket(mid + 1, self._high)
 
         # Reorganize the contacts into the new kbuckets
-        for contact in self._contacts:
+        for contact in list(self._contacts):
             if k1.low <= contact.id <= k1.high:
                 k1.add_contact(contact)
             else:

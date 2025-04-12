@@ -27,7 +27,8 @@ class Protocol:
         return contacts, val, self.no_error()
 
     async def find_node(self, sender: 'Contact', key: int) -> (list['Contact'], RPCError):
-        return await self._node.find_node(sender, key), self.no_error()
+        contacts, val = await self._node.find_node(sender, key)
+        return contacts, self.no_error()
 
     def ping(self, sender: 'Contact') -> RPCError:
         if self._responds:
