@@ -12,7 +12,7 @@ class Protocol:
         self._responds = responds
         self._node = node
 
-    def store(self, sender: 'Contact', key: int, val: str, exp_time: int = BUCKET_REFRESH_INTERVAL):
+    async def store(self, sender: 'Contact', key: int, val: str, exp_time: int = BUCKET_REFRESH_INTERVAL) -> RPCError:
         """
         Stores the value on the remote peer.
         """
@@ -30,7 +30,7 @@ class Protocol:
         contacts, val = await self._node.find_node(sender, key)
         return contacts, self.no_error()
 
-    def ping(self, sender: 'Contact') -> RPCError:
+    async def ping(self, sender: 'Contact') -> RPCError:
         if self._responds:
             self._node.ping(sender)
         err = RPCError()

@@ -20,6 +20,86 @@ class Router:
         self.error_handler: Callable[[RPCError, Contact], None] = lambda e, c: None
         self.lock = asyncio.Lock()
 
+
+    async def lookup(self, key: int,
+                     rpc_call: Callable[[int, Contact], tuple[list[Contact], Contact, str]],
+                     give_all: bool = False) -> (bool, list[Contact], Contact, str):
+
+        """
+        Node lookup algorithm for finding the closest nodes to the given key and they target itself if possible.
+        """
+
+        ret: list[Contact] = []
+        have_work = True
+
+        all_nodes: list[Contact] = self.node.bucket_list.get_kbucket(key).contacts
+
+        nodes_to_query: list[Contact] = all_nodes[:A_VAL]
+
+        # Split contacts into two groups
+        closer_contacts: list[Contact] = [node for node in nodes_to_query if node.id ^ key < self.node.our_contact.id ^ key]
+        farther_contacts: list[Contact] = [node for node in nodes_to_query if
+                                           node.id ^ key >= self.node.our_contact.id ^ key]
+
+        # Keep track of distinct nodes that have been contacted
+        contacted_ids: set[int] = {n.id for n in nodes_to_query}
+        contacted_Nodes: list[Contact] = nodes_to_query
+
+        # Initial query attempt
+        found, contacts, found_by, val = await self.query(key, nodes_to_query, rpc_call, closer_contacts, farther_contacts)
+
+        # If initial query resulted in a hit, we are done
+        if found:
+            return found, contacts, found_by, val
+
+        # otherwise, continue and add the closer contacts to the return
+        ret.extend(c for c in closer_contacts if c.id not in {r.id for r in ret})
+
+        # Loop and continue to try and find the target until K nodes have been contacted or no one is left to query
+        while len(ret) < K_VAL and have_work:
+            # Find far and close nodes that have not been contacted
+            closer_uncontacted_nodes: list[Contact] = [c for c in closer_contacts if c not in contacted_Nodes]
+            farther_uncontacted_nodes: list[Contact] = [c for c in farther_contacts if c not in contacted_Nodes]
+
+            # Do we have nodes to contact?
+            have_closer: bool = len(closer_uncontacted_nodes) > 0
+            have_farther: bool = len(farther_uncontacted_nodes) > 0
+
+            # Do we REALLY have nodes to contact?
+            have_work = have_closer or have_farther
+
+            # Try close nodes first
+            if have_closer:
+                new_nodes_to_query = closer_uncontacted_nodes[:A_VAL]
+                contacted_Nodes.extend(n for n in new_nodes_to_query if n.id not in contacted_ids)
+                contacted_ids.update(n.id for n in new_nodes_to_query)
+
+                # Query again
+                found, contacts, found_by, val = await self.query(key, new_nodes_to_query, rpc_call, closer_contacts,
+                                                                  farther_contacts)
+
+                # Exit if we found the target
+                if found:
+                    return found, contacts, found_by, val
+
+            # Do the same for the far uncontacted nodes
+            elif have_farther:
+                new_nodes_to_query = farther_uncontacted_nodes[:A_VAL]
+                contacted_Nodes.extend(n for n in new_nodes_to_query if n not in contacted_ids)
+                contacted_ids.update(n.id for n in new_nodes_to_query)
+
+                # Query again
+                found, contacts, found_by, val = await self.query(key, new_nodes_to_query, rpc_call, closer_contacts,
+                                                                  farther_contacts)
+
+                if found:
+                    return found, contacts, found_by, val
+
+        if give_all:
+            return False, ret, None, None
+        else:
+            return False, sorted(ret, key=lambda c: c.id ^ key)[:K_VAL], None, None
+
     def get_closest_nonempty_kbucket(self, key: int) -> KBucket:
         """
         Returns the closest nonempty bucket to the given key through XOR distance.
@@ -108,85 +188,6 @@ class Router:
                     target_list.append(peer)
 
         return val is not None, val, found_by
-
-    async def lookup(self, key: int,
-                     rpc_call: Callable[[int, Contact], tuple[list[Contact], Contact, str]],
-                     give_all: bool = False) -> (bool, list[Contact], Contact, str):
-
-        """
-        Node lookup algorithm for finding the closest nodes to the given key and they target itself if possible.
-        """
-
-        ret: list[Contact] = []
-        have_work = True
-
-        all_nodes: list[Contact] = self.node.bucket_list.get_kbucket(key).contacts
-
-        nodes_to_query: list[Contact] = all_nodes[:A_VAL]
-
-        # Split contacts into two groups
-        closer_contacts: list[Contact] = [node for node in nodes_to_query if node.id ^ key < self.node.our_contact.id ^ key]
-        farther_contacts: list[Contact] = [node for node in nodes_to_query if
-                                           node.id ^ key >= self.node.our_contact.id ^ key]
-
-        # Keep track of distinct nodes that have been contacted
-        contacted_ids: set[int] = {n.id for n in nodes_to_query}
-        contacted_Nodes: list[Contact] = nodes_to_query
-
-        # Initial query attempt
-        found, contacts, found_by, val = await self.query(key, nodes_to_query, rpc_call, closer_contacts, farther_contacts)
-
-        # If initial query resulted in a hit, we are done
-        if found:
-            return found, contacts, found_by, val
-
-        # otherwise, continue and add the closer contacts to the return
-        ret.extend(c for c in closer_contacts if c.id not in {r.id for r in ret})
-
-        # Loop and continue to try and find the target until K nodes have been contacted or no one is left to query
-        while len(ret) < K_VAL and have_work:
-            # Find far and close nodes that have not been contacted
-            closer_uncontacted_nodes: list[Contact] = [c for c in closer_contacts if c not in contacted_Nodes]
-            farther_uncontacted_nodes: list[Contact] = [c for c in farther_contacts if c not in contacted_Nodes]
-
-            # Do we have nodes to contact?
-            have_closer: bool = len(closer_uncontacted_nodes) > 0
-            have_farther: bool = len(farther_uncontacted_nodes) > 0
-
-            # Do we REALLY have nodes to contact?
-            have_work = have_closer or have_farther
-
-            # Try close nodes first
-            if have_closer:
-                new_nodes_to_query = closer_uncontacted_nodes[:A_VAL]
-                contacted_Nodes.extend(n for n in new_nodes_to_query if n.id not in contacted_ids)
-                contacted_ids.update(n.id for n in new_nodes_to_query)
-
-                # Query again
-                found, contacts, found_by, val = await self.query(key, new_nodes_to_query, rpc_call, closer_contacts,
-                                                                  farther_contacts)
-
-                # Exit if we found the target
-                if found:
-                    return found, contacts, found_by, val
-
-            # Do the same for the far uncontacted nodes
-            elif have_farther:
-                new_nodes_to_query = farther_uncontacted_nodes[:A_VAL]
-                contacted_Nodes.extend(n for n in new_nodes_to_query if n not in contacted_ids)
-                contacted_ids.update(n.id for n in new_nodes_to_query)
-
-                # Query again
-                found, contacts, found_by, val = await self.query(key, new_nodes_to_query, rpc_call, closer_contacts,
-                                                                  farther_contacts)
-
-                if found:
-                    return found, contacts, found_by, val
-
-        if give_all:
-            return False, ret, None, None
-        else:
-            return False, sorted(ret, key=lambda c: c.id ^ key)[:K_VAL], None, None
 
     async def query(self, key: int, nodes_to_query: list[Contact],
                     rpc_call: Callable[[int, Contact], tuple[list[Contact], Contact, str]],

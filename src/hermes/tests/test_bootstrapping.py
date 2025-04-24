@@ -33,12 +33,12 @@ async def test_bootstrap_outside_bootstrapping_bucket():
 
     # US
     randid = random.randint(0, 2**160)
-    dht_us: DHT = DHT(randid, vps[0], Storage(), Router(Node(Contact(vps[0], randid), Storage())))
+    dht_us: DHT = DHT(randid, vps[0], Storage(), Router(Node(Contact(vps[0], randid, 'host', 1), Storage())))
     vps[0].node = dht_us.router.node
 
     # BOOTSTRAP NODE DHT
     randid = random.randint(0, 2 ** 158)
-    dht_bootstrap: DHT = DHT(randid, vps[1], Storage(), Router(Node(Contact(vps[1], randid), Storage())))
+    dht_bootstrap: DHT = DHT(randid, vps[1], Storage(), Router(Node(Contact(vps[1], randid, 'host', 1), Storage())))
     vps[1].node = dht_bootstrap.router.node
 
     n = None
@@ -48,7 +48,7 @@ async def test_bootstrap_outside_bootstrapping_bucket():
         else:
             randid = 2**160
 
-        c = Contact(vps[i+2], randid)
+        c = Contact(vps[i+2], randid, 'host', 1)
         n = Node(c, Storage())
         vps[i+2].node = n
         await dht_bootstrap.router.node.bucket_list.add_contact(c)
@@ -57,7 +57,7 @@ async def test_bootstrap_outside_bootstrapping_bucket():
     # one other node knows about 10 other contacts
     for i in range(10):
         randid = random.randint(0, 2 ** 160)
-        c = Contact(vps[i+22], randid)
+        c = Contact(vps[i+22], randid, 'host', 1)
         n2 = Node(c, Storage())
         vps[i+22].node = n
         await n.bucket_list.add_contact(c)
@@ -82,19 +82,19 @@ async def test_bootstrap_within_bootstrapping_bucket():
 
     # US
     randid = random.randint(0, 2**160)
-    dht_us: DHT = DHT(randid, vps[0], Storage(), Router(Node(Contact(vps[0], randid), Storage())))
+    dht_us: DHT = DHT(randid, vps[0], Storage(), Router(Node(Contact(vps[0], randid, 'host', 1), Storage())))
     vps[0].node = dht_us.router.node
 
     # BOOTSTRAP NODE DHT
     randid = random.randint(0, 2 ** 160)
-    dht_bootstrap: DHT = DHT(randid, vps[1], Storage(), Router(Node(Contact(vps[1], randid), Storage())))
+    dht_bootstrap: DHT = DHT(randid, vps[1], Storage(), Router(Node(Contact(vps[1], randid, 'host', 1), Storage())))
     vps[1].node = dht_bootstrap.router.node
 
     n = None
 
     for i in range(10):
         randid = random.randint(0, 2 ** 160)
-        c = Contact(vps[i+2], randid)
+        c = Contact(vps[i+2], randid, 'host', 1)
         n = Node(c, Storage())
         vps[i+2].node = n
         await dht_bootstrap.router.node.bucket_list.add_contact(c)
@@ -103,7 +103,7 @@ async def test_bootstrap_within_bootstrapping_bucket():
     # one other node knows about 10 other contacts
     for i in range(10):
         randid = random.randint(0, 2 ** 160)
-        c = Contact(vps[i+12], randid)
+        c = Contact(vps[i+12], randid, 'host', 1)
         n2 = Node(c, Storage())
         vps[i+12].node = n
         await n.bucket_list.add_contact(c)

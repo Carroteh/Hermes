@@ -1,5 +1,7 @@
 from typing import TYPE_CHECKING
 
+from hermes.net.UDPServer import UDPServer
+
 if TYPE_CHECKING:
     from hermes.core.Contact import Contact
 
@@ -7,10 +9,11 @@ from hermes.core.BucketList import BucketList
 from hermes.core.Storage import Storage
 
 class Node:
-    def __init__(self, our_contact, storage):
+    def __init__(self, our_contact: Contact, storage: Storage):
         self._our_contact = our_contact
         self._storage: Storage = storage
         self._bucket_list: BucketList = BucketList(our_contact.id)
+        self._server = UDPServer(self, our_contact.host, our_contact.port)
 
     def ping(self, sender):
         return self._our_contact
@@ -73,3 +76,8 @@ class Node:
     @property
     def bucket_list(self):
         return self._bucket_list
+
+    @property
+    def server(self):
+        return self._server
+

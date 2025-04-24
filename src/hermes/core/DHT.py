@@ -17,11 +17,16 @@ class DHT:
         self._storage: Storage = storage
         self._protocol:Protocol = protocol
         self._our_id: int = id
-        self._our_contact: Contact = Contact(protocol, id)
+        self._our_contact: Contact = Contact(protocol, id, 'host', 1) #TODO update host and port
         self._node: Node = Node(self._our_contact, storage)
         self._router.node = self._node
         self._router.set_error_handler(self.handle_error)
 
+    async def start(self):
+        await self._node.server.start()
+
+    async def stop(self):
+        await self._node.server.stop()
 
     async def store(self, key: int, val: str):
         """
@@ -73,7 +78,7 @@ class DHT:
             found, contacts, found_by, val = await self.router.lookup(key, self._router.rpc_find_nodes)
 
         for c in list(contacts):
-            error = c.protocol.store(self._node.our_contact, key, val)
+            error = await c.protocol.store(self._node.our_contact, key, val)
             self.handle_error(error, c)
 
     async def bootstrap(self, known_peer: Contact):

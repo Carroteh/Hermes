@@ -1,11 +1,23 @@
+import json
+
 from hermes.core.Protocol import Protocol
 import datetime
+from dataclasses import dataclass, asdict
 
+@dataclass
 class Contact:
-    def __init__(self, protocol: Protocol, id: int):
-        self.protocol: Protocol = protocol
-        self.id: int = id
-        self.last_seen = datetime.datetime.now()
+    protocol: Protocol
+    id: int
+    host: str
+    port: int
+    last_seen = datetime.datetime.now()
+
+    def to_json(self) -> str:
+        return json.dumps(asdict(self))
+
+    @classmethod
+    def from_json(cls, json_str: str):
+        return cls(**json.loads(json_str))
 
     def touch(self):
         self.last_seen = datetime.datetime.now()
