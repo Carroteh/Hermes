@@ -8,8 +8,8 @@ from dataclasses import dataclass, asdict
 class Contact:
     protocol: Protocol
     id: int
-    host: str
-    port: int
+    host: str = ""
+    port: int = 0
     last_seen = datetime.datetime.now()
 
     def to_json(self) -> str:

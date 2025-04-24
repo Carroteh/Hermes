@@ -9,7 +9,7 @@ from hermes.core.BucketList import BucketList
 from hermes.core.Storage import Storage
 
 class Node:
-    def __init__(self, our_contact: Contact, storage: Storage):
+    def __init__(self, our_contact: 'Contact', storage: Storage):
         self._our_contact = our_contact
         self._storage: Storage = storage
         self._bucket_list: BucketList = BucketList(our_contact.id)

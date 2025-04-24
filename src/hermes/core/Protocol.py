@@ -2,13 +2,13 @@ from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
     from hermes.core.Contact import Contact
+    from hermes.core.Node import Node
 
-from hermes.core.Node import Node
 from hermes.core.RPCError import RPCError
 from hermes.core.Support import BUCKET_REFRESH_INTERVAL
 
 class Protocol:
-    def __init__(self, responds: bool = True, node: Node = None):
+    def __init__(self, responds: bool = True, node: 'Node' = None):
         self._responds = responds
         self._node = node
 
