@@ -18,13 +18,13 @@ class Node:
     def ping(self, sender):
         return self._our_contact
 
-    def store(self, sender: 'Contact', key: int, val: str, expiration: int = 0):
+    async def store(self, sender: 'Contact', key: int, val: str, expiration: int = 0):
         """
         Store a key value pair
         """
         assert sender.id != self._our_contact.id, "Sender cannot be us!"
 
-        self._bucket_list.add_contact(sender)
+        await self._bucket_list.add_contact(sender)
         self._storage.set(key, val, expiration)
         self.send_key_values_if_new(sender)
 

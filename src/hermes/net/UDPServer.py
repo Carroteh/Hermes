@@ -49,7 +49,7 @@ class UDPServer:
 
     async def handle_store(self, request:CommonRequest) -> StoreResponse:
         protocol = UDPProtocol("", 0)
-        self.node.store(
+        await self.node.store(
             Contact(protocol, request.sender),
             request.key,
             request.value,

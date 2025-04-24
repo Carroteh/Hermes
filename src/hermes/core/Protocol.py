@@ -16,7 +16,7 @@ class Protocol:
         """
         Stores the value on the remote peer.
         """
-        self._node.store(sender, key, val, exp_time)
+        await self._node.store(sender, key, val, exp_time)
         return self.no_error()
 
     async def find_value(self, sender: 'Contact', key: int) -> (list['Contact'], str, RPCError):

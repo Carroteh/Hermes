@@ -87,7 +87,7 @@ async def test_value_stored_in_closer_node():
     val = "Test"
 
     # Store a key-value pair in other node
-    other_node.store(ghost_contact, key, val, 1000000)
+    await other_node.store(ghost_contact, key, val, 1000000)
 
     assert not store1.contains(key)
     assert store2.contains(key)
@@ -122,7 +122,7 @@ async def test_value_stored_in_farther_node():
     val = "Test"
 
     # Store a key-value pair in other node
-    other_node.store(ghost_contact, key, val, 1000000)
+    await other_node.store(ghost_contact, key, val, 1000000)
 
     # Our peer does NOT have the key-value
     assert not store1.contains(key)
@@ -206,7 +206,7 @@ async def test_get_value_propagates_to_closer_nodes():
     vp3.node = other_node3
 
     # Add 3rd contact to peer list
-    dht.router.node.bucket_list.add_contact(other_contact3)
+    await dht.router.node.bucket_list.add_contact(other_contact3)
 
     # Our peer does NOT have the key-value
     assert not store1.contains(key)
