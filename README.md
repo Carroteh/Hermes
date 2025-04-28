@@ -8,5 +8,5 @@ docker build -t hermes .
 ```
 
 ```aiignore
-docker run --network  host hermes
+docker run -it --network  host hermes
 ```

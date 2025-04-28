@@ -17,15 +17,21 @@ class DHT:
         self._storage: Storage = storage
         self._protocol:Protocol = protocol
         self._our_id: int = id
-        self._our_contact: Contact = Contact(protocol, id, local_addr[0], local_addr[1]) #TODO update host and port
+        self._our_contact: Contact = Contact(protocol, id, local_addr[0], local_addr[1])
         self._node: Node = Node(self._our_contact, storage)
         self._router: Router = Router(self._node)
         self._router.set_error_handler(self.handle_error)
         #UDP server
         self._server = UDPServer(self._node, self._our_contact.host, self._our_contact.port)
 
+    def _set_addr_in_contact(self, addr: tuple[str, int]):
+        self._our_contact.host = addr[0]
+        self._our_contact.port = addr[1]
+        self._server.port = addr[1]
+        self._server.host = addr[0]
+
     async def start(self):
-        await self._server.start()
+        await self._server.start(self._set_addr_in_contact)
 
     async def stop(self):
         await self._server.stop()
@@ -157,4 +163,10 @@ class DHT:
     @router.setter
     def router(self, value):
         self._router = value
+
+    @property
+    def our_id(self):
+        return self._our_id
+
+
 

@@ -23,7 +23,7 @@ class Contact:
         self.last_seen = datetime.datetime.now()
 
     def __repr__(self):
-        return f"ID: {self.id} ~ Last Seen: {self.last_seen}"
+        return f"ID: {self.id} ~ HOST: {self.host} ~ PORT: {self.port} Last Seen: {self.last_seen}"
 
     def __eq__(self, other):
         if not isinstance(other, Contact):

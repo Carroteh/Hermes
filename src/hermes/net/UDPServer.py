@@ -1,5 +1,7 @@
 from typing import TYPE_CHECKING
 
+from black.lines import Callable
+
 if TYPE_CHECKING:
     from hermes.core.Node import Node
 
@@ -29,13 +31,15 @@ class UDPServer:
             "store": self.handle_store
         }
 
-    async def start(self):
+    async def start(self, update_addr: Callable):
         loop = asyncio.get_running_loop()
         self.transport, protocol = await loop.create_datagram_endpoint(
             lambda: UDPServerProtocol(self.node, self.handlers),
             local_addr=(self.host, self.port)
         )
-        logger.info(f"UDP Server started on {self.host}:{self.port}")
+        addr =  self.transport.get_extra_info("sockname")
+        update_addr((addr[0], addr[1]))
+        logger.info(f"UDP Server started on {addr[0]}:{addr[1]}")
         await asyncio.Event().wait()
 
 
@@ -45,13 +49,14 @@ class UDPServer:
         logger.info(f"UDP Server stopped on {self.host}:{self.port}")
 
     async def handle_ping(self, request: CommonRequest) -> PingResponse:
-        self.node.ping(request.sender)
+        contact = Contact(UDPProtocol(request.sender_host, request.sender_port), request.sender, request.sender_host, request.sender_port)
+        self.node.ping(contact)
         return PingResponse(random_id=request.random_id)
 
     async def handle_store(self, request:CommonRequest) -> StoreResponse:
-        protocol = UDPProtocol("", 0)
+        protocol = UDPProtocol(request.sender_host, request.sender_port)
         await self.node.store(
-            Contact(protocol, request.sender),
+            Contact(protocol, request.sender, request.sender_host, request.sender_port),
             request.key,
             request.value,
             request.exp_time
@@ -59,8 +64,11 @@ class UDPServer:
         return StoreResponse(random_id=request.random_id)
 
     async def handle_find_node(self, request: CommonRequest) -> FindNodeResponse:
-        protocol = UDPProtocol("", 0)
-        contacts, _ = await self.node.find_node(Contact(protocol, request.sender), request.key)
+        protocol = UDPProtocol(request.sender_host, request.sender_port)
+        contacts, _ = await self.node.find_node(
+            Contact(protocol, request.sender, request.sender_host, request.sender_port),
+            request.key
+        )
 
         return FindNodeResponse(
             random_id=request.random_id,
@@ -73,8 +81,11 @@ class UDPServer:
         )
 
     async def handle_find_value(self, request: CommonRequest) -> FindValueResponse:
-        protocol = UDPProtocol("", 0)
-        contacts, value = await self.node.find_value(Contact(protocol, request.sender), request.key)
+        protocol = UDPProtocol(request.sender_host, request.sender_port)
+        contacts, value = await self.node.find_value(
+            Contact(protocol, request.sender, request.sender_host, request.sender_port),
+            request.key
+        )
         return FindValueResponse(
             random_id=request.random_id,
             contacts=[ContactResponse(
@@ -97,6 +108,7 @@ class UDPServerProtocol(asyncio.DatagramProtocol):
 
     def datagram_received(self, data, addr):
         async def handle():
+            request = None
             try:
                 request_data = json.loads(data.decode())
                 request = CommonRequest.from_json(json.dumps(request_data["data"]))
@@ -113,7 +125,10 @@ class UDPServerProtocol(asyncio.DatagramProtocol):
                 logger.info(f"Sending {request_data['type'].upper()}_RESPONSE to {addr[0]}:{addr[1]}")
                 self.transport.sendto(json.dumps({"type":request_data["type"]+"_response", "data": asdict(response)}).encode(), addr)
             except Exception as e:
-                response = ErrorResponse(random_id=request.random_id, error_message=str(e))
+                if request is not None:
+                    response = ErrorResponse(random_id=request.random_id, error_message=str(e))
+                else:
+                    response = ErrorResponse(random_id=0, error_message="Invalid Protocol.")
                 logger.error(f"Sending error to {addr[0]}:{addr[1]}: {str(e)}")
                 self.transport.sendto(json.dumps({"type": "error", "data": asdict(response)}).encode(), addr)
         asyncio.create_task(handle())

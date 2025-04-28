@@ -10,6 +10,8 @@ class BaseRequest:
     protocol_name: str
     random_id: int
     sender: int
+    sender_host: str
+    sender_port: int
 
     def to_json(self) -> str:
         return json.dumps(asdict(self))

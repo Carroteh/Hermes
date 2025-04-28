@@ -33,6 +33,8 @@ class UDPProtocol(Protocol):
             protocol_name=self.__class__.__name__,
             random_id=random_id,
             sender=sender.id,
+            sender_host=sender.host,
+            sender_port=sender.port,
             key=key
         )
 
@@ -96,6 +98,8 @@ class UDPProtocol(Protocol):
             protocol_name=self.__class__.__name__,
             random_id=random_id,
             sender=sender.id,
+            sender_host=sender.host,
+            sender_port=sender.port,
             key=key
         )
 
@@ -156,6 +160,8 @@ class UDPProtocol(Protocol):
             protocol_name=self.__class__.__name__,
             random_id=random_id,
             sender=sender.id,
+            sender_host=sender.host,
+            sender_port=sender.port,
         )
 
         request_data = {"type": "ping", "data": asdict(request)}
@@ -196,6 +202,8 @@ class UDPProtocol(Protocol):
             protocol_name=self.__class__.__name__,
             random_id=random_id,
             sender=sender.id,
+            sender_host=sender.host,
+            sender_port=sender.port,
             key=key,
             value=val,
             exp_time=exp_time
