@@ -76,7 +76,4 @@ class Node:
     def bucket_list(self):
         return self._bucket_list
 
-    @property
-    def server(self):
-        return self._server
 

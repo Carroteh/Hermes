@@ -84,6 +84,9 @@ class BucketList:
             contacts = [c for b in self._buckets for c in b.contacts if c.id != our_id]
             return sorted(contacts, key=lambda c: c.id ^ key)[:K_VAL]
 
+    def get_num_contacts(self) -> int:
+        cs = [c for b in self._buckets for c in b.contacts]
+        return len(cs)
 
     @property
     def buckets(self):

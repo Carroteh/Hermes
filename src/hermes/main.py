@@ -18,20 +18,18 @@ logging.basicConfig(
 )
 
 async def bootstrap(dht, id, host, port):
-    print(f"bootstrapping: {id}, {host}, {port}")
     prot = UDPProtocol(host, port)
     await dht.bootstrap(Contact(prot, id, host, port))
 
+async def store(dht, key, value):
+    await dht.store(key, value)
 
 def logs():
     with open("src/hermes/logs/hermes.log") as file:
         for line in (file.readlines()[-50:]):
             print(line, end='')
 
-def clear():
-    os.system('cls' if os.name == 'nt' else 'clear')
-
-async def full_run():
+def print_logo():
     print("""
 
     |     |   ___   ___    __ __    ___    __
@@ -39,6 +37,13 @@ async def full_run():
     |     |  |___  |      |  |  |  |___    __|
 
     """)
+
+def clear():
+    os.system('cls' if os.name == 'nt' else 'clear')
+    print_logo()
+
+async def full_run():
+    print_logo()
 
     protocol = UDPProtocol("127.0.0.1", 0)
     id = random.randint(0, 2 ** 160)
@@ -51,30 +56,45 @@ async def full_run():
 
     def input_thread():
         while True:
-            cmd = input("> ").strip()
+            cmd = input().strip()
             loop.call_soon_threadsafe(command_queue.put_nowait, cmd)
             if cmd == "q":
                 break
 
     threading.Thread(target=input_thread, daemon=True).start()
 
-    print("bootstrap:sender     q:QUIT")
     while True:
+        print("> ", end="", flush=True)
         command = await command_queue.get()
         args = command.split(" ")
 
         if args[0] == "bootstrap":
-            if len(args) < 4:
+            if len(args) != 4:
                 print("usage: bootstrap <id> <host> <port>")
                 continue
             await bootstrap(dht, int(args[1]), args[2], int(args[3]))
-            print("bootstrapped")
         elif args[0] == "logs":
             logs()
         elif args[0] == "clear":
             clear()
         elif args[0] == "me":
             print(dht.contact)
+        elif args[0] == "status":
+            print("Contacts known: " + str(dht.router.node.bucket_list.get_num_contacts()))
+            print("Storage size: " + str(len(dht.storage.store)))
+        elif args[0] == "store":
+            if len(args) != 3:
+                print("usage: store <key> <value>")
+                continue
+        elif args[0] == "help":
+            print("""
+bootstrap <id> <host> <port> - bootstrap DHT
+store <key> <value> - store a value in the DHT
+logs
+clear
+me
+status
+            """)
         elif command == "q":
             break
 
