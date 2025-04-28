@@ -6,13 +6,13 @@ if TYPE_CHECKING:
 
 import json
 import logging
+import asyncio
 from dataclasses import asdict
 
 from hermes.net.Payload import CommonRequest, PingResponse, FindNodeResponse, ContactResponse, StoreResponse, \
     FindValueResponse, ErrorResponse
 from hermes.net.UDPProtocol import UDPProtocol
 from hermes.core.Contact import Contact
-from hermes.net.RequestHandler import *
 
 logger = logging.getLogger(__name__)
 
@@ -35,13 +35,14 @@ class UDPServer:
             lambda: UDPServerProtocol(self.node, self.handlers),
             local_addr=(self.host, self.port)
         )
-
+        logger.info(f"UDP Server started on {self.host}:{self.port}")
         await asyncio.Event().wait()
 
 
     async def stop(self):
         if self.transport:
             self.transport.close()
+        logger.info(f"UDP Server stopped on {self.host}:{self.port}")
 
     async def handle_ping(self, request: CommonRequest) -> PingResponse:
         self.node.ping(request.sender)

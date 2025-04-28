@@ -1,22 +1,22 @@
-[project]
+[tool.poetry]
 name = "hermes"
 version = "0.1.0"
 description = "Hermes's Thoughts"
-authors = [
-    {name = "Philip Mathee",email = "philipmathee@gmail.com"}
-]
-license = {text = "MIT"}
+authors = ["Philip Mathee <philipmathee@gmail.com>"]
+license = "MIT"
 readme = "README.md"
-requires-python = ">=3.13"
-dependencies = [
-    "flake8 (>=7.1.1,<8.0.0)",
-    "black (>=25.1.0,<26.0.0)",
-    "pre-commit (>=4.1.0,<5.0.0)",
-    "pynacl (>=1.5.0,<2.0.0)",
-    "pytest (>=8.3.5,<9.0.0)",
-    "pytest-asyncio (>=0.26.0,<0.27.0)",
-]
+packages = [{include = "hermes", from = "src"}]
 
+[tool.poetry.dependencies]
+python = ">=3.13"
+pynacl = "^1.5.0"
+
+[tool.poetry.group.dev.dependencies]
+flake8 = "^7.1.1"
+black = "^25.1.0"
+pre-commit = "^4.1.0"
+pytest = "^8.3.5"
+pytest-asyncio = "^0.26.0"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
@@ -26,5 +26,3 @@ build-backend = "poetry.core.masonry.api"
 asyncio_default_fixture_loop_scope = "function"
 log_cli = 1
 log_level = "INFO"
-
-

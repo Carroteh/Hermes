@@ -62,18 +62,23 @@ class UDPProtocol(Protocol):
 
             # Get the response, and repackage
             response = FindNodeResponse(**response["data"])
-            contacts = [
-                Contact(
-                    UDPProtocol(host=c.host, port=c.port),
-                    c.contact,
-                    host=c.host,
-                    port=c.port
-                )
-                for c in response.contacts
-                if c.protocol_name == self.__class__.__name__
-            ]
-            logger.info(f"FIND_NODE returned {len(contacts)} contacts from {self._host}:{self._port}")
-            return contacts, RPCError()
+
+            if response.contacts is not None:
+                contacts = [
+                    Contact(
+                        UDPProtocol(host=c.host, port=c.port),
+                        c.contact,
+                        host=c.host,
+                        port=c.port
+                    )
+                    for c in response.contacts
+                    if c.protocol_name == self.__class__.__name__
+                ]
+                logger.info(f"FIND_NODE returned {len(contacts)} contacts from {self._host}:{self._port}")
+                return contacts, RPCError()
+            else:
+                logger.info(f"FIND_NODE returned NOTHING from {self._host}:{self._port}")
+                return [], RPCError()
 
         except asyncio.TimeoutError:
             logger.error(f"FIND_NODE timed out on {self._host}:{self._port}")
@@ -118,19 +123,23 @@ class UDPProtocol(Protocol):
 
             if response.value is not None:
                 logger.info(f"FIND_VALUE returned value from {self._host}:{self._port}")
-                return None, response.value, RPCError()
+                return [], response.value, RPCError()
             else:
-                logger.info(f"FIND_VALUE returned {len(response.contacts)} contacts from {self._host}:{self._port}")
-                contacts = [
-                    Contact(
-                        UDPProtocol(c.host, c.port),
-                        c.contact,
-                        host=c.host,
-                        port=c.port
-                    ) for c in response.contacts
-                    if c.protocol_name == self.__class__.__name__
-                ]
-                return contacts, None, RPCError()
+                if response.contacts is not None:
+                    logger.info(f"FIND_VALUE returned {len(response.contacts)} contacts from {self._host}:{self._port}")
+                    contacts = [
+                        Contact(
+                            UDPProtocol(c.host, c.port),
+                            c.contact,
+                            host=c.host,
+                            port=c.port
+                        ) for c in response.contacts
+                        if c.protocol_name == self.__class__.__name__
+                    ]
+                    return contacts, None, RPCError()
+                else:
+                    logger.info(f"FIND_VALUE returned NOTHING from {self._host}:{self._port}")
+                    return [], None, RPCError()
         except asyncio.TimeoutError:
             logger.error(f"FIND_VALUE timed out on {self._host}:{self._port}")
             return [], RPCError(timeout_error=True)

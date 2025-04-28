@@ -7,26 +7,28 @@ from hermes.core.RPCError import RPCError
 from hermes.core.Storage import Storage
 from hermes.core.Router import Router
 from hermes.core.Node import Node
+from hermes.net.UDPServer import UDPServer
 from hermes.core.Support import BUCKET_REFRESH_INTERVAL
 
 import datetime
 
 class DHT:
-    def __init__(self, id: int, protocol: Protocol, storage: Storage, router: Router):
-        self._router: Router = router
+    def __init__(self, id: int, protocol: Protocol, storage: Storage, local_addr: tuple[str, int] = ('0.0.0.0', 3301)):
         self._storage: Storage = storage
         self._protocol:Protocol = protocol
         self._our_id: int = id
-        self._our_contact: Contact = Contact(protocol, id, 'host', 1) #TODO update host and port
+        self._our_contact: Contact = Contact(protocol, id, local_addr[0], local_addr[1]) #TODO update host and port
         self._node: Node = Node(self._our_contact, storage)
-        self._router.node = self._node
+        self._router: Router = Router(self._node)
         self._router.set_error_handler(self.handle_error)
+        #UDP server
+        self._server = UDPServer(self._node, self._our_contact.host, self._our_contact.port)
 
     async def start(self):
-        await self._node.server.start()
+        await self._server.start()
 
     async def stop(self):
-        await self._node.server.stop()
+        await self._server.stop()
 
     async def store(self, key: int, val: str):
         """
