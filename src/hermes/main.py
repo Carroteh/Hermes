@@ -45,9 +45,9 @@ def clear():
 async def full_run():
     print_logo()
 
-    protocol = UDPProtocol("127.0.0.1", 0)
+    protocol = UDPProtocol("0.0.0.0", 0)
     id = random.randint(0, 2 ** 160)
-    dht = DHT(id, protocol, Storage(), ("127.0.0.1", 0))
+    dht = DHT(id, protocol, Storage(), ("0.0.0.0", 0))
     asyncio.create_task(dht.start())
 
     # Use asyncio.Queue for commands
