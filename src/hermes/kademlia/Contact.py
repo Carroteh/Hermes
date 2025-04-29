@@ -1,6 +1,6 @@
 import json
 
-from hermes.core.Protocol import Protocol
+from hermes.kademlia.Protocol import Protocol
 import datetime
 from dataclasses import dataclass, asdict
 

@@ -4,11 +4,11 @@ import asyncio
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
-    from hermes.core.Contact import Contact
+    from hermes.kademlia.Contact import Contact
 
-from hermes.core.Support import B_VAL
-from hermes.core.Support import K_VAL
-from hermes.core.KBucket import KBucket
+from hermes.kademlia.Support import B_VAL
+from hermes.kademlia.Support import K_VAL
+from hermes.kademlia.KBucket import KBucket
 
 logger = logging.getLogger(__name__)
 

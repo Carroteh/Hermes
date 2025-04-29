@@ -1,11 +1,11 @@
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
-    from hermes.core.Contact import Contact
-    from hermes.core.Node import Node
+    from hermes.kademlia.Contact import Contact
+    from hermes.kademlia.Node import Node
 
-from hermes.core.RPCError import RPCError
-from hermes.core.Support import BUCKET_REFRESH_INTERVAL
+from hermes.kademlia.RPCError import RPCError
+from hermes.kademlia.Support import BUCKET_REFRESH_INTERVAL
 
 class Protocol:
     def __init__(self, responds: bool = True, node: 'Node' = None):

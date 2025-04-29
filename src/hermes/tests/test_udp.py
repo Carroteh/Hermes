@@ -6,15 +6,15 @@ import logging
 import asyncio
 
 
-from hermes.core.Contact import Contact
-from hermes.core.DHT import DHT
-from hermes.core.KBucket import KBucket
-from hermes.core.BucketList import BucketList
-from hermes.core.Protocol import Protocol
-from hermes.core.Router import Router
-from hermes.core.Support import K_VAL
-from hermes.core.Node import Node
-from hermes.core.Storage import Storage
+from hermes.kademlia.Contact import Contact
+from hermes.kademlia.DHT import DHT
+from hermes.kademlia.KBucket import KBucket
+from hermes.kademlia.BucketList import BucketList
+from hermes.kademlia.Protocol import Protocol
+from hermes.kademlia.Router import Router
+from hermes.kademlia.Support import K_VAL
+from hermes.kademlia.Node import Node
+from hermes.kademlia.Storage import Storage
 from hermes.net.UDPProtocol import UDPProtocol
 from hermes.net.UDPServer import UDPServer
 

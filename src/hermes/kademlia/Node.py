@@ -3,10 +3,10 @@ from typing import TYPE_CHECKING
 
 
 if TYPE_CHECKING:
-    from hermes.core.Contact import Contact
+    from hermes.kademlia.Contact import Contact
 
-from hermes.core.BucketList import BucketList
-from hermes.core.Storage import Storage
+from hermes.kademlia.BucketList import BucketList
+from hermes.kademlia.Storage import Storage
 
 class Node:
     def __init__(self, our_contact: 'Contact', storage: Storage):

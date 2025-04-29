@@ -1,14 +1,14 @@
 import random
 
-from hermes.core.KBucket import KBucket
-from hermes.core.Protocol import Protocol
-from hermes.core.Contact import Contact
-from hermes.core.RPCError import RPCError
-from hermes.core.Storage import Storage
-from hermes.core.Router import Router
-from hermes.core.Node import Node
+from hermes.kademlia.KBucket import KBucket
+from hermes.kademlia.Protocol import Protocol
+from hermes.kademlia.Contact import Contact
+from hermes.kademlia.RPCError import RPCError
+from hermes.kademlia.Storage import Storage
+from hermes.kademlia.Router import Router
+from hermes.kademlia.Node import Node
 from hermes.net.UDPServer import UDPServer
-from hermes.core.Support import BUCKET_REFRESH_INTERVAL
+from hermes.kademlia.Support import BUCKET_REFRESH_INTERVAL
 
 import datetime
 

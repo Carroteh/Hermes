@@ -4,9 +4,9 @@ import threading
 import os
 import random
 
-from hermes.core.Contact import Contact
-from hermes.core.DHT import DHT
-from hermes.core.Storage import Storage
+from hermes.kademlia.Contact import Contact
+from hermes.kademlia.DHT import DHT
+from hermes.kademlia.Storage import Storage
 from hermes.net.UDPProtocol import UDPProtocol
 
 # Configure the logging

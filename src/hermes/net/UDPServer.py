@@ -3,7 +3,7 @@ from typing import TYPE_CHECKING
 from black.lines import Callable
 
 if TYPE_CHECKING:
-    from hermes.core.Node import Node
+    from hermes.kademlia.Node import Node
 
 
 import json
@@ -14,7 +14,7 @@ from dataclasses import asdict
 from hermes.net.Payload import CommonRequest, PingResponse, FindNodeResponse, ContactResponse, StoreResponse, \
     FindValueResponse, ErrorResponse
 from hermes.net.UDPProtocol import UDPProtocol
-from hermes.core.Contact import Contact
+from hermes.kademlia.Contact import Contact
 
 logger = logging.getLogger(__name__)
 

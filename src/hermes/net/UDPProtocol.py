@@ -3,16 +3,16 @@ import json
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
-    from hermes.core.Contact import Contact
-    from hermes.core.Node import Node
+    from hermes.kademlia.Contact import Contact
+    from hermes.kademlia.Node import Node
 
 import random
 import logging
 
-from hermes.core.Protocol import Protocol
-from hermes.core.RPCError import RPCError
+from hermes.kademlia.Protocol import Protocol
+from hermes.kademlia.RPCError import RPCError
 from hermes.net.Payload import *
-from hermes.core.Support import REQUEST_TIMEOUT, BUCKET_REFRESH_INTERVAL
+from hermes.kademlia.Support import REQUEST_TIMEOUT, BUCKET_REFRESH_INTERVAL
 
 logger = logging.getLogger(__name__)
 

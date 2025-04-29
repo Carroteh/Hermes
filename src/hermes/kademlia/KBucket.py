@@ -6,9 +6,9 @@ import logging
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
-    from hermes.core.Contact import Contact
+    from hermes.kademlia.Contact import Contact
 
-from hermes.core.Support import K_VAL
+from hermes.kademlia.Support import K_VAL
 
 logger = logging.getLogger(__name__)
 

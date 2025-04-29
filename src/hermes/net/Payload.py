@@ -1,7 +1,7 @@
 import random
 import json
 
-from hermes.core.Protocol import Protocol
+from hermes.kademlia.Protocol import Protocol
 from typing import Optional
 from dataclasses import dataclass, asdict
 

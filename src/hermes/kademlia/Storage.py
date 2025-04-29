@@ -18,7 +18,6 @@ class Storage:
 
     def set(self, key, value, expiration_time = 0):
         self.store[key] = value
-        pass
 
     def get_expiration_time(self, key):
         pass

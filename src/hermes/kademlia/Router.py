@@ -2,16 +2,16 @@ from typing import Callable
 
 import asyncio
 
-# from hermes.core import KademliaNode
-from hermes.core.KBucket import KBucket
-from hermes.core.Node import Node
-from hermes.core.Contact import Contact
-from hermes.core.RPCError import RPCError
-from hermes.core.Support import K_VAL
-from hermes.core.Support import A_VAL
+# from hermes.kademlia import KademliaNode
+from hermes.kademlia.KBucket import KBucket
+from hermes.kademlia.Node import Node
+from hermes.kademlia.Contact import Contact
+from hermes.kademlia.RPCError import RPCError
+from hermes.kademlia.Support import K_VAL
+from hermes.kademlia.Support import A_VAL
 
 
-# from hermes.core import DHT
+# from hermes.kademlia import DHT
 
 class Router:
 
