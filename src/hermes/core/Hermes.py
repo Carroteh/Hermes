@@ -6,9 +6,9 @@ from hermes.core.Error import Error
 from hermes.kademlia.DHT import DHT
 
 class Hermes:
-    def __init__(self, nickname: str, dht: DHT):
-        self._nickname = nickname
-        self._dht = dht
+    def __init__(self, dht: DHT):
+        self._nickname: str = None
+        self._dht: DHT = dht
         self._msg_tools = KeyValueTools()
 
     async def find_by_nickname(self, nickname: str) -> str:
@@ -30,7 +30,7 @@ class Hermes:
         recip = await self.find_by_nickname(recipient)
 
         if recip is None:
-            return Error(user_doesnt_exist=True)
+            return Error(user_doesnt_exist=True, error_message="Recipient doesn't exist.")
 
         # Get the shared message box
         msg_box_key = message_box_key(self._nickname, recipient)
@@ -38,9 +38,9 @@ class Hermes:
 
         # If no message box, create one
         if not found:
-            msg_box = MessageBoxValue(messages=[])
+            msg_box = MessageBoxValue(message_keys=[])
         else:
-            msg_box = MessageValue.from_json(msg_box_raw)
+            msg_box = MessageBoxValue.from_json(msg_box_raw)
 
         # Get users public Key
         val = ContactValue.from_json(recip)
@@ -52,7 +52,7 @@ class Hermes:
         await self._dht.store(msg_key, json.dumps(asdict(msg_val)))
 
         # Update the msgbox
-        msg_box = self._msg_tools.update_message_box(msg_val, msg_box)
+        msg_box = self._msg_tools.update_message_box(msg_val, msg_box, msg_key)
         # Store msgbox
         await self._dht.store(msg_box_key, json.dumps(asdict(msg_box)))
 
@@ -79,22 +79,15 @@ class Hermes:
 
             if found:
                 msg_val = MessageValue.from_json(msg_val_raw)
-                decrypted_msg = self._msg_tools.read_message(msg_val.encrypted_message, self._nickname)
+                decrypted_msg = self._msg_tools.read_message(msg_val, self._nickname)
                 returned_msgs.append(LightWeightMessage(msg_val.timestamp, msg_val.sender, msg_val.receiver, decrypted_msg))
 
         return returned_msgs
-                
-
-
-
-
-
-
 
     def get_nickname(self):
         return self._nickname
 
-    async def register_nickname(self, nickname: str):
+    async def register_nickname(self, nickname: str) -> Error:
         '''
         Check if a nickname is available, if so register it on the DHT
         '''
@@ -102,13 +95,15 @@ class Hermes:
         contact_value = await self.find_by_nickname(nickname)
 
         if contact_value is not None:
-            return Error(nickname_already_in_use=True)
+            return Error(nickname_already_in_use=True, error_message="Nickname already in use.")
 
         contact = ContactValue(nickname, self._dht.contact.host, self._dht.contact.port, self._msg_tools.public_key())
 
         key = contact_key(nickname)
 
         await self._dht.store(key, json.dumps(asdict(contact)))
+
+        self._nickname = nickname
 
         return Error()
 

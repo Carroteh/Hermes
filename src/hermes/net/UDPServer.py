@@ -7,6 +7,7 @@ if TYPE_CHECKING:
 
 
 import json
+import socket
 import logging
 import asyncio
 from dataclasses import asdict
@@ -31,6 +32,19 @@ class UDPServer:
             "store": self.handle_store
         }
 
+    def check_bound_ip(self):
+        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        s.settimeout(0)
+        try:
+            # doesn't even have to be reachable
+            s.connect(('10.254.254.254', 1))
+            ip = s.getsockname()[0]
+        except Exception:
+            ip = '0.0.0.0'
+        finally:
+            s.close()
+        return ip
+
     async def start(self, update_addr: Callable):
         loop = asyncio.get_running_loop()
         self.transport, protocol = await loop.create_datagram_endpoint(
@@ -38,8 +52,9 @@ class UDPServer:
             local_addr=(self.host, self.port)
         )
         addr =  self.transport.get_extra_info("sockname")
-        update_addr((addr[0], addr[1]))
-        logger.info(f"UDP Server started on {addr[0]}:{addr[1]}")
+        self.transport.get_extra_info("")
+        update_addr((self.check_bound_ip(), addr[1]))
+        logger.info(f"UDP Server started on {self.check_bound_ip()}:{addr[1]}")
         await asyncio.Event().wait()
 
 
@@ -73,8 +88,9 @@ class UDPServer:
         return FindNodeResponse(
             random_id=request.random_id,
             contacts=[ContactResponse(
+                random_id=request.random_id,
                 contact=c.id,
-                protocol_name=c.protocol_name,
+                protocol_name='UDPProtocol',
                 host=c.host,
                 port=c.port
             ) for c in contacts]
@@ -89,8 +105,9 @@ class UDPServer:
         return FindValueResponse(
             random_id=request.random_id,
             contacts=[ContactResponse(
+                random_id=request.random_id,
                 contact=c.id,
-                protocol_name=c.protocol_name,
+                protocol_name='UDPProtocol',
                 host=c.host,
                 port=c.port
             ) for c in contacts] if contacts else None,

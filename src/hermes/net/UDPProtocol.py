@@ -3,7 +3,6 @@ import json
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
-    from hermes.kademlia.Contact import Contact
     from hermes.kademlia.Node import Node
 
 import random
@@ -11,6 +10,7 @@ import logging
 
 from hermes.kademlia.Protocol import Protocol
 from hermes.kademlia.RPCError import RPCError
+from hermes.kademlia.Contact import Contact
 from hermes.net.Payload import *
 from hermes.kademlia.Support import REQUEST_TIMEOUT, BUCKET_REFRESH_INTERVAL
 
@@ -26,7 +26,7 @@ class UDPProtocol(Protocol):
         self._host = host
         self._port = port
 
-    async def find_node(self, sender: 'Contact', key: int) -> (list['Contact'], RPCError):
+    async def find_node(self, sender: Contact, key: int) -> (list[Contact], RPCError):
         random_id = random.randint(0, 2**160-1)
 
         request = FindNodeRequest(
@@ -68,13 +68,12 @@ class UDPProtocol(Protocol):
             if response.contacts is not None:
                 contacts = [
                     Contact(
-                        UDPProtocol(host=c.host, port=c.port),
-                        c.contact,
-                        host=c.host,
-                        port=c.port
+                        UDPProtocol(host=c['host'], port=c['port']),
+                        c['contact'],
+                        host=c['host'],
+                        port=c['port']
                     )
                     for c in response.contacts
-                    if c.protocol_name == self.__class__.__name__
                 ]
                 logger.info(f"FIND_NODE returned {len(contacts)} contacts from {self._host}:{self._port}")
                 return contacts, RPCError()
@@ -91,7 +90,7 @@ class UDPProtocol(Protocol):
         finally:
             transport.close()
 
-    async def find_value(self, sender: 'Contact', key: int) -> (list['Contact'], str, RPCError):
+    async def find_value(self, sender: Contact, key: int) -> (list[Contact], str, RPCError):
         random_id = random.randint(0, 2 ** 160 - 1)
 
         request = FindValueRequest(
@@ -119,10 +118,10 @@ class UDPProtocol(Protocol):
             if response["type"] == "error":
                 error = ErrorResponse(**response["data"])
                 logger.error(f"FIND_VALUE Error response from: {self._host}:{self._port} sent error: {error.error_message}")
-                return [], RPCError(peer_error=True, peer_error_message=error.error_message)
+                return [], None, RPCError(peer_error=True, peer_error_message=error.error_message)
             if response["data"]["random_id"] != random_id:
                 logger.error("FIND_VALUE Error: id_mismatch_error")
-                return [], RPCError(id_mismatched_error=True)
+                return [], None, RPCError(id_mismatched_error=True)
             response = FindValueResponse(**response["data"])
 
             if response.value is not None:
@@ -133,12 +132,11 @@ class UDPProtocol(Protocol):
                     logger.info(f"FIND_VALUE returned {len(response.contacts)} contacts from {self._host}:{self._port}")
                     contacts = [
                         Contact(
-                            UDPProtocol(c.host, c.port),
-                            c.contact,
-                            host=c.host,
-                            port=c.port
+                            UDPProtocol(host=c['host'], port=c['port']),
+                            c['contact'],
+                            host=c['host'],
+                            port=c['port']
                         ) for c in response.contacts
-                        if c.protocol_name == self.__class__.__name__
                     ]
                     return contacts, None, RPCError()
                 else:
@@ -146,14 +144,14 @@ class UDPProtocol(Protocol):
                     return [], None, RPCError()
         except asyncio.TimeoutError:
             logger.error(f"FIND_VALUE timed out on {self._host}:{self._port}")
-            return [], RPCError(timeout_error=True)
+            return [], None, RPCError(timeout_error=True)
         except Exception as e:
             logger.error(f"FIND_VALUE Error: {str(e)}")
-            return [], RPCError(protocol_error=True, peer_error_message=str(e))
+            return [], None, RPCError(protocol_error=True, peer_error_message=str(e))
         finally:
             transport.close()
 
-    async def ping(self, sender: 'Contact') -> RPCError:
+    async def ping(self, sender: Contact) -> RPCError:
         random_id = random.randint(0, 2 ** 160 - 1)
 
         request = PingRequest(
@@ -195,7 +193,7 @@ class UDPProtocol(Protocol):
         finally:
             transport.close()
 
-    async def store(self, sender: 'Contact', key: int, val: str, exp_time: int = BUCKET_REFRESH_INTERVAL) -> RPCError:
+    async def store(self, sender: Contact, key: int, val: str, exp_time: int = BUCKET_REFRESH_INTERVAL) -> RPCError:
         random_id = random.randint(0, 2 ** 160 - 1)
 
         request = StoreRequest(

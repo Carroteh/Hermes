@@ -27,6 +27,9 @@ class KeyValueTools:
         return  msg_key, return_msg
 
     def read_message(self, msg: MessageValue, our_nick: str) -> str:
+        '''
+        Decrypt a message.
+        '''
         enc_message = msg.encrypted_message
 
         #Get the correct wrapped key based on if we are the sender or receiver
@@ -34,9 +37,11 @@ class KeyValueTools:
 
         return self._crypt.decrypt_message_with_key_wrapping(enc_message, wrapped_key)
 
-    def update_message_box(self, msg: MessageValue, msg_box: MessageBoxValue) -> MessageBoxValue:
-        key = message_key(msg.sender, msg.receiver)
-        msg_box.message_keys.append(key)
+    def update_message_box(self, msg: MessageValue, msg_box: MessageBoxValue, msg_key: int) -> MessageBoxValue:
+        '''
+        Add a MessageValue to a MessageBoxValue.
+        '''
+        msg_box.message_keys.append(msg_key)
         return msg_box
 
     def public_key(self):

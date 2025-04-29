@@ -7,7 +7,7 @@ class Error:
         ):
         self.nickname_already_in_use: bool = nickname_already_in_use
         self.user_doesnt_exist: bool = user_doesnt_exist
-        self.protocol_error_message: str = error_message
+        self.error_message: str = error_message
 
     def has_error(self) -> bool:
         return self.user_doesnt_exist or self.nickname_already_in_use

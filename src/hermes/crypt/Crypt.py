@@ -18,8 +18,8 @@ class Crypt:
         self._priv_key = nacl.public.PrivateKey.generate()
         self._pub_key = self._priv_key.public_key
 
-    def get_public_key(self) -> bytes:
-        return self._pub_key
+    def get_public_key(self) -> str:
+        return self.b64encode(self._pub_key)
 
     def encrypt_message_with_key_wrapping(self, message : str, remote_public_key : str) -> (str, str, str):
         # Decode the key from a string
@@ -55,7 +55,7 @@ class Crypt:
         return decrypted_message.decode()
 
     def b64encode(self, data: bytes) -> str:
-        return base64.b64encode(data).decode('utf-8')
+        return base64.b64encode(bytes(data)).decode('utf-8')
 
     def b64decode(self, data: str) -> bytes:
         return base64.b64decode(data.encode('utf-8'))

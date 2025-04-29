@@ -141,10 +141,9 @@ class Router:
         self.error_handler(error, contact)
 
         if not error.has_error():
-            if other_contacts is not None:
+            if val is None:
                 nodes.extend(other_contacts)
             else:
-                assert val is not None
                 nodes.append(contact)
                 ret_val = val
                 found_by = contact
