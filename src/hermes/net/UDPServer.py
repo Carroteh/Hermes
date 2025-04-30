@@ -32,12 +32,12 @@ class UDPServer:
             "store": self.handle_store
         }
 
-    def check_bound_ip(self):
+    def check_bound_ip(self, host: str):
         s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         s.settimeout(0)
         try:
             # doesn't even have to be reachable
-            s.connect(('10.254.254.254', 1))
+            s.connect((host, 1))
             ip = s.getsockname()[0]
         except Exception:
             ip = '0.0.0.0'
@@ -47,16 +47,15 @@ class UDPServer:
 
     async def start(self, update_addr: Callable):
         loop = asyncio.get_running_loop()
+        host = self.check_bound_ip(self.host)
         self.transport, protocol = await loop.create_datagram_endpoint(
             lambda: UDPServerProtocol(self.node, self.handlers),
-            local_addr=(self.host, self.port)
+            local_addr=(host, self.port)
         )
         addr =  self.transport.get_extra_info("sockname")
-        self.transport.get_extra_info("")
-        update_addr((self.check_bound_ip(), addr[1]))
-        logger.info(f"UDP Server started on {self.check_bound_ip()}:{addr[1]}")
+        update_addr((addr[0], addr[1]))
+        logger.info(f"UDP Server started on {addr[0]}:{addr[1]}")
         await asyncio.Event().wait()
-
 
     async def stop(self):
         if self.transport:

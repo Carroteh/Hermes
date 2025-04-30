@@ -24,12 +24,8 @@ logging.basicConfig(
 async def full_run():
     print_logo()
 
-    # Setup this node
-    protocol = UDPProtocol("0.0.0.0", 0)
-    id = random.randint(0, 2 ** 160)
-    dht = DHT(id, protocol, Storage(), ("0.0.0.0", 0))
-    asyncio.create_task(dht.start())
-    hermes = Hermes(dht)
+    dht = None
+    hermes = None
 
     # Use asyncio.Queue for commands
     command_queue = asyncio.Queue()
@@ -49,6 +45,17 @@ async def full_run():
         print("> ", end="", flush=True)
         command = await command_queue.get()
         args = command.split(" ")
+
+        if args[0] != "start" and dht is None:
+            print("Please start the DHT first: start <1-VM>  <0-otherwise>")
+            continue
+
+        if args[0] == "start":
+            if len(args) != 2:
+                print("usage: start <1-VM>  <0-otherwise>")
+                continue
+            dht, hermes = await start(int(args[1]) == 1)
+            print("DHT Started.")
 
         if args[0] == "bootstrap":
             if len(args) != 4:
@@ -86,6 +93,17 @@ async def full_run():
             help()
         elif command == "q":
             break
+
+async def start(vm: bool) -> (DHT, Hermes):
+    # Setup this node
+    ip = "192.168.56.1" if vm else "8.8.8.8"
+    protocol = UDPProtocol(ip, 0)
+    id = random.randint(0, 2 ** 160)
+    dht = DHT(id, protocol, Storage(), (ip, 0))
+    asyncio.create_task(dht.start())
+    hermes = Hermes(dht)
+    return dht, hermes
+
 
 async def bootstrap(dht, id, host, port):
     prot = UDPProtocol(host, port)
