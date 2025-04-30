@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 
 # Size of KBuckets essentially
-K_VAL = 1
+K_VAL = 2
 # System wide Concurrency Parameter
 A_VAL = K_VAL
 

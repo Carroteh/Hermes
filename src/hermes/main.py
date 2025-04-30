@@ -111,7 +111,11 @@ async def send(hermes, nickname: str, message: str):
         print("Message sent successfully.")
 
 async def read(hermes, nickname: str):
-    msg: list[LightWeightMessage] = await hermes.get_messages_from_msg_box(nickname)
+    msg, err = await hermes.get_messages_from_msg_box(nickname)
+
+    if err.has_error():
+        print(err.error_message)
+        return
 
     sorted_msg = sorted(msg, key=lambda x: x.timestamp)
     for m in sorted_msg:

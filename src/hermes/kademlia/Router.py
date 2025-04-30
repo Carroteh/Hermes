@@ -85,7 +85,7 @@ class Router:
             # Do the same for the far uncontacted nodes
             elif have_farther:
                 new_nodes_to_query = farther_uncontacted_nodes[:A_VAL]
-                contacted_Nodes.extend(n for n in new_nodes_to_query if n not in contacted_ids)
+                contacted_Nodes.extend(n for n in new_nodes_to_query if n.id not in contacted_ids)
                 contacted_ids.update(n.id for n in new_nodes_to_query)
 
                 # Query again

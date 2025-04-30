@@ -11,10 +11,14 @@ class Hermes:
         self._dht: DHT = dht
         self._msg_tools = KeyValueTools()
 
+    def connected(self) -> bool:
+        return self._dht.router.node.bucket_list.get_num_contacts() > 0
+
     async def find_by_nickname(self, nickname: str) -> str:
         '''
         Check if the username exists in the DHT
         '''
+
         key = contact_key(nickname)
         val = None
 
@@ -22,10 +26,19 @@ class Hermes:
 
         return val
 
-    async def send_message(self, recipient: str, message: str):
+    async def send_message(self, recipient: str, message: str) -> Error:
         '''
         Store a message onto the DHT, along with updating its message box
         '''
+        if not self.connected():
+            return Error(isolated=True, error_message="Node is isolated. Try bootstrapping.")
+
+        if self._nickname == recipient:
+            return Error(query_with_self=True, error_message="Cannot query with self.")
+
+        if self._nickname is None:
+            return Error(not_registered=True, error_message="Not registered.")
+
         # Check recipients existence
         recip = await self.find_by_nickname(recipient)
 
@@ -59,10 +72,24 @@ class Hermes:
         # Check valid recipient
         return Error()
 
-    async def get_messages_from_msg_box(self, sender: str) -> list[LightWeightMessage]:
+    async def get_messages_from_msg_box(self, sender: str) -> (list[LightWeightMessage], Error):
         '''
         Return a list of messages from a message box
         '''
+        if not self.connected():
+            return Error(isolated=True, error_message="Node is isolated. Try bootstrapping.")
+
+        if self._nickname is None:
+            return [], Error(not_registered=True, error_message="Not registered.")
+
+        if self._nickname == sender:
+            return [], Error(query_with_self=True, error_message="Cannot query with self.")
+
+        nick = await self.find_by_nickname(sender)
+
+        if nick is None:
+            return Error(user_doesnt_exist=True, error_message="Sender doesn't exist.")
+
         returned_msgs: list[LightWeightMessage] = []
 
         msg_box_key = message_box_key(self._nickname, sender)
@@ -70,7 +97,7 @@ class Hermes:
         found, a , msg_box_raw = await self._dht.find_value(msg_box_key)
 
         if not found:
-            return []
+            return [], Error()
 
         msg_box = MessageBoxValue.from_json(msg_box_raw)
 
@@ -82,7 +109,7 @@ class Hermes:
                 decrypted_msg = self._msg_tools.read_message(msg_val, self._nickname)
                 returned_msgs.append(LightWeightMessage(msg_val.timestamp, msg_val.sender, msg_val.receiver, decrypted_msg))
 
-        return returned_msgs
+        return returned_msgs, Error()
 
     def get_nickname(self):
         return self._nickname
@@ -91,6 +118,13 @@ class Hermes:
         '''
         Check if a nickname is available, if so register it on the DHT
         '''
+        if not self.connected():
+            return Error(isolated=True, error_message="Node is isolated. Try bootstrapping.")
+
+        # Check already registered
+        if self._nickname is not None:
+            return Error(already_registered=True, error_message="This node already has a registered nickname.")
+
         # Check nickname already exists
         contact_value = await self.find_by_nickname(nickname)
 
