@@ -33,6 +33,7 @@ class ContactValue(BaseValue):
     ip_address: str
     udp_port: int
     public_key: str
+    tcp_port: int
 
 @dataclass
 class LightWeightMessage:

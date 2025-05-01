@@ -55,7 +55,6 @@ class UDPServer:
         addr =  self.transport.get_extra_info("sockname")
         update_addr((addr[0], addr[1]))
         logger.info(f"UDP Server started on {addr[0]}:{addr[1]}")
-        await asyncio.Event().wait()
 
     async def stop(self):
         if self.transport:

@@ -1,0 +1,1865 @@
+2025-05-01 23:31:06,847 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-3' coro=<Hermes.start() done, defined at C:\Users\phili\OneDrive - University of Johannesburg\BScHons Information Technology\Data Communications (IT28X97)\Project\Hermes\src\hermes\core\Hermes.py:19> exception=TypeError("Hermes.get_lightweight_message_from_json() missing 1 required positional argument: 'message_value'")>
+Traceback (most recent call last):
+  File "C:\Users\phili\OneDrive - University of Johannesburg\BScHons Information Technology\Data Communications (IT28X97)\Project\Hermes\src\hermes\core\Hermes.py", line 20, in start
+    await self._tcp_server.handle_requests(host, self.get_lightweight_message_from_json())
+                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+TypeError: Hermes.get_lightweight_message_from_json() missing 1 required positional argument: 'message_value'
+2025-05-01 23:31:06,849 - INFO - UDP Server started on 192.168.0.226:54359
+2025-05-01 23:31:28,432 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-3' coro=<Hermes.start() done, defined at C:\Users\phili\OneDrive - University of Johannesburg\BScHons Information Technology\Data Communications (IT28X97)\Project\Hermes\src\hermes\core\Hermes.py:19> exception=TypeError("Hermes.get_lightweight_message_from_json() missing 1 required positional argument: 'message_value'")>
+Traceback (most recent call last):
+  File "C:\Users\phili\OneDrive - University of Johannesburg\BScHons Information Technology\Data Communications (IT28X97)\Project\Hermes\src\hermes\core\Hermes.py", line 20, in start
+    await self._tcp_server.handle_requests(host, self.get_lightweight_message_from_json())
+                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+TypeError: Hermes.get_lightweight_message_from_json() missing 1 required positional argument: 'message_value'
+2025-05-01 23:31:28,434 - INFO - UDP Server started on 192.168.0.226:64950
+2025-05-01 23:31:39,300 - INFO - >>> Added contact: ID: 942496872033318274871138751375159786677717535999 ~ HOST: 192.168.0.226 ~ PORT: 54359 Last Seen: 2025-05-01 23:31:39.300402
+2025-05-01 23:31:39,301 - INFO - Sending FIND_NODE RPC to: 192.168.0.226:54359
+2025-05-01 23:31:39,301 - INFO - Received FIND_NODE request from 192.168.0.226:57039
+2025-05-01 23:31:39,301 - INFO - >>> Added contact: ID: 1284651427386690325809887948223974284483711534129 ~ HOST: 192.168.0.226 ~ PORT: 64950 Last Seen: 2025-05-01 23:31:39.301726
+2025-05-01 23:31:39,301 - INFO - Sending FIND_NODE_RESPONSE to 192.168.0.226:57039
+2025-05-01 23:31:39,302 - INFO - FIND_NODE returned 0 contacts from 192.168.0.226:54359
+2025-05-01 23:31:52,866 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:64950
+2025-05-01 23:31:52,866 - INFO - Received FIND_VALUE request from 192.168.0.226:57040
+2025-05-01 23:31:52,866 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-01 23:31:52,866 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:57040
+2025-05-01 23:31:52,867 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:64950
+2025-05-01 23:31:52,867 - INFO - Sending STORE RPC to: 192.168.0.226:64950
+2025-05-01 23:31:52,868 - INFO - Received STORE request from 192.168.0.226:57041
+2025-05-01 23:31:52,868 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-01 23:31:52,868 - INFO - Sending STORE_RESPONSE to 192.168.0.226:57041
+2025-05-01 23:31:52,868 - INFO - STORE successful to 192.168.0.226:64950
+2025-05-01 23:32:04,072 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:54359
+2025-05-01 23:32:04,072 - INFO - Received FIND_VALUE request from 192.168.0.226:49248
+2025-05-01 23:32:04,072 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-01 23:32:04,072 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:49248
+2025-05-01 23:32:04,073 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:54359
+2025-05-01 23:32:04,073 - INFO - Sending STORE RPC to: 192.168.0.226:54359
+2025-05-01 23:32:04,073 - INFO - Received STORE request from 192.168.0.226:49249
+2025-05-01 23:32:04,073 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-01 23:32:04,074 - INFO - Sending STORE_RESPONSE to 192.168.0.226:49249
+2025-05-01 23:32:04,074 - INFO - STORE successful to 192.168.0.226:54359
+2025-05-01 23:35:06,012 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-3' coro=<Hermes.start() done, defined at C:\Users\phili\OneDrive - University of Johannesburg\BScHons Information Technology\Data Communications (IT28X97)\Project\Hermes\src\hermes\core\Hermes.py:19> exception=TypeError("Hermes.get_lightweight_message_from_json() missing 1 required positional argument: 'message_value'")>
+Traceback (most recent call last):
+  File "C:\Users\phili\OneDrive - University of Johannesburg\BScHons Information Technology\Data Communications (IT28X97)\Project\Hermes\src\hermes\core\Hermes.py", line 20, in start
+    await self._tcp_server.handle_requests(host, self.get_lightweight_message_from_json())
+                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+TypeError: Hermes.get_lightweight_message_from_json() missing 1 required positional argument: 'message_value'
+2025-05-01 23:35:06,013 - INFO - UDP Server started on 192.168.0.226:59841
+2025-05-01 23:35:08,936 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-3' coro=<Hermes.start() done, defined at C:\Users\phili\OneDrive - University of Johannesburg\BScHons Information Technology\Data Communications (IT28X97)\Project\Hermes\src\hermes\core\Hermes.py:19> exception=TypeError("Hermes.get_lightweight_message_from_json() missing 1 required positional argument: 'message_value'")>
+Traceback (most recent call last):
+  File "C:\Users\phili\OneDrive - University of Johannesburg\BScHons Information Technology\Data Communications (IT28X97)\Project\Hermes\src\hermes\core\Hermes.py", line 20, in start
+    await self._tcp_server.handle_requests(host, self.get_lightweight_message_from_json())
+                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+TypeError: Hermes.get_lightweight_message_from_json() missing 1 required positional argument: 'message_value'
+2025-05-01 23:35:08,937 - INFO - UDP Server started on 192.168.0.226:59844
+2025-05-01 23:35:28,270 - INFO - >>> Added contact: ID: 43080623074157757498588492213974494337716894122 ~ HOST: 192.168.0.226 ~ PORT: 59841 Last Seen: 2025-05-01 23:35:28.270104
+2025-05-01 23:35:28,270 - INFO - Sending FIND_NODE RPC to: 192.168.0.226:59841
+2025-05-01 23:35:28,271 - INFO - Received FIND_NODE request from 192.168.0.226:59845
+2025-05-01 23:35:28,271 - INFO - >>> Added contact: ID: 747048804665554884601936201925892076321145036152 ~ HOST: 192.168.0.226 ~ PORT: 59844 Last Seen: 2025-05-01 23:35:28.271943
+2025-05-01 23:35:28,272 - INFO - Sending FIND_NODE_RESPONSE to 192.168.0.226:59845
+2025-05-01 23:35:28,272 - INFO - FIND_NODE returned 0 contacts from 192.168.0.226:59841
+2025-05-01 23:35:34,210 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:59841
+2025-05-01 23:35:34,211 - INFO - Received FIND_VALUE request from 192.168.0.226:59850
+2025-05-01 23:35:34,211 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-01 23:35:34,211 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:59850
+2025-05-01 23:35:34,211 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:59841
+2025-05-01 23:35:34,212 - INFO - Sending STORE RPC to: 192.168.0.226:59841
+2025-05-01 23:35:34,212 - INFO - Received STORE request from 192.168.0.226:59851
+2025-05-01 23:35:34,213 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-01 23:35:34,213 - INFO - Sending STORE_RESPONSE to 192.168.0.226:59851
+2025-05-01 23:35:34,213 - INFO - STORE successful to 192.168.0.226:59841
+2025-05-01 23:35:38,214 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:59844
+2025-05-01 23:35:38,215 - INFO - Received FIND_VALUE request from 192.168.0.226:59857
+2025-05-01 23:35:38,215 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-01 23:35:38,215 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:59857
+2025-05-01 23:35:38,216 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:59844
+2025-05-01 23:35:38,216 - INFO - Sending STORE RPC to: 192.168.0.226:59844
+2025-05-01 23:35:38,217 - INFO - Received STORE request from 192.168.0.226:59858
+2025-05-01 23:35:38,217 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-01 23:35:38,217 - INFO - Sending STORE_RESPONSE to 192.168.0.226:59858
+2025-05-01 23:35:38,217 - INFO - STORE successful to 192.168.0.226:59844
+2025-05-01 23:35:50,807 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:59841
+2025-05-01 23:35:50,807 - INFO - Received FIND_VALUE request from 192.168.0.226:52330
+2025-05-01 23:35:50,807 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-01 23:35:50,807 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:52330
+2025-05-01 23:35:50,808 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:59841
+2025-05-01 23:36:06,237 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:59844
+2025-05-01 23:36:06,238 - INFO - Received FIND_VALUE request from 192.168.0.226:53410
+2025-05-01 23:36:06,238 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-01 23:36:06,238 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:53410
+2025-05-01 23:36:06,239 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:59844
+2025-05-01 23:36:13,715 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:59841
+2025-05-01 23:36:13,716 - INFO - Received FIND_VALUE request from 192.168.0.226:49955
+2025-05-01 23:36:13,716 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-01 23:36:13,716 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:49955
+2025-05-01 23:36:13,716 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:59841
+2025-05-01 23:36:13,717 - INFO - Sending STORE RPC to: 192.168.0.226:59841
+2025-05-01 23:36:13,717 - INFO - Received STORE request from 192.168.0.226:49956
+2025-05-01 23:36:13,717 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-01 23:36:13,717 - INFO - Sending STORE_RESPONSE to 192.168.0.226:49956
+2025-05-01 23:36:13,717 - INFO - STORE successful to 192.168.0.226:59841
+2025-05-01 23:37:12,798 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-3' coro=<Hermes.start() done, defined at C:\Users\phili\OneDrive - University of Johannesburg\BScHons Information Technology\Data Communications (IT28X97)\Project\Hermes\src\hermes\core\Hermes.py:19> exception=TypeError("Hermes.get_lightweight_message_from_json() missing 1 required positional argument: 'message_value'")>
+Traceback (most recent call last):
+  File "C:\Users\phili\OneDrive - University of Johannesburg\BScHons Information Technology\Data Communications (IT28X97)\Project\Hermes\src\hermes\core\Hermes.py", line 20, in start
+    await self._tcp_server.handle_requests(host, self.get_lightweight_message_from_json())
+                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+TypeError: Hermes.get_lightweight_message_from_json() missing 1 required positional argument: 'message_value'
+2025-05-01 23:37:12,799 - INFO - UDP Server started on 192.168.0.226:57896
+2025-05-01 23:37:15,555 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-3' coro=<Hermes.start() done, defined at C:\Users\phili\OneDrive - University of Johannesburg\BScHons Information Technology\Data Communications (IT28X97)\Project\Hermes\src\hermes\core\Hermes.py:19> exception=TypeError("Hermes.get_lightweight_message_from_json() missing 1 required positional argument: 'message_value'")>
+Traceback (most recent call last):
+  File "C:\Users\phili\OneDrive - University of Johannesburg\BScHons Information Technology\Data Communications (IT28X97)\Project\Hermes\src\hermes\core\Hermes.py", line 20, in start
+    await self._tcp_server.handle_requests(host, self.get_lightweight_message_from_json())
+                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+TypeError: Hermes.get_lightweight_message_from_json() missing 1 required positional argument: 'message_value'
+2025-05-01 23:37:15,556 - INFO - UDP Server started on 192.168.0.226:57898
+2025-05-01 23:37:25,530 - INFO - >>> Added contact: ID: 36989214662559042706338374571952287517562399249 ~ HOST: 192.168.0.226 ~ PORT: 57896 Last Seen: 2025-05-01 23:37:25.530553
+2025-05-01 23:37:25,531 - INFO - Sending FIND_NODE RPC to: 192.168.0.226:57896
+2025-05-01 23:37:25,531 - INFO - Received FIND_NODE request from 192.168.0.226:64399
+2025-05-01 23:37:25,531 - INFO - >>> Added contact: ID: 1247198724406848757601325404240004620918971433662 ~ HOST: 192.168.0.226 ~ PORT: 57898 Last Seen: 2025-05-01 23:37:25.531894
+2025-05-01 23:37:25,531 - INFO - Sending FIND_NODE_RESPONSE to 192.168.0.226:64399
+2025-05-01 23:37:25,532 - INFO - FIND_NODE returned 0 contacts from 192.168.0.226:57896
+2025-05-01 23:37:30,820 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:57898
+2025-05-01 23:37:30,821 - INFO - Received FIND_VALUE request from 192.168.0.226:64400
+2025-05-01 23:37:30,821 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-01 23:37:30,821 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:64400
+2025-05-01 23:37:30,821 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:57898
+2025-05-01 23:37:30,822 - INFO - Sending STORE RPC to: 192.168.0.226:57898
+2025-05-01 23:37:30,822 - INFO - Received STORE request from 192.168.0.226:64401
+2025-05-01 23:37:30,822 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-01 23:37:30,822 - INFO - Sending STORE_RESPONSE to 192.168.0.226:64401
+2025-05-01 23:37:30,822 - INFO - STORE successful to 192.168.0.226:57898
+2025-05-01 23:37:34,425 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:57896
+2025-05-01 23:37:34,426 - INFO - Received FIND_VALUE request from 192.168.0.226:64406
+2025-05-01 23:37:34,426 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-01 23:37:34,426 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:64406
+2025-05-01 23:37:34,427 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:57896
+2025-05-01 23:37:34,427 - INFO - Sending STORE RPC to: 192.168.0.226:57896
+2025-05-01 23:37:34,428 - INFO - Received STORE request from 192.168.0.226:64407
+2025-05-01 23:37:34,428 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-01 23:37:34,428 - INFO - Sending STORE_RESPONSE to 192.168.0.226:64407
+2025-05-01 23:37:34,428 - INFO - STORE successful to 192.168.0.226:57896
+2025-05-01 23:37:38,306 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:57896
+2025-05-01 23:37:38,307 - INFO - Received FIND_VALUE request from 192.168.0.226:64413
+2025-05-01 23:37:38,308 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-01 23:37:38,308 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:64413
+2025-05-01 23:37:38,308 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:57896
+2025-05-01 23:37:40,589 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:57896
+2025-05-01 23:37:40,590 - INFO - Received FIND_VALUE request from 192.168.0.226:51299
+2025-05-01 23:37:40,590 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-01 23:37:40,590 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:51299
+2025-05-01 23:37:40,591 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:57896
+2025-05-01 23:37:40,592 - INFO - Sending STORE RPC to: 192.168.0.226:57896
+2025-05-01 23:37:40,592 - INFO - Received STORE request from 192.168.0.226:51300
+2025-05-01 23:37:40,592 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-01 23:37:40,592 - INFO - Sending STORE_RESPONSE to 192.168.0.226:51300
+2025-05-01 23:37:40,593 - INFO - STORE successful to 192.168.0.226:57896
+2025-05-01 23:42:48,350 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-3' coro=<Hermes.start() done, defined at C:\Users\phili\OneDrive - University of Johannesburg\BScHons Information Technology\Data Communications (IT28X97)\Project\Hermes\src\hermes\core\Hermes.py:19> exception=TypeError("Hermes.get_lightweight_message_from_json() missing 1 required positional argument: 'message_value'")>
+Traceback (most recent call last):
+  File "C:\Users\phili\OneDrive - University of Johannesburg\BScHons Information Technology\Data Communications (IT28X97)\Project\Hermes\src\hermes\core\Hermes.py", line 20, in start
+    await self._tcp_server.handle_requests(host, self.get_lightweight_message_from_json())
+                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+TypeError: Hermes.get_lightweight_message_from_json() missing 1 required positional argument: 'message_value'
+2025-05-01 23:42:48,351 - INFO - UDP Server started on 192.168.0.226:61024
+2025-05-01 23:42:50,589 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-3' coro=<Hermes.start() done, defined at C:\Users\phili\OneDrive - University of Johannesburg\BScHons Information Technology\Data Communications (IT28X97)\Project\Hermes\src\hermes\core\Hermes.py:19> exception=TypeError("Hermes.get_lightweight_message_from_json() missing 1 required positional argument: 'message_value'")>
+Traceback (most recent call last):
+  File "C:\Users\phili\OneDrive - University of Johannesburg\BScHons Information Technology\Data Communications (IT28X97)\Project\Hermes\src\hermes\core\Hermes.py", line 20, in start
+    await self._tcp_server.handle_requests(host, self.get_lightweight_message_from_json())
+                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+TypeError: Hermes.get_lightweight_message_from_json() missing 1 required positional argument: 'message_value'
+2025-05-01 23:42:50,590 - INFO - UDP Server started on 192.168.0.226:61026
+2025-05-01 23:43:14,823 - INFO - >>> Added contact: ID: 114934233143335679535328128273902614720197012410 ~ HOST: 192.168.0.226 ~ PORT: 61024 Last Seen: 2025-05-01 23:43:14.822899
+2025-05-01 23:43:14,823 - INFO - Sending FIND_NODE RPC to: 192.168.0.226:61024
+2025-05-01 23:43:14,824 - INFO - Received FIND_NODE request from 192.168.0.226:61036
+2025-05-01 23:43:14,824 - INFO - >>> Added contact: ID: 36007418757788789574120335543914886012177996690 ~ HOST: 192.168.0.226 ~ PORT: 61026 Last Seen: 2025-05-01 23:43:14.824307
+2025-05-01 23:43:14,824 - INFO - Sending FIND_NODE_RESPONSE to 192.168.0.226:61036
+2025-05-01 23:43:14,824 - INFO - FIND_NODE returned 0 contacts from 192.168.0.226:61024
+2025-05-01 23:43:17,963 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:61024
+2025-05-01 23:43:17,964 - INFO - Received FIND_VALUE request from 192.168.0.226:61037
+2025-05-01 23:43:17,964 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-01 23:43:17,964 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:61037
+2025-05-01 23:43:17,964 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:61024
+2025-05-01 23:43:17,964 - INFO - Sending STORE RPC to: 192.168.0.226:61024
+2025-05-01 23:43:17,966 - INFO - Received STORE request from 192.168.0.226:61038
+2025-05-01 23:43:17,966 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-01 23:43:17,966 - INFO - Sending STORE_RESPONSE to 192.168.0.226:61038
+2025-05-01 23:43:17,966 - INFO - STORE successful to 192.168.0.226:61024
+2025-05-01 23:43:22,647 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:61026
+2025-05-01 23:43:22,647 - INFO - Received FIND_VALUE request from 192.168.0.226:61000
+2025-05-01 23:43:22,647 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-01 23:43:22,647 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:61000
+2025-05-01 23:43:22,648 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:61026
+2025-05-01 23:43:22,648 - INFO - Sending STORE RPC to: 192.168.0.226:61026
+2025-05-01 23:43:22,648 - INFO - Received STORE request from 192.168.0.226:61001
+2025-05-01 23:43:22,648 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-01 23:43:22,649 - INFO - Sending STORE_RESPONSE to 192.168.0.226:61001
+2025-05-01 23:43:22,649 - INFO - STORE successful to 192.168.0.226:61026
+2025-05-01 23:43:52,034 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:61024
+2025-05-01 23:43:52,035 - INFO - Received FIND_VALUE request from 192.168.0.226:65273
+2025-05-01 23:43:52,035 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-01 23:43:52,035 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:65273
+2025-05-01 23:43:52,035 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:61024
+2025-05-01 23:43:52,035 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:61024
+2025-05-01 23:43:52,036 - INFO - Received FIND_VALUE request from 192.168.0.226:65274
+2025-05-01 23:43:52,036 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-01 23:43:52,036 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:65274
+2025-05-01 23:43:52,036 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:61024
+2025-05-01 23:43:52,037 - INFO - Sending STORE RPC to: 192.168.0.226:61024
+2025-05-01 23:43:52,037 - INFO - Received STORE request from 192.168.0.226:65275
+2025-05-01 23:43:52,037 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-01 23:43:52,037 - INFO - Sending STORE_RESPONSE to 192.168.0.226:65275
+2025-05-01 23:43:52,037 - INFO - STORE successful to 192.168.0.226:61024
+2025-05-01 23:43:52,042 - INFO - Sending STORE RPC to: 192.168.0.226:61024
+2025-05-01 23:43:52,042 - INFO - Received STORE request from 192.168.0.226:65276
+2025-05-01 23:43:52,042 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-01 23:43:52,042 - INFO - Sending STORE_RESPONSE to 192.168.0.226:65276
+2025-05-01 23:43:52,042 - INFO - STORE successful to 192.168.0.226:61024
+2025-05-01 23:48:26,202 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-3' coro=<Hermes.start() done, defined at C:\Users\phili\OneDrive - University of Johannesburg\BScHons Information Technology\Data Communications (IT28X97)\Project\Hermes\src\hermes\core\Hermes.py:19> exception=TypeError("Hermes.get_lightweight_message_from_json() missing 1 required positional argument: 'message_value'")>
+Traceback (most recent call last):
+  File "C:\Users\phili\OneDrive - University of Johannesburg\BScHons Information Technology\Data Communications (IT28X97)\Project\Hermes\src\hermes\core\Hermes.py", line 20, in start
+    await self._tcp_server.handle_requests(host, self.get_lightweight_message_from_json())
+                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+TypeError: Hermes.get_lightweight_message_from_json() missing 1 required positional argument: 'message_value'
+2025-05-01 23:48:26,203 - INFO - UDP Server started on 192.168.0.226:61519
+2025-05-01 23:48:52,369 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-3' coro=<Hermes.start() done, defined at C:\Users\phili\OneDrive - University of Johannesburg\BScHons Information Technology\Data Communications (IT28X97)\Project\Hermes\src\hermes\core\Hermes.py:19> exception=TypeError("Hermes.get_lightweight_message_from_json() missing 1 required positional argument: 'message_value'")>
+Traceback (most recent call last):
+  File "C:\Users\phili\OneDrive - University of Johannesburg\BScHons Information Technology\Data Communications (IT28X97)\Project\Hermes\src\hermes\core\Hermes.py", line 20, in start
+    await self._tcp_server.handle_requests(host, self.get_lightweight_message_from_json())
+                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+TypeError: Hermes.get_lightweight_message_from_json() missing 1 required positional argument: 'message_value'
+2025-05-01 23:48:52,371 - INFO - UDP Server started on 192.168.0.226:52788
+2025-05-01 23:49:15,527 - INFO - >>> Added contact: ID: 447116154647719165781542496919721373766040949890 ~ HOST: 192.168.0.226 ~ PORT: 61519 Last Seen: 2025-05-01 23:49:15.527527
+2025-05-01 23:49:15,528 - INFO - Sending FIND_NODE RPC to: 192.168.0.226:61519
+2025-05-01 23:49:15,528 - INFO - Received FIND_NODE request from 192.168.0.226:62359
+2025-05-01 23:49:15,529 - INFO - >>> Added contact: ID: 639223932713457303148166854891322564489450603702 ~ HOST: 192.168.0.226 ~ PORT: 52788 Last Seen: 2025-05-01 23:49:15.529156
+2025-05-01 23:49:15,529 - INFO - Sending FIND_NODE_RESPONSE to 192.168.0.226:62359
+2025-05-01 23:49:15,529 - INFO - FIND_NODE returned 0 contacts from 192.168.0.226:61519
+2025-05-01 23:49:37,784 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:61519
+2025-05-01 23:49:37,785 - INFO - Received FIND_VALUE request from 192.168.0.226:56012
+2025-05-01 23:49:37,785 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-01 23:49:37,785 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:56012
+2025-05-01 23:49:37,785 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:61519
+2025-05-01 23:49:37,786 - INFO - Sending STORE RPC to: 192.168.0.226:61519
+2025-05-01 23:49:37,786 - INFO - Received STORE request from 192.168.0.226:56013
+2025-05-01 23:49:37,786 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-01 23:49:37,786 - INFO - Sending STORE_RESPONSE to 192.168.0.226:56013
+2025-05-01 23:49:37,786 - INFO - STORE successful to 192.168.0.226:61519
+2025-05-01 23:49:42,825 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:52788
+2025-05-01 23:49:42,826 - INFO - Received FIND_VALUE request from 192.168.0.226:56014
+2025-05-01 23:49:42,826 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-01 23:49:42,826 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:56014
+2025-05-01 23:49:42,826 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:52788
+2025-05-01 23:49:42,827 - INFO - Sending STORE RPC to: 192.168.0.226:52788
+2025-05-01 23:49:42,827 - INFO - Received STORE request from 192.168.0.226:56015
+2025-05-01 23:49:42,827 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-01 23:49:42,827 - INFO - Sending STORE_RESPONSE to 192.168.0.226:56015
+2025-05-01 23:49:42,827 - INFO - STORE successful to 192.168.0.226:52788
+2025-05-01 23:49:47,989 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:52788
+2025-05-01 23:49:47,989 - INFO - Received FIND_VALUE request from 192.168.0.226:56016
+2025-05-01 23:49:47,989 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-01 23:49:47,989 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:56016
+2025-05-01 23:49:47,990 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:52788
+2025-05-01 23:49:58,325 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:61519
+2025-05-01 23:49:58,325 - INFO - Received FIND_VALUE request from 192.168.0.226:64270
+2025-05-01 23:49:58,326 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-01 23:49:58,326 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:64270
+2025-05-01 23:49:58,326 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:61519
+2025-05-01 23:50:01,404 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:61519
+2025-05-01 23:50:01,405 - INFO - Received FIND_VALUE request from 192.168.0.226:55558
+2025-05-01 23:50:01,405 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-01 23:50:01,405 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:55558
+2025-05-01 23:50:01,406 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:61519
+2025-05-01 23:50:01,407 - INFO - Sending STORE RPC to: 192.168.0.226:61519
+2025-05-01 23:50:01,407 - INFO - Received STORE request from 192.168.0.226:55559
+2025-05-01 23:50:01,407 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-01 23:50:01,407 - INFO - Sending STORE_RESPONSE to 192.168.0.226:55559
+2025-05-01 23:50:01,408 - INFO - STORE successful to 192.168.0.226:61519
+2025-05-01 23:50:01,412 - INFO - Sending STORE RPC to: 192.168.0.226:61519
+2025-05-01 23:50:01,412 - INFO - Received STORE request from 192.168.0.226:55560
+2025-05-01 23:50:01,413 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-01 23:50:01,413 - INFO - Sending STORE_RESPONSE to 192.168.0.226:55560
+2025-05-01 23:50:01,413 - INFO - STORE successful to 192.168.0.226:61519
+2025-05-01 23:50:44,033 - INFO - UDP Server started on 192.168.0.226:50117
+2025-05-01 23:50:48,240 - INFO - >>> Added contact: ID: 447116154647719165781542496919721373766040949890 ~ HOST: 192.168.0.226 ~ PORT: 61519 Last Seen: 2025-05-01 23:50:48.240474
+2025-05-01 23:50:48,241 - INFO - Sending FIND_NODE RPC to: 192.168.0.226:61519
+2025-05-01 23:50:48,242 - INFO - Received FIND_NODE request from 192.168.0.226:50118
+2025-05-01 23:50:48,243 - INFO - >>> Added contact: ID: 1058052254775807439854854215456766743588401414926 ~ HOST: 192.168.0.226 ~ PORT: 50117 Last Seen: 2025-05-01 23:50:48.243012
+2025-05-01 23:50:48,243 - INFO - Sending FIND_NODE_RESPONSE to 192.168.0.226:50118
+2025-05-01 23:50:48,243 - INFO - FIND_NODE returned 1 contacts from 192.168.0.226:61519
+2025-05-01 23:50:48,244 - INFO - >>> Added contact: ID: 639223932713457303148166854891322564489450603702 ~ HOST: 192.168.0.226 ~ PORT: 52788 Last Seen: 2025-05-01 23:50:48.244028
+2025-05-01 23:50:50,584 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:61519
+2025-05-01 23:50:50,584 - INFO - Received FIND_VALUE request from 192.168.0.226:50119
+2025-05-01 23:50:50,585 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-01 23:50:50,585 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:50119
+2025-05-01 23:50:50,585 - INFO - FIND_VALUE returned 1 contacts from 192.168.0.226:61519
+2025-05-01 23:50:50,586 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:52788
+2025-05-01 23:50:50,586 - INFO - Received FIND_VALUE request from 192.168.0.226:50120
+2025-05-01 23:50:50,586 - INFO - >>> Added contact: ID: 1058052254775807439854854215456766743588401414926 ~ HOST: 192.168.0.226 ~ PORT: 50117 Last Seen: 2025-05-01 23:50:50.586786
+2025-05-01 23:50:50,586 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:50120
+2025-05-01 23:50:50,587 - INFO - FIND_VALUE returned 1 contacts from 192.168.0.226:52788
+2025-05-01 23:50:50,588 - INFO - Sending STORE RPC to: 192.168.0.226:52788
+2025-05-01 23:50:50,588 - INFO - Received STORE request from 192.168.0.226:50121
+2025-05-01 23:50:50,588 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-01 23:50:50,588 - INFO - Sending STORE_RESPONSE to 192.168.0.226:50121
+2025-05-01 23:50:50,588 - INFO - STORE successful to 192.168.0.226:52788
+2025-05-01 23:50:50,589 - INFO - Sending STORE RPC to: 192.168.0.226:61519
+2025-05-01 23:50:50,589 - INFO - Received STORE request from 192.168.0.226:50122
+2025-05-01 23:50:50,589 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-01 23:50:50,589 - INFO - Sending STORE_RESPONSE to 192.168.0.226:50122
+2025-05-01 23:50:50,590 - INFO - STORE successful to 192.168.0.226:61519
+2025-05-01 23:50:54,335 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:61519
+2025-05-01 23:50:54,335 - INFO - Received FIND_VALUE request from 192.168.0.226:57362
+2025-05-01 23:50:54,335 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-01 23:50:54,335 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:57362
+2025-05-01 23:50:54,336 - INFO - FIND_VALUE returned value from 192.168.0.226:61519
+2025-05-01 23:50:54,336 - INFO - Sending STORE RPC to: 192.168.0.226:52788
+2025-05-01 23:50:54,337 - INFO - Received STORE request from 192.168.0.226:57363
+2025-05-01 23:50:54,337 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-01 23:50:54,337 - INFO - Sending STORE_RESPONSE to 192.168.0.226:57363
+2025-05-01 23:50:54,337 - INFO - STORE successful to 192.168.0.226:52788
+2025-05-01 23:50:54,337 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:61519
+2025-05-01 23:50:54,338 - INFO - Received FIND_VALUE request from 192.168.0.226:57364
+2025-05-01 23:50:54,338 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-01 23:50:54,338 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:57364
+2025-05-01 23:50:54,338 - INFO - FIND_VALUE returned 1 contacts from 192.168.0.226:61519
+2025-05-01 23:50:54,339 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:52788
+2025-05-01 23:50:54,339 - INFO - Received FIND_VALUE request from 192.168.0.226:57365
+2025-05-01 23:50:54,339 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-01 23:50:54,339 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:57365
+2025-05-01 23:50:54,339 - INFO - FIND_VALUE returned 1 contacts from 192.168.0.226:52788
+2025-05-01 23:50:59,702 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:61519
+2025-05-01 23:50:59,703 - INFO - Received FIND_VALUE request from 192.168.0.226:57375
+2025-05-01 23:50:59,703 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-01 23:50:59,703 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:57375
+2025-05-01 23:50:59,703 - INFO - FIND_VALUE returned value from 192.168.0.226:61519
+2025-05-01 23:50:59,704 - INFO - Sending STORE RPC to: 192.168.0.226:52788
+2025-05-01 23:50:59,704 - INFO - Received STORE request from 192.168.0.226:57376
+2025-05-01 23:50:59,704 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-01 23:50:59,704 - INFO - Sending STORE_RESPONSE to 192.168.0.226:57376
+2025-05-01 23:50:59,704 - INFO - STORE successful to 192.168.0.226:52788
+2025-05-01 23:50:59,705 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:61519
+2025-05-01 23:50:59,705 - INFO - Received FIND_VALUE request from 192.168.0.226:57377
+2025-05-01 23:50:59,706 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-01 23:50:59,706 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:57377
+2025-05-01 23:50:59,706 - INFO - FIND_VALUE returned 1 contacts from 192.168.0.226:61519
+2025-05-01 23:50:59,706 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:52788
+2025-05-01 23:50:59,707 - INFO - Received FIND_VALUE request from 192.168.0.226:57378
+2025-05-01 23:50:59,707 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-01 23:50:59,707 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:57378
+2025-05-01 23:50:59,707 - INFO - FIND_VALUE returned 1 contacts from 192.168.0.226:52788
+2025-05-01 23:50:59,708 - INFO - Sending STORE RPC to: 192.168.0.226:52788
+2025-05-01 23:50:59,708 - INFO - Received STORE request from 192.168.0.226:57379
+2025-05-01 23:50:59,708 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-01 23:50:59,708 - INFO - Sending STORE_RESPONSE to 192.168.0.226:57379
+2025-05-01 23:50:59,708 - INFO - STORE successful to 192.168.0.226:52788
+2025-05-01 23:50:59,709 - INFO - Sending STORE RPC to: 192.168.0.226:61519
+2025-05-01 23:50:59,709 - INFO - Received STORE request from 192.168.0.226:57380
+2025-05-01 23:50:59,709 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-01 23:50:59,709 - INFO - Sending STORE_RESPONSE to 192.168.0.226:57380
+2025-05-01 23:50:59,709 - INFO - STORE successful to 192.168.0.226:61519
+2025-05-01 23:50:59,714 - INFO - Sending STORE RPC to: 192.168.0.226:61519
+2025-05-01 23:50:59,715 - INFO - Received STORE request from 192.168.0.226:57381
+2025-05-01 23:50:59,715 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-01 23:50:59,715 - INFO - Sending STORE_RESPONSE to 192.168.0.226:57381
+2025-05-01 23:50:59,715 - INFO - STORE successful to 192.168.0.226:61519
+2025-05-01 23:50:59,716 - INFO - Sending STORE RPC to: 192.168.0.226:52788
+2025-05-01 23:50:59,716 - INFO - Received STORE request from 192.168.0.226:57382
+2025-05-01 23:50:59,716 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-01 23:50:59,716 - INFO - Sending STORE_RESPONSE to 192.168.0.226:57382
+2025-05-01 23:50:59,716 - INFO - STORE successful to 192.168.0.226:52788
+2025-05-01 23:51:43,111 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:61519
+2025-05-01 23:51:43,111 - INFO - Received FIND_VALUE request from 192.168.0.226:61815
+2025-05-01 23:51:43,111 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-01 23:51:43,112 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:61815
+2025-05-01 23:51:43,112 - INFO - FIND_VALUE returned value from 192.168.0.226:61519
+2025-05-01 23:51:43,112 - INFO - Sending STORE RPC to: 192.168.0.226:52788
+2025-05-01 23:51:43,113 - INFO - Received STORE request from 192.168.0.226:61816
+2025-05-01 23:51:43,113 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-01 23:51:43,113 - INFO - Sending STORE_RESPONSE to 192.168.0.226:61816
+2025-05-01 23:51:43,113 - INFO - STORE successful to 192.168.0.226:52788
+2025-05-01 23:51:43,114 - INFO - Sending STORE RPC to: 192.168.0.226:61519
+2025-05-01 23:51:43,115 - INFO - Received STORE request from 192.168.0.226:61817
+2025-05-01 23:51:43,115 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-01 23:51:43,115 - INFO - Sending STORE_RESPONSE to 192.168.0.226:61817
+2025-05-01 23:51:43,115 - INFO - STORE successful to 192.168.0.226:61519
+2025-05-01 23:51:43,115 - INFO - Sending STORE RPC to: 192.168.0.226:52788
+2025-05-01 23:51:43,116 - INFO - Received STORE request from 192.168.0.226:61818
+2025-05-01 23:51:43,116 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-01 23:51:43,116 - INFO - Sending STORE_RESPONSE to 192.168.0.226:61818
+2025-05-01 23:51:43,116 - INFO - STORE successful to 192.168.0.226:52788
+2025-05-01 23:51:43,196 - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-2' coro=<DHT.start() done, defined at C:\Users\phili\OneDrive - University of Johannesburg\BScHons Information Technology\Data Communications (IT28X97)\Project\Hermes\src\hermes\kademlia\DHT.py:33> wait_for=<Future pending cb=[Task.__wakeup()]>>
+2025-05-01 23:51:43,196 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-3' coro=<Hermes.start() done, defined at C:\Users\phili\OneDrive - University of Johannesburg\BScHons Information Technology\Data Communications (IT28X97)\Project\Hermes\src\hermes\core\Hermes.py:19> exception=TypeError("Hermes.get_lightweight_message_from_json() missing 1 required positional argument: 'message_value'")>
+Traceback (most recent call last):
+  File "C:\Users\phili\AppData\Local\Programs\Python\Python313\Lib\asyncio\tasks.py", line 304, in __step_run_and_handle_result
+    result = coro.send(None)
+  File "C:\Users\phili\OneDrive - University of Johannesburg\BScHons Information Technology\Data Communications (IT28X97)\Project\Hermes\src\hermes\core\Hermes.py", line 20, in start
+    await self._tcp_server.handle_requests(host, self.get_lightweight_message_from_json())
+                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+TypeError: Hermes.get_lightweight_message_from_json() missing 1 required positional argument: 'message_value'
+2025-05-01 23:54:33,784 - INFO - UDP Server started on 192.168.0.226:63387
+2025-05-01 23:54:37,213 - INFO - >>> Added contact: ID: 447116154647719165781542496919721373766040949890 ~ HOST: 192.168.0.226 ~ PORT: 61519 Last Seen: 2025-05-01 23:54:37.212377
+2025-05-01 23:54:37,218 - INFO - Sending FIND_NODE RPC to: 192.168.0.226:61519
+2025-05-01 23:54:37,220 - INFO - Received FIND_NODE request from 192.168.0.226:63388
+2025-05-01 23:54:37,221 - INFO - >>> Splitting bucket. Reorganizing contacts.
+2025-05-01 23:54:37,221 - INFO - >>> Added contact: ID: 639223932713457303148166854891322564489450603702 ~ HOST: 192.168.0.226 ~ PORT: 52788 Last Seen: 2025-05-01 23:50:01.413106
+2025-05-01 23:54:37,221 - INFO - >>> Added contact: ID: 1058052254775807439854854215456766743588401414926 ~ HOST: 192.168.0.226 ~ PORT: 50117 Last Seen: 2025-05-01 23:51:43.115213
+2025-05-01 23:54:37,221 - INFO - >>> Added contact: ID: 146542921722721524493052313269179729395967176534 ~ HOST: 192.168.0.226 ~ PORT: 63387 Last Seen: 2025-05-01 23:54:37.221010
+2025-05-01 23:54:37,221 - INFO - Sending FIND_NODE_RESPONSE to 192.168.0.226:63388
+2025-05-01 23:54:37,223 - INFO - FIND_NODE returned 2 contacts from 192.168.0.226:61519
+2025-05-01 23:54:37,225 - INFO - >>> Added contact: ID: 639223932713457303148166854891322564489450603702 ~ HOST: 192.168.0.226 ~ PORT: 52788 Last Seen: 2025-05-01 23:54:37.225137
+2025-05-01 23:54:37,226 - INFO - >>> Splitting bucket. Reorganizing contacts.
+2025-05-01 23:54:37,228 - INFO - >>> Added contact: ID: 447116154647719165781542496919721373766040949890 ~ HOST: 192.168.0.226 ~ PORT: 61519 Last Seen: 2025-05-01 23:54:37.212377
+2025-05-01 23:54:37,229 - INFO - >>> Added contact: ID: 639223932713457303148166854891322564489450603702 ~ HOST: 192.168.0.226 ~ PORT: 52788 Last Seen: 2025-05-01 23:54:37.225137
+2025-05-01 23:54:37,230 - INFO - >>> Added contact: ID: 1058052254775807439854854215456766743588401414926 ~ HOST: 192.168.0.226 ~ PORT: 50117 Last Seen: 2025-05-01 23:54:37.226510
+2025-05-01 23:54:37,235 - INFO - Sending FIND_NODE RPC to: 192.168.0.226:50117
+2025-05-01 23:54:44,439 - INFO - Sending STORE RPC to: 192.168.0.226:61519
+2025-05-01 23:54:44,441 - INFO - Received STORE request from 192.168.0.226:63391
+2025-05-01 23:54:44,441 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-01 23:54:44,441 - INFO - Sending STORE_RESPONSE to 192.168.0.226:63391
+2025-05-01 23:54:44,443 - INFO - Received FIND_NODE request from 192.168.0.226:63389
+2025-05-01 23:54:44,444 - INFO - >>> Splitting bucket. Reorganizing contacts.
+2025-05-01 23:54:44,446 - INFO - >>> Added contact: ID: 447116154647719165781542496919721373766040949890 ~ HOST: 192.168.0.226 ~ PORT: 61519 Last Seen: 2025-05-01 23:50:48.240474
+2025-05-01 23:54:44,447 - INFO - >>> Added contact: ID: 639223932713457303148166854891322564489450603702 ~ HOST: 192.168.0.226 ~ PORT: 52788 Last Seen: 2025-05-01 23:50:48.244028
+2025-05-01 23:54:44,448 - INFO - >>> Splitting bucket. Reorganizing contacts.
+2025-05-01 23:54:44,450 - INFO - >>> Added contact: ID: 447116154647719165781542496919721373766040949890 ~ HOST: 192.168.0.226 ~ PORT: 61519 Last Seen: 2025-05-01 23:50:48.240474
+2025-05-01 23:54:44,451 - INFO - >>> Added contact: ID: 639223932713457303148166854891322564489450603702 ~ HOST: 192.168.0.226 ~ PORT: 52788 Last Seen: 2025-05-01 23:50:48.244028
+2025-05-01 23:54:44,452 - INFO - >>> Added contact: ID: 146542921722721524493052313269179729395967176534 ~ HOST: 192.168.0.226 ~ PORT: 63387 Last Seen: 2025-05-01 23:54:44.444336
+2025-05-01 23:54:44,454 - INFO - Sending FIND_NODE_RESPONSE to 192.168.0.226:63389
+2025-05-01 23:54:44,457 - INFO - FIND_NODE returned 2 contacts from 192.168.0.226:50117
+2025-05-01 23:54:44,458 - INFO - STORE successful to 192.168.0.226:61519
+2025-05-01 23:54:44,459 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-01 23:54:44,461 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-01 23:54:44,463 - INFO - Sending STORE RPC to: 192.168.0.226:52788
+2025-05-01 23:54:44,464 - INFO - Received STORE request from 192.168.0.226:63392
+2025-05-01 23:54:44,464 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-01 23:54:44,464 - INFO - Sending STORE_RESPONSE to 192.168.0.226:63392
+2025-05-01 23:54:44,466 - INFO - STORE successful to 192.168.0.226:52788
+2025-05-01 23:55:48,577 - INFO - UDP Server started on 192.168.0.226:64635
+2025-05-01 23:56:05,657 - INFO - >>> Added contact: ID: 447116154647719165781542496919721373766040949890 ~ HOST: 192.168.0.226 ~ PORT: 61519 Last Seen: 2025-05-01 23:56:05.656867
+2025-05-01 23:56:05,662 - INFO - Sending FIND_NODE RPC to: 192.168.0.226:61519
+2025-05-01 23:56:05,664 - INFO - Received FIND_NODE request from 192.168.0.226:52579
+2025-05-01 23:56:05,664 - INFO - >>> Splitting bucket. Reorganizing contacts.
+2025-05-01 23:56:05,665 - INFO - >>> Added contact: ID: 639223932713457303148166854891322564489450603702 ~ HOST: 192.168.0.226 ~ PORT: 52788 Last Seen: 2025-05-01 23:50:01.413106
+2025-05-01 23:56:05,665 - INFO - >>> Added contact: ID: 146542921722721524493052313269179729395967176534 ~ HOST: 192.168.0.226 ~ PORT: 63387 Last Seen: 2025-05-01 23:54:37.221010
+2025-05-01 23:56:05,665 - INFO - >>> Added contact: ID: 89200360623618086042386743512018646281750870617 ~ HOST: 192.168.0.226 ~ PORT: 64635 Last Seen: 2025-05-01 23:56:05.664846
+2025-05-01 23:56:05,665 - INFO - Sending FIND_NODE_RESPONSE to 192.168.0.226:52579
+2025-05-01 23:56:05,667 - INFO - FIND_NODE returned 2 contacts from 192.168.0.226:61519
+2025-05-01 23:56:05,669 - INFO - >>> Added contact: ID: 146542921722721524493052313269179729395967176534 ~ HOST: 192.168.0.226 ~ PORT: 63387 Last Seen: 2025-05-01 23:56:05.668909
+2025-05-01 23:56:05,670 - INFO - >>> Splitting bucket. Reorganizing contacts.
+2025-05-01 23:56:05,672 - INFO - >>> Added contact: ID: 447116154647719165781542496919721373766040949890 ~ HOST: 192.168.0.226 ~ PORT: 61519 Last Seen: 2025-05-01 23:56:05.656867
+2025-05-01 23:56:05,673 - INFO - >>> Added contact: ID: 146542921722721524493052313269179729395967176534 ~ HOST: 192.168.0.226 ~ PORT: 63387 Last Seen: 2025-05-01 23:56:05.668909
+2025-05-01 23:56:05,675 - INFO - >>> Splitting bucket. Reorganizing contacts.
+2025-05-01 23:56:05,676 - INFO - >>> Added contact: ID: 447116154647719165781542496919721373766040949890 ~ HOST: 192.168.0.226 ~ PORT: 61519 Last Seen: 2025-05-01 23:56:05.656867
+2025-05-01 23:56:05,677 - INFO - >>> Added contact: ID: 146542921722721524493052313269179729395967176534 ~ HOST: 192.168.0.226 ~ PORT: 63387 Last Seen: 2025-05-01 23:56:05.668909
+2025-05-01 23:56:05,679 - INFO - >>> Added contact: ID: 639223932713457303148166854891322564489450603702 ~ HOST: 192.168.0.226 ~ PORT: 52788 Last Seen: 2025-05-01 23:56:05.670388
+2025-05-01 23:56:05,683 - INFO - Sending FIND_NODE RPC to: 192.168.0.226:63387
+2025-05-01 23:56:05,687 - INFO - Received FIND_NODE request from 192.168.0.226:52580
+2025-05-01 23:56:05,688 - INFO - >>> Splitting bucket. Reorganizing contacts.
+2025-05-01 23:56:05,689 - INFO - >>> Added contact: ID: 447116154647719165781542496919721373766040949890 ~ HOST: 192.168.0.226 ~ PORT: 61519 Last Seen: 2025-05-01 23:54:44.460652
+2025-05-01 23:56:05,690 - INFO - >>> Added contact: ID: 639223932713457303148166854891322564489450603702 ~ HOST: 192.168.0.226 ~ PORT: 52788 Last Seen: 2025-05-01 23:54:44.459146
+2025-05-01 23:56:05,692 - INFO - >>> Added contact: ID: 89200360623618086042386743512018646281750870617 ~ HOST: 192.168.0.226 ~ PORT: 64635 Last Seen: 2025-05-01 23:56:05.688060
+2025-05-01 23:56:05,693 - INFO - Sending FIND_NODE_RESPONSE to 192.168.0.226:52580
+2025-05-01 23:56:05,697 - INFO - FIND_NODE returned 2 contacts from 192.168.0.226:63387
+2025-05-01 23:56:05,699 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-01 23:56:05,700 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:01:51,415 - INFO - UDP Server started on 192.168.0.226:53224
+2025-05-02 00:02:16,555 - INFO - UDP Server started on 192.168.0.226:58799
+2025-05-02 00:03:17,007 - INFO - UDP Server started on 192.168.0.226:55535
+2025-05-02 00:04:22,159 - INFO - UDP Server started on 192.168.0.226:54439
+2025-05-02 00:05:04,163 - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-2' coro=<DHT.start() done, defined at C:\Users\phili\OneDrive - University of Johannesburg\BScHons Information Technology\Data Communications (IT28X97)\Project\Hermes\src\hermes\kademlia\DHT.py:33> wait_for=<Future pending cb=[Task.__wakeup()]>>
+2025-05-02 00:05:04,169 - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-2' coro=<DHT.start() done, defined at C:\Users\phili\OneDrive - University of Johannesburg\BScHons Information Technology\Data Communications (IT28X97)\Project\Hermes\src\hermes\kademlia\DHT.py:33> wait_for=<Future pending cb=[Task.__wakeup()]>>
+2025-05-02 00:05:04,165 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-3' coro=<Hermes.start() done, defined at C:\Users\phili\OneDrive - University of Johannesburg\BScHons Information Technology\Data Communications (IT28X97)\Project\Hermes\src\hermes\core\Hermes.py:19> exception=TypeError("Hermes.get_lightweight_message_from_json() missing 1 required positional argument: 'message_value'")>
+Traceback (most recent call last):
+  File "C:\Users\phili\AppData\Local\Programs\Python\Python313\Lib\asyncio\tasks.py", line 304, in __step_run_and_handle_result
+    result = coro.send(None)
+  File "C:\Users\phili\OneDrive - University of Johannesburg\BScHons Information Technology\Data Communications (IT28X97)\Project\Hermes\src\hermes\core\Hermes.py", line 20, in start
+    await self._tcp_server.handle_requests(host, self.get_lightweight_message_from_json)
+                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Hermes.get_lightweight_message_from_json() missing 1 required positional argument: 'message_value'
+2025-05-02 00:05:04,171 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-3' coro=<Hermes.start() done, defined at C:\Users\phili\OneDrive - University of Johannesburg\BScHons Information Technology\Data Communications (IT28X97)\Project\Hermes\src\hermes\core\Hermes.py:19> exception=TypeError("Hermes.get_lightweight_message_from_json() missing 1 required positional argument: 'message_value'")>
+Traceback (most recent call last):
+  File "C:\Users\phili\AppData\Local\Programs\Python\Python313\Lib\asyncio\tasks.py", line 304, in __step_run_and_handle_result
+    result = coro.send(None)
+  File "C:\Users\phili\OneDrive - University of Johannesburg\BScHons Information Technology\Data Communications (IT28X97)\Project\Hermes\src\hermes\core\Hermes.py", line 20, in start
+    await self._tcp_server.handle_requests(host, self.get_lightweight_message_from_json)
+                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Hermes.get_lightweight_message_from_json() missing 1 required positional argument: 'message_value'
+2025-05-02 00:05:27,105 - INFO - UDP Server started on 192.168.0.226:53214
+2025-05-02 00:07:19,578 - INFO - UDP Server started on 192.168.0.226:49180
+2025-05-02 00:08:07,522 - INFO - UDP Server started on 192.168.0.226:61656
+2025-05-02 00:08:20,272 - INFO - UDP Server started on 192.168.0.226:55518
+2025-05-02 00:08:34,882 - INFO - UDP Server started on 192.168.0.226:56110
+2025-05-02 00:08:58,555 - INFO - >>> Added contact: ID: 1375007052733483282079905849747283306407293219706 ~ HOST: 192.168.0.226 ~ PORT: 55518 Last Seen: 2025-05-02 00:08:58.555243
+2025-05-02 00:08:58,556 - INFO - Sending FIND_NODE RPC to: 192.168.0.226:55518
+2025-05-02 00:08:58,556 - INFO - Received FIND_NODE request from 192.168.0.226:56120
+2025-05-02 00:08:58,556 - INFO - >>> Added contact: ID: 560927450072690137548552476449750608135163006393 ~ HOST: 192.168.0.226 ~ PORT: 56110 Last Seen: 2025-05-02 00:08:58.556865
+2025-05-02 00:08:58,557 - INFO - Sending FIND_NODE_RESPONSE to 192.168.0.226:56120
+2025-05-02 00:08:58,557 - INFO - FIND_NODE returned 0 contacts from 192.168.0.226:55518
+2025-05-02 00:09:02,501 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:55518
+2025-05-02 00:09:02,502 - INFO - Received FIND_VALUE request from 192.168.0.226:56121
+2025-05-02 00:09:02,502 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:09:02,502 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:56121
+2025-05-02 00:09:02,503 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:55518
+2025-05-02 00:09:02,503 - INFO - Sending STORE RPC to: 192.168.0.226:55518
+2025-05-02 00:09:02,504 - INFO - Received STORE request from 192.168.0.226:56122
+2025-05-02 00:09:02,504 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:09:02,504 - INFO - Sending STORE_RESPONSE to 192.168.0.226:56122
+2025-05-02 00:09:02,504 - INFO - STORE successful to 192.168.0.226:55518
+2025-05-02 00:09:05,677 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:56110
+2025-05-02 00:09:05,678 - INFO - Received FIND_VALUE request from 192.168.0.226:56123
+2025-05-02 00:09:05,678 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:09:05,678 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:56123
+2025-05-02 00:09:05,679 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:56110
+2025-05-02 00:09:05,679 - INFO - Sending STORE RPC to: 192.168.0.226:56110
+2025-05-02 00:09:05,680 - INFO - Received STORE request from 192.168.0.226:56124
+2025-05-02 00:09:05,680 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:09:05,680 - INFO - Sending STORE_RESPONSE to 192.168.0.226:56124
+2025-05-02 00:09:05,680 - INFO - STORE successful to 192.168.0.226:56110
+2025-05-02 00:09:17,511 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:55518
+2025-05-02 00:09:17,511 - INFO - Received FIND_VALUE request from 192.168.0.226:56125
+2025-05-02 00:09:17,512 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:09:17,512 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:56125
+2025-05-02 00:09:17,512 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:55518
+2025-05-02 00:09:19,973 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:56110
+2025-05-02 00:09:19,974 - INFO - Received FIND_VALUE request from 192.168.0.226:56126
+2025-05-02 00:09:19,975 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:09:19,975 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:56126
+2025-05-02 00:09:19,975 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:56110
+2025-05-02 00:09:26,026 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:55518
+2025-05-02 00:09:26,027 - INFO - Received FIND_VALUE request from 192.168.0.226:56127
+2025-05-02 00:09:26,027 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:09:26,027 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:56127
+2025-05-02 00:09:26,027 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:55518
+2025-05-02 00:09:26,028 - INFO - Sending STORE RPC to: 192.168.0.226:55518
+2025-05-02 00:09:26,029 - INFO - Received STORE request from 192.168.0.226:56128
+2025-05-02 00:09:26,029 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:09:26,029 - INFO - Sending STORE_RESPONSE to 192.168.0.226:56128
+2025-05-02 00:09:26,029 - INFO - STORE successful to 192.168.0.226:55518
+2025-05-02 00:09:26,031 - INFO - Sending STORE RPC to: 192.168.0.226:55518
+2025-05-02 00:09:26,031 - INFO - Received STORE request from 192.168.0.226:56129
+2025-05-02 00:09:26,031 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:09:26,031 - INFO - Sending STORE_RESPONSE to 192.168.0.226:56129
+2025-05-02 00:09:26,032 - INFO - STORE successful to 192.168.0.226:55518
+2025-05-02 00:09:26,032 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-2' coro=<Hermes.start() done, defined at C:\Users\phili\OneDrive - University of Johannesburg\BScHons Information Technology\Data Communications (IT28X97)\Project\Hermes\src\hermes\core\Hermes.py:19> exception=AttributeError("'str' object has no attribute 'encrypted_message'")>
+Traceback (most recent call last):
+  File "C:\Users\phili\OneDrive - University of Johannesburg\BScHons Information Technology\Data Communications (IT28X97)\Project\Hermes\src\hermes\core\Hermes.py", line 20, in start
+    await self._tcp_server.handle_requests(host, self.get_lightweight_message_from_json)
+  File "C:\Users\phili\OneDrive - University of Johannesburg\BScHons Information Technology\Data Communications (IT28X97)\Project\Hermes\src\hermes\net\TCPServer.py", line 23, in handle_requests
+    clear_msg: LightWeightMessage = message_parser(msg)
+                                    ~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\phili\OneDrive - University of Johannesburg\BScHons Information Technology\Data Communications (IT28X97)\Project\Hermes\src\hermes\core\Hermes.py", line 124, in get_lightweight_message_from_json
+    decrypted_msg = self._msg_tools.read_message(message_value, self._nickname)
+  File "C:\Users\phili\OneDrive - University of Johannesburg\BScHons Information Technology\Data Communications (IT28X97)\Project\Hermes\src\hermes\core\KeyValueTools.py", line 33, in read_message
+    enc_message = msg.encrypted_message
+                  ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'encrypted_message'
+2025-05-02 00:09:36,976 - ERROR - Exception in callback <Task pending name='Task-1' coro=<main() running at C:\Users\phili\OneDrive - University of Johannesburg\BScHons Information Technology\Data Communications (IT28X97)\Project\Hermes\src\hermes\main.py:213> cb=[_run_until_complete_cb() at C:\Users\phili\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py:181]>()
+handle: <Handle <Task pending name='Task-1' coro=<main() running at C:\Users\phili\OneDrive - University of Johannesburg\BScHons Information Technology\Data Communications (IT28X97)\Project\Hermes\src\hermes\main.py:213> cb=[_run_until_complete_cb() at C:\Users\phili\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py:181]>()>
+Traceback (most recent call last):
+  File "C:\Users\phili\AppData\Local\Programs\Python\Python313\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'Task' object is not callable
+2025-05-02 00:09:51,201 - ERROR - Exception in callback <Task pending name='Task-1' coro=<main() running at C:\Users\phili\OneDrive - University of Johannesburg\BScHons Information Technology\Data Communications (IT28X97)\Project\Hermes\src\hermes\main.py:213> cb=[_run_until_complete_cb() at C:\Users\phili\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py:181]>()
+handle: <Handle <Task pending name='Task-1' coro=<main() running at C:\Users\phili\OneDrive - University of Johannesburg\BScHons Information Technology\Data Communications (IT28X97)\Project\Hermes\src\hermes\main.py:213> cb=[_run_until_complete_cb() at C:\Users\phili\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py:181]>()>
+Traceback (most recent call last):
+  File "C:\Users\phili\AppData\Local\Programs\Python\Python313\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'Task' object is not callable
+2025-05-02 00:10:43,560 - INFO - UDP Server started on 192.168.0.226:61728
+2025-05-02 00:11:04,250 - INFO - >>> Added contact: ID: 1375007052733483282079905849747283306407293219706 ~ HOST: 192.168.0.226 ~ PORT: 55518 Last Seen: 2025-05-02 00:11:04.249571
+2025-05-02 00:11:04,255 - INFO - Sending FIND_NODE RPC to: 192.168.0.226:55518
+2025-05-02 00:11:04,257 - INFO - Received FIND_NODE request from 192.168.0.226:61302
+2025-05-02 00:11:04,257 - INFO - >>> Added contact: ID: 789527872859356326184291394567127616382937466380 ~ HOST: 192.168.0.226 ~ PORT: 61728 Last Seen: 2025-05-02 00:11:04.257708
+2025-05-02 00:11:04,257 - INFO - Sending FIND_NODE_RESPONSE to 192.168.0.226:61302
+2025-05-02 00:11:04,260 - INFO - FIND_NODE returned 1 contacts from 192.168.0.226:55518
+2025-05-02 00:11:04,262 - INFO - >>> Added contact: ID: 560927450072690137548552476449750608135163006393 ~ HOST: 192.168.0.226 ~ PORT: 56110 Last Seen: 2025-05-02 00:11:04.261732
+2025-05-02 00:11:10,190 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:55518
+2025-05-02 00:11:10,192 - INFO - Received FIND_VALUE request from 192.168.0.226:55824
+2025-05-02 00:11:10,192 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:11:10,192 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:55824
+2025-05-02 00:11:10,194 - INFO - FIND_VALUE returned 1 contacts from 192.168.0.226:55518
+2025-05-02 00:11:10,199 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:56110
+2025-05-02 00:11:10,201 - INFO - Received FIND_VALUE request from 192.168.0.226:55825
+2025-05-02 00:11:10,201 - INFO - >>> Added contact: ID: 789527872859356326184291394567127616382937466380 ~ HOST: 192.168.0.226 ~ PORT: 61728 Last Seen: 2025-05-02 00:11:10.201693
+2025-05-02 00:11:10,201 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:55825
+2025-05-02 00:11:10,203 - INFO - FIND_VALUE returned 1 contacts from 192.168.0.226:56110
+2025-05-02 00:11:10,210 - INFO - Sending STORE RPC to: 192.168.0.226:55518
+2025-05-02 00:11:10,211 - INFO - Received STORE request from 192.168.0.226:55826
+2025-05-02 00:11:10,211 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:11:10,211 - INFO - Sending STORE_RESPONSE to 192.168.0.226:55826
+2025-05-02 00:11:10,213 - INFO - STORE successful to 192.168.0.226:55518
+2025-05-02 00:11:10,218 - INFO - Sending STORE RPC to: 192.168.0.226:56110
+2025-05-02 00:11:10,219 - INFO - Received STORE request from 192.168.0.226:55827
+2025-05-02 00:11:10,220 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:11:10,220 - INFO - Sending STORE_RESPONSE to 192.168.0.226:55827
+2025-05-02 00:11:10,221 - INFO - STORE successful to 192.168.0.226:56110
+2025-05-02 00:11:12,783 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:55518
+2025-05-02 00:11:12,784 - INFO - Received FIND_VALUE request from 192.168.0.226:55335
+2025-05-02 00:11:12,785 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:11:12,785 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:55335
+2025-05-02 00:11:12,788 - INFO - FIND_VALUE returned value from 192.168.0.226:55518
+2025-05-02 00:11:12,793 - INFO - Sending STORE RPC to: 192.168.0.226:56110
+2025-05-02 00:11:12,794 - INFO - Received STORE request from 192.168.0.226:55336
+2025-05-02 00:11:12,794 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:11:12,794 - INFO - Sending STORE_RESPONSE to 192.168.0.226:55336
+2025-05-02 00:11:12,796 - INFO - STORE successful to 192.168.0.226:56110
+2025-05-02 00:11:12,801 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:55518
+2025-05-02 00:11:12,802 - INFO - Received FIND_VALUE request from 192.168.0.226:55337
+2025-05-02 00:11:12,803 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:11:12,803 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:55337
+2025-05-02 00:11:12,805 - INFO - FIND_VALUE returned 1 contacts from 192.168.0.226:55518
+2025-05-02 00:11:12,809 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:56110
+2025-05-02 00:11:12,811 - INFO - Received FIND_VALUE request from 192.168.0.226:55338
+2025-05-02 00:11:12,811 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:11:12,811 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:55338
+2025-05-02 00:11:12,813 - INFO - FIND_VALUE returned 1 contacts from 192.168.0.226:56110
+2025-05-02 00:11:14,636 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:55518
+2025-05-02 00:11:14,638 - INFO - Received FIND_VALUE request from 192.168.0.226:55339
+2025-05-02 00:11:14,638 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:11:14,638 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:55339
+2025-05-02 00:11:14,640 - INFO - FIND_VALUE returned value from 192.168.0.226:55518
+2025-05-02 00:11:14,645 - INFO - Sending STORE RPC to: 192.168.0.226:56110
+2025-05-02 00:11:14,646 - INFO - Received STORE request from 192.168.0.226:55340
+2025-05-02 00:11:14,646 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:11:14,646 - INFO - Sending STORE_RESPONSE to 192.168.0.226:55340
+2025-05-02 00:11:14,649 - INFO - STORE successful to 192.168.0.226:56110
+2025-05-02 00:11:14,654 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:55518
+2025-05-02 00:11:14,656 - INFO - Received FIND_VALUE request from 192.168.0.226:55341
+2025-05-02 00:11:14,656 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:11:14,656 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:55341
+2025-05-02 00:11:14,658 - INFO - FIND_VALUE returned 1 contacts from 192.168.0.226:55518
+2025-05-02 00:11:14,663 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:56110
+2025-05-02 00:11:14,664 - INFO - Received FIND_VALUE request from 192.168.0.226:55342
+2025-05-02 00:11:14,664 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:11:14,664 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:55342
+2025-05-02 00:11:14,666 - INFO - FIND_VALUE returned 1 contacts from 192.168.0.226:56110
+2025-05-02 00:11:14,673 - INFO - Sending STORE RPC to: 192.168.0.226:56110
+2025-05-02 00:11:14,675 - INFO - Received STORE request from 192.168.0.226:55343
+2025-05-02 00:11:14,675 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:11:14,675 - INFO - Sending STORE_RESPONSE to 192.168.0.226:55343
+2025-05-02 00:11:14,677 - INFO - STORE successful to 192.168.0.226:56110
+2025-05-02 00:11:14,682 - INFO - Sending STORE RPC to: 192.168.0.226:55518
+2025-05-02 00:11:14,684 - INFO - Received STORE request from 192.168.0.226:55344
+2025-05-02 00:11:14,684 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:11:14,684 - INFO - Sending STORE_RESPONSE to 192.168.0.226:55344
+2025-05-02 00:11:14,687 - INFO - STORE successful to 192.168.0.226:55518
+2025-05-02 00:11:41,571 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-2' coro=<Hermes.start() done, defined at C:\Users\phili\OneDrive - University of Johannesburg\BScHons Information Technology\Data Communications (IT28X97)\Project\Hermes\src\hermes\core\Hermes.py:19> exception=RuntimeError("Proactor event loop does not implement add_reader family of methods required for zmq. zmq will work with proactor if tornado >= 6.1 can be found. Use `asyncio.set_event_loop_policy(WindowsSelectorEventLoopPolicy())` or install 'tornado>=6.1' to avoid this error.")>
+Traceback (most recent call last):
+  File "C:\Users\phili\AppData\Local\pypoetry\Cache\virtualenvs\hermes-McEV8F7E-py3.13\Lib\site-packages\zmq\asyncio.py", line 51, in _get_selector_windows
+    from tornado.platform.asyncio import AddThreadSelectorEventLoop
+ModuleNotFoundError: No module named 'tornado'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\phili\AppData\Local\Programs\Python\Python313\Lib\asyncio\tasks.py", line 304, in __step_run_and_handle_result
+    result = coro.send(None)
+  File "C:\Users\phili\OneDrive - University of Johannesburg\BScHons Information Technology\Data Communications (IT28X97)\Project\Hermes\src\hermes\core\Hermes.py", line 20, in start
+    await self._tcp_server.handle_requests(host, self.get_lightweight_message_from_json)
+  File "C:\Users\phili\OneDrive - University of Johannesburg\BScHons Information Technology\Data Communications (IT28X97)\Project\Hermes\src\hermes\net\TCPServer.py", line 22, in handle_requests
+    msg = await socket.recv_json()
+                ~~~~~~~~~~~~~~~~^^
+  File "C:\Users\phili\AppData\Local\pypoetry\Cache\virtualenvs\hermes-McEV8F7E-py3.13\Lib\site-packages\zmq\sugar\socket.py", line 1031, in recv_json
+    msg = self.recv(flags)
+  File "C:\Users\phili\AppData\Local\pypoetry\Cache\virtualenvs\hermes-McEV8F7E-py3.13\Lib\site-packages\zmq\_future.py", line 290, in recv
+    return self._add_recv_event(
+           ~~~~~~~~~~~~~~~~~~~~^
+        'recv', kwargs=dict(flags=flags, copy=copy, track=track)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\phili\AppData\Local\pypoetry\Cache\virtualenvs\hermes-McEV8F7E-py3.13\Lib\site-packages\zmq\_future.py", line 522, in _add_recv_event
+    self._add_io_state(POLLIN)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\phili\AppData\Local\pypoetry\Cache\virtualenvs\hermes-McEV8F7E-py3.13\Lib\site-packages\zmq\_future.py", line 702, in _add_io_state
+    self._update_handler(self._state)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\phili\AppData\Local\pypoetry\Cache\virtualenvs\hermes-McEV8F7E-py3.13\Lib\site-packages\zmq\_future.py", line 718, in _update_handler
+    self._get_loop()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\phili\AppData\Local\pypoetry\Cache\virtualenvs\hermes-McEV8F7E-py3.13\Lib\site-packages\zmq\_future.py", line 57, in _get_loop
+    self._init_io_state(self._current_loop)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\phili\AppData\Local\pypoetry\Cache\virtualenvs\hermes-McEV8F7E-py3.13\Lib\site-packages\zmq\asyncio.py", line 150, in _init_io_state
+    self._get_selector(io_loop).add_reader(
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\phili\AppData\Local\pypoetry\Cache\virtualenvs\hermes-McEV8F7E-py3.13\Lib\site-packages\zmq\asyncio.py", line 146, in _get_selector
+    return _get_selector(io_loop)
+  File "C:\Users\phili\AppData\Local\pypoetry\Cache\virtualenvs\hermes-McEV8F7E-py3.13\Lib\site-packages\zmq\asyncio.py", line 53, in _get_selector_windows
+    raise RuntimeError(
+    ...<4 lines>...
+    )
+RuntimeError: Proactor event loop does not implement add_reader family of methods required for zmq. zmq will work with proactor if tornado >= 6.1 can be found. Use `asyncio.set_event_loop_policy(WindowsSelectorEventLoopPolicy())` or install 'tornado>=6.1' to avoid this error.
+2025-05-02 00:11:44,099 - INFO - Sending STORE RPC to: 192.168.0.226:56110
+2025-05-02 00:11:44,100 - INFO - Received STORE request from 192.168.0.226:61310
+2025-05-02 00:11:44,100 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:11:44,100 - INFO - Sending STORE_RESPONSE to 192.168.0.226:61310
+2025-05-02 00:11:44,103 - INFO - STORE successful to 192.168.0.226:56110
+2025-05-02 00:11:44,108 - INFO - Sending STORE RPC to: 192.168.0.226:55518
+2025-05-02 00:11:44,109 - INFO - Received STORE request from 192.168.0.226:61311
+2025-05-02 00:11:44,109 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:11:44,109 - INFO - Sending STORE_RESPONSE to 192.168.0.226:61311
+2025-05-02 00:11:44,112 - INFO - STORE successful to 192.168.0.226:55518
+2025-05-02 00:12:02,363 - ERROR - Exception in callback <Task pending name='Task-1' coro=<main() running at C:\Users\phili\OneDrive - University of Johannesburg\BScHons Information Technology\Data Communications (IT28X97)\Project\Hermes\src\hermes\main.py:213> cb=[_run_until_complete_cb() at C:\Users\phili\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py:181]>()
+handle: <Handle <Task pending name='Task-1' coro=<main() running at C:\Users\phili\OneDrive - University of Johannesburg\BScHons Information Technology\Data Communications (IT28X97)\Project\Hermes\src\hermes\main.py:213> cb=[_run_until_complete_cb() at C:\Users\phili\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py:181]>()>
+Traceback (most recent call last):
+  File "C:\Users\phili\AppData\Local\Programs\Python\Python313\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'Task' object is not callable
+2025-05-02 00:19:22,252 - INFO - UDP Server started on 192.168.0.226:64697
+2025-05-02 00:20:55,001 - INFO - UDP Server started on 192.168.0.226:53334
+2025-05-02 00:21:12,847 - INFO - >>> Added contact: ID: 945149972227447095622646401720304763067862181983 ~ HOST: 192.168.0.226 ~ PORT: 64697 Last Seen: 2025-05-02 00:21:12.846306
+2025-05-02 00:21:12,852 - INFO - Sending FIND_NODE RPC to: 192.168.0.226:64697
+2025-05-02 00:21:12,856 - INFO - Received FIND_NODE request from 192.168.0.226:53344
+2025-05-02 00:21:12,856 - INFO - >>> Added contact: ID: 611657393903594303260866144136192330458482634674 ~ HOST: 192.168.0.226 ~ PORT: 53334 Last Seen: 2025-05-02 00:21:12.856680
+2025-05-02 00:21:12,857 - INFO - Sending FIND_NODE_RESPONSE to 192.168.0.226:53344
+2025-05-02 00:21:12,860 - INFO - FIND_NODE returned 0 contacts from 192.168.0.226:64697
+2025-05-02 00:21:16,779 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:64697
+2025-05-02 00:21:16,782 - INFO - Received FIND_VALUE request from 192.168.0.226:53345
+2025-05-02 00:21:16,782 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:21:16,783 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:53345
+2025-05-02 00:21:16,785 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:64697
+2025-05-02 00:21:16,792 - INFO - Sending STORE RPC to: 192.168.0.226:64697
+2025-05-02 00:21:16,794 - INFO - Received STORE request from 192.168.0.226:53346
+2025-05-02 00:21:16,795 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:21:16,795 - INFO - Sending STORE_RESPONSE to 192.168.0.226:53346
+2025-05-02 00:21:16,797 - INFO - STORE successful to 192.168.0.226:64697
+2025-05-02 00:21:20,800 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:53334
+2025-05-02 00:21:20,803 - INFO - Received FIND_VALUE request from 192.168.0.226:64106
+2025-05-02 00:21:20,805 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:21:20,806 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:64106
+2025-05-02 00:21:20,809 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:53334
+2025-05-02 00:21:20,812 - INFO - Sending STORE RPC to: 192.168.0.226:53334
+2025-05-02 00:21:20,815 - INFO - Received STORE request from 192.168.0.226:64107
+2025-05-02 00:21:20,816 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:21:20,817 - INFO - Sending STORE_RESPONSE to 192.168.0.226:64107
+2025-05-02 00:21:20,819 - INFO - STORE successful to 192.168.0.226:53334
+2025-05-02 00:21:24,292 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:53334
+2025-05-02 00:21:24,295 - INFO - Received FIND_VALUE request from 192.168.0.226:64108
+2025-05-02 00:21:24,297 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:21:24,298 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:64108
+2025-05-02 00:21:24,301 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:53334
+2025-05-02 00:21:27,137 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:64697
+2025-05-02 00:21:27,140 - INFO - Received FIND_VALUE request from 192.168.0.226:64109
+2025-05-02 00:21:27,140 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:21:27,141 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:64109
+2025-05-02 00:21:27,143 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:64697
+2025-05-02 00:21:38,957 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:64697
+2025-05-02 00:21:38,960 - INFO - Received FIND_VALUE request from 192.168.0.226:61942
+2025-05-02 00:21:38,960 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:21:38,961 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:61942
+2025-05-02 00:21:38,963 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:64697
+2025-05-02 00:21:38,970 - INFO - Sending STORE RPC to: 192.168.0.226:64697
+2025-05-02 00:21:38,972 - INFO - Received STORE request from 192.168.0.226:61943
+2025-05-02 00:21:38,973 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:21:38,973 - INFO - Sending STORE_RESPONSE to 192.168.0.226:61943
+2025-05-02 00:21:38,975 - INFO - STORE successful to 192.168.0.226:64697
+2025-05-02 00:22:25,015 - INFO - Sending STORE RPC to: 192.168.0.226:64697
+2025-05-02 00:22:25,018 - INFO - Received STORE request from 192.168.0.226:57301
+2025-05-02 00:22:25,018 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:22:25,019 - INFO - Sending STORE_RESPONSE to 192.168.0.226:57301
+2025-05-02 00:22:25,021 - INFO - STORE successful to 192.168.0.226:64697
+2025-05-02 00:22:39,904 - INFO - Sending STORE RPC to: 192.168.0.226:64697
+2025-05-02 00:22:39,906 - INFO - Received STORE request from 192.168.0.226:53325
+2025-05-02 00:22:39,906 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:22:39,907 - INFO - Sending STORE_RESPONSE to 192.168.0.226:53325
+2025-05-02 00:22:39,909 - INFO - STORE successful to 192.168.0.226:64697
+2025-05-02 00:22:51,483 - INFO - Sending STORE RPC to: 192.168.0.226:64697
+2025-05-02 00:22:51,485 - INFO - Received STORE request from 192.168.0.226:64277
+2025-05-02 00:22:51,486 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:22:51,486 - INFO - Sending STORE_RESPONSE to 192.168.0.226:64277
+2025-05-02 00:22:51,488 - INFO - STORE successful to 192.168.0.226:64697
+2025-05-02 00:22:59,204 - INFO - Sending STORE RPC to: 192.168.0.226:64697
+2025-05-02 00:22:59,207 - INFO - Received STORE request from 192.168.0.226:64192
+2025-05-02 00:22:59,207 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:22:59,208 - INFO - Sending STORE_RESPONSE to 192.168.0.226:64192
+2025-05-02 00:22:59,210 - INFO - STORE successful to 192.168.0.226:64697
+2025-05-02 00:23:09,373 - INFO - Sending STORE RPC to: 192.168.0.226:64697
+2025-05-02 00:23:09,375 - INFO - Received STORE request from 192.168.0.226:65289
+2025-05-02 00:23:09,376 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:23:09,376 - INFO - Sending STORE_RESPONSE to 192.168.0.226:65289
+2025-05-02 00:23:09,378 - INFO - STORE successful to 192.168.0.226:64697
+2025-05-02 00:23:17,711 - INFO - Sending STORE RPC to: 192.168.0.226:64697
+2025-05-02 00:23:17,714 - INFO - Received STORE request from 192.168.0.226:51947
+2025-05-02 00:23:17,714 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:23:17,715 - INFO - Sending STORE_RESPONSE to 192.168.0.226:51947
+2025-05-02 00:23:17,717 - INFO - STORE successful to 192.168.0.226:64697
+2025-05-02 00:24:46,284 - INFO - UDP Server started on 192.168.0.226:60934
+2025-05-02 00:25:25,813 - INFO - >>> Added contact: ID: 945149972227447095622646401720304763067862181983 ~ HOST: 192.168.0.226 ~ PORT: 64697 Last Seen: 2025-05-02 00:25:25.812760
+2025-05-02 00:25:25,815 - INFO - Sending FIND_NODE RPC to: 192.168.0.226:64697
+2025-05-02 00:25:25,817 - INFO - Received FIND_NODE request from 192.168.0.226:57660
+2025-05-02 00:25:25,829 - INFO - >>> Added contact: ID: 617946506248181490988315424144064006591753466566 ~ HOST: 192.168.0.226 ~ PORT: 60934 Last Seen: 2025-05-02 00:25:25.829552
+2025-05-02 00:25:25,830 - INFO - Sending FIND_NODE_RESPONSE to 192.168.0.226:57660
+2025-05-02 00:25:25,832 - INFO - FIND_NODE returned 1 contacts from 192.168.0.226:64697
+2025-05-02 00:25:25,833 - INFO - >>> Added contact: ID: 611657393903594303260866144136192330458482634674 ~ HOST: 192.168.0.226 ~ PORT: 53334 Last Seen: 2025-05-02 00:25:25.832767
+2025-05-02 00:25:29,166 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:64697
+2025-05-02 00:25:29,168 - INFO - Received FIND_VALUE request from 192.168.0.226:57661
+2025-05-02 00:25:29,168 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:25:29,169 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:57661
+2025-05-02 00:25:29,170 - INFO - FIND_VALUE returned 1 contacts from 192.168.0.226:64697
+2025-05-02 00:25:29,172 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:53334
+2025-05-02 00:25:39,179 - ERROR - FIND_VALUE timed out on 192.168.0.226:53334
+2025-05-02 00:25:39,184 - INFO - Sending STORE RPC to: 192.168.0.226:64697
+2025-05-02 00:25:39,186 - INFO - Received STORE request from 192.168.0.226:64416
+2025-05-02 00:25:39,186 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:25:39,187 - INFO - Sending STORE_RESPONSE to 192.168.0.226:64416
+2025-05-02 00:25:39,188 - INFO - STORE successful to 192.168.0.226:64697
+2025-05-02 00:25:39,190 - INFO - Sending STORE RPC to: 192.168.0.226:53334
+2025-05-02 00:25:43,435 - INFO - Sending STORE RPC to: 192.168.0.226:64697
+2025-05-02 00:25:43,437 - INFO - Received STORE request from 192.168.0.226:61652
+2025-05-02 00:25:43,438 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:25:43,438 - INFO - Sending STORE_RESPONSE to 192.168.0.226:61652
+2025-05-02 00:25:43,449 - INFO - Received FIND_VALUE request from 192.168.0.226:57662
+2025-05-02 00:25:43,450 - INFO - >>> Added contact: ID: 617946506248181490988315424144064006591753466566 ~ HOST: 192.168.0.226 ~ PORT: 60934 Last Seen: 2025-05-02 00:25:43.450070
+2025-05-02 00:25:43,452 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:57662
+2025-05-02 00:25:43,464 - INFO - Received STORE request from 192.168.0.226:64417
+2025-05-02 00:25:43,466 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:25:43,467 - INFO - Sending STORE_RESPONSE to 192.168.0.226:64417
+2025-05-02 00:25:43,469 - INFO - STORE successful to 192.168.0.226:53334
+2025-05-02 00:25:43,471 - INFO - STORE successful to 192.168.0.226:64697
+2025-05-02 00:26:07,733 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:64697
+2025-05-02 00:26:07,735 - INFO - Received FIND_VALUE request from 192.168.0.226:59620
+2025-05-02 00:26:07,736 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:26:07,736 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:59620
+2025-05-02 00:26:07,737 - INFO - FIND_VALUE returned value from 192.168.0.226:64697
+2025-05-02 00:26:07,739 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:64697
+2025-05-02 00:26:07,741 - INFO - Received FIND_VALUE request from 192.168.0.226:59621
+2025-05-02 00:26:07,741 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:26:07,742 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:59621
+2025-05-02 00:26:07,743 - INFO - FIND_VALUE returned 1 contacts from 192.168.0.226:64697
+2025-05-02 00:26:07,745 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:53334
+2025-05-02 00:26:07,748 - INFO - Received FIND_VALUE request from 192.168.0.226:59622
+2025-05-02 00:26:07,749 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:26:07,751 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:59622
+2025-05-02 00:26:07,753 - INFO - FIND_VALUE returned 1 contacts from 192.168.0.226:53334
+2025-05-02 00:26:12,104 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:64697
+2025-05-02 00:26:12,105 - INFO - Received FIND_VALUE request from 192.168.0.226:59623
+2025-05-02 00:26:12,106 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:26:12,106 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:59623
+2025-05-02 00:26:12,108 - INFO - FIND_VALUE returned value from 192.168.0.226:64697
+2025-05-02 00:26:12,110 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:64697
+2025-05-02 00:26:12,111 - INFO - Received FIND_VALUE request from 192.168.0.226:59624
+2025-05-02 00:26:12,111 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:26:12,112 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:59624
+2025-05-02 00:26:12,113 - INFO - FIND_VALUE returned 1 contacts from 192.168.0.226:64697
+2025-05-02 00:26:12,115 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:53334
+2025-05-02 00:26:12,118 - INFO - Received FIND_VALUE request from 192.168.0.226:59625
+2025-05-02 00:26:12,119 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:26:12,120 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:59625
+2025-05-02 00:26:12,123 - INFO - FIND_VALUE returned 1 contacts from 192.168.0.226:53334
+2025-05-02 00:26:12,127 - INFO - Sending STORE RPC to: 192.168.0.226:64697
+2025-05-02 00:26:12,128 - INFO - Received STORE request from 192.168.0.226:59626
+2025-05-02 00:26:12,129 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:26:12,129 - INFO - Sending STORE_RESPONSE to 192.168.0.226:59626
+2025-05-02 00:26:12,130 - INFO - STORE successful to 192.168.0.226:64697
+2025-05-02 00:26:12,132 - INFO - Sending STORE RPC to: 192.168.0.226:53334
+2025-05-02 00:26:12,135 - INFO - Received STORE request from 192.168.0.226:59627
+2025-05-02 00:26:12,136 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:26:12,137 - INFO - Sending STORE_RESPONSE to 192.168.0.226:59627
+2025-05-02 00:26:12,140 - INFO - STORE successful to 192.168.0.226:53334
+2025-05-02 00:26:12,144 - INFO - Sending STORE RPC to: 192.168.0.226:64697
+2025-05-02 00:26:12,146 - INFO - Received STORE request from 192.168.0.226:59628
+2025-05-02 00:26:12,146 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:26:12,147 - INFO - Sending STORE_RESPONSE to 192.168.0.226:59628
+2025-05-02 00:26:12,148 - INFO - STORE successful to 192.168.0.226:64697
+2025-05-02 00:26:12,149 - INFO - Sending STORE RPC to: 192.168.0.226:53334
+2025-05-02 00:26:12,152 - INFO - Received STORE request from 192.168.0.226:59629
+2025-05-02 00:26:12,153 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:26:12,155 - INFO - Sending STORE_RESPONSE to 192.168.0.226:59629
+2025-05-02 00:26:12,157 - INFO - STORE successful to 192.168.0.226:53334
+2025-05-02 00:26:24,977 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:64697
+2025-05-02 00:26:24,979 - INFO - Received FIND_VALUE request from 192.168.0.226:53930
+2025-05-02 00:26:24,980 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:26:24,980 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:53930
+2025-05-02 00:26:24,983 - INFO - FIND_VALUE returned 1 contacts from 192.168.0.226:64697
+2025-05-02 00:26:24,988 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:60934
+2025-05-02 00:26:24,991 - INFO - Received FIND_VALUE request from 192.168.0.226:53931
+2025-05-02 00:26:24,991 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:26:24,992 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:53931
+2025-05-02 00:26:24,994 - INFO - FIND_VALUE returned 1 contacts from 192.168.0.226:60934
+2025-05-02 00:29:19,400 - ERROR - Exception in callback <Task pending name='Task-1' coro=<main() running at C:\Users\phili\OneDrive - University of Johannesburg\BScHons Information Technology\Data Communications (IT28X97)\Project\Hermes\src\hermes\main.py:218> cb=[_run_until_complete_cb() at C:\Users\phili\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py:181]>()
+handle: <Handle <Task pending name='Task-1' coro=<main() running at C:\Users\phili\OneDrive - University of Johannesburg\BScHons Information Technology\Data Communications (IT28X97)\Project\Hermes\src\hermes\main.py:218> cb=[_run_until_complete_cb() at C:\Users\phili\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py:181]>()>
+Traceback (most recent call last):
+  File "C:\Users\phili\AppData\Local\Programs\Python\Python313\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'Task' object is not callable
+2025-05-02 00:31:51,449 - INFO - UDP Server started on 192.168.0.226:52176
+2025-05-02 00:31:56,751 - INFO - UDP Server started on 192.168.0.226:52178
+2025-05-02 00:33:10,899 - INFO - UDP Server started on 192.168.0.226:50706
+2025-05-02 00:34:32,948 - INFO - UDP Server started on 192.168.0.226:50719
+2025-05-02 00:35:21,012 - INFO - >>> Added contact: ID: 737061999000154474079618274697068766937279798842 ~ HOST: 192.168.0.226 ~ PORT: 50706 Last Seen: 2025-05-02 00:35:21.012113
+2025-05-02 00:35:21,015 - INFO - Sending FIND_NODE RPC to: 192.168.0.226:50706
+2025-05-02 00:35:21,021 - INFO - Received FIND_NODE request from 192.168.0.226:60486
+2025-05-02 00:35:21,025 - INFO - >>> Added contact: ID: 449105097057337640330327984491981835253160194175 ~ HOST: 192.168.0.226 ~ PORT: 50719 Last Seen: 2025-05-02 00:35:21.023700
+2025-05-02 00:35:21,028 - INFO - Sending FIND_NODE_RESPONSE to 192.168.0.226:60486
+2025-05-02 00:35:21,032 - INFO - FIND_NODE returned 0 contacts from 192.168.0.226:50706
+2025-05-02 00:35:25,814 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:50706
+2025-05-02 00:35:25,819 - INFO - Received FIND_VALUE request from 192.168.0.226:60487
+2025-05-02 00:35:25,823 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:35:25,826 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:60487
+2025-05-02 00:35:25,830 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:50706
+2025-05-02 00:35:25,833 - INFO - Sending STORE RPC to: 192.168.0.226:50706
+2025-05-02 00:35:25,837 - INFO - Received STORE request from 192.168.0.226:60488
+2025-05-02 00:35:25,841 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:35:25,843 - INFO - Sending STORE_RESPONSE to 192.168.0.226:60488
+2025-05-02 00:35:25,847 - INFO - STORE successful to 192.168.0.226:50706
+2025-05-02 00:35:29,901 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:50719
+2025-05-02 00:35:29,905 - INFO - Received FIND_VALUE request from 192.168.0.226:60489
+2025-05-02 00:35:29,906 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:35:29,906 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:60489
+2025-05-02 00:35:29,910 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:50719
+2025-05-02 00:35:29,923 - INFO - Sending STORE RPC to: 192.168.0.226:50719
+2025-05-02 00:35:29,926 - INFO - Received STORE request from 192.168.0.226:60490
+2025-05-02 00:35:29,927 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:35:29,927 - INFO - Sending STORE_RESPONSE to 192.168.0.226:60490
+2025-05-02 00:35:29,931 - INFO - STORE successful to 192.168.0.226:50719
+2025-05-02 00:35:43,289 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:50719
+2025-05-02 00:35:43,293 - INFO - Received FIND_VALUE request from 192.168.0.226:50150
+2025-05-02 00:35:43,294 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:35:43,294 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:50150
+2025-05-02 00:35:43,298 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:50719
+2025-05-02 00:35:46,486 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:50706
+2025-05-02 00:35:46,491 - INFO - Received FIND_VALUE request from 192.168.0.226:50151
+2025-05-02 00:35:46,494 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:35:46,498 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:50151
+2025-05-02 00:35:46,502 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:50706
+2025-05-02 00:36:08,919 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:50706
+2025-05-02 00:36:08,924 - INFO - Received FIND_VALUE request from 192.168.0.226:54214
+2025-05-02 00:36:08,927 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:36:08,931 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:54214
+2025-05-02 00:36:08,934 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:50706
+2025-05-02 00:36:08,938 - INFO - Sending STORE RPC to: 192.168.0.226:50706
+2025-05-02 00:36:08,942 - INFO - Received STORE request from 192.168.0.226:54215
+2025-05-02 00:36:08,945 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:36:08,948 - INFO - Sending STORE_RESPONSE to 192.168.0.226:54215
+2025-05-02 00:36:08,951 - INFO - STORE successful to 192.168.0.226:50706
+2025-05-02 00:41:01,525 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:50719
+2025-05-02 00:41:11,532 - ERROR - FIND_VALUE timed out on 192.168.0.226:50719
+2025-05-02 00:41:11,537 - INFO - Sending STORE RPC to: 192.168.0.226:50719
+2025-05-02 00:41:21,553 - ERROR - STORE timed out on 192.168.0.226:50719
+2025-05-02 00:41:21,561 - INFO - Sending STORE RPC to: 192.168.0.226:50719
+2025-05-02 00:41:31,574 - ERROR - STORE timed out on 192.168.0.226:50719
+2025-05-02 00:41:33,894 - INFO - Sending STORE RPC to: 192.168.0.226:50719
+2025-05-02 00:41:43,900 - ERROR - STORE timed out on 192.168.0.226:50719
+2025-05-02 00:41:43,907 - INFO - Sending STORE RPC to: 192.168.0.226:50719
+2025-05-02 00:41:53,915 - ERROR - STORE timed out on 192.168.0.226:50719
+2025-05-02 00:41:53,921 - INFO - Sending STORE RPC to: 192.168.0.226:50719
+2025-05-02 00:41:56,019 - INFO - Sending STORE RPC to: 192.168.0.226:50706
+2025-05-02 00:41:56,021 - INFO - Received FIND_VALUE request from 192.168.0.226:65077
+2025-05-02 00:41:56,022 - INFO - >>> Contact already in bucket, refreshing.
+027
+2025-05-02 00:41:56,023 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:65077
+2025-05-02 00:41:56,023 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:41:56,024 - INFO - Sending STORE_RESPONSE to 192.168.0.226:54027
+2025-05-02 00:42:03,937 - ERROR - STORE timed out on 192.168.0.226:50719
+2025-05-02 00:42:03,944 - INFO - Sending STORE RPC to: 192.168.0.226:50719
+2025-05-02 00:42:08,897 - INFO - Received STORE request from 192.168.0.226:50729
+2025-05-02 00:42:08,898 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:42:08,899 - INFO - Sending STORE_RESPONSE to 192.168.0.226:50729
+2025-05-02 00:42:08,901 - INFO - Received STORE request from 192.168.0.226:49650
+2025-05-02 00:42:08,902 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:42:08,903 - INFO - Sending STORE_RESPONSE to 192.168.0.226:49650
+2025-05-02 00:42:08,905 - INFO - Received STORE request from 192.168.0.226:49651
+2025-05-02 00:42:08,905 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:42:08,906 - INFO - Sending STORE_RESPONSE to 192.168.0.226:49651
+2025-05-02 00:42:08,907 - ERROR - STORE timed out on 192.168.0.226:50706
+2025-05-02 00:42:08,909 - INFO - Received STORE request from 192.168.0.226:54025
+2025-05-02 00:42:08,910 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:42:08,910 - INFO - Sending STORE_RESPONSE to 192.168.0.226:54025
+2025-05-02 00:42:08,912 - INFO - Received STORE request from 192.168.0.226:54026
+2025-05-02 00:42:08,912 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:42:08,913 - INFO - Sending STORE_RESPONSE to 192.168.0.226:54026
+2025-05-02 00:42:13,955 - ERROR - STORE timed out on 192.168.0.226:50719
+2025-05-02 00:42:13,961 - INFO - Sending STORE RPC to: 192.168.0.226:50719
+2025-05-02 00:42:23,976 - ERROR - STORE timed out on 192.168.0.226:50719
+2025-05-02 00:42:23,983 - INFO - Sending STORE RPC to: 192.168.0.226:50719
+2025-05-02 00:42:33,993 - ERROR - STORE timed out on 192.168.0.226:50719
+2025-05-02 00:42:33,999 - INFO - Sending STORE RPC to: 192.168.0.226:50719
+2025-05-02 00:42:44,009 - ERROR - STORE timed out on 192.168.0.226:50719
+2025-05-02 00:42:44,025 - INFO - Sending STORE RPC to: 192.168.0.226:50719
+2025-05-02 00:42:49,230 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-2' coro=<Hermes.start() done, defined at C:\Users\phili\OneDrive - University of Johannesburg\BScHons Information Technology\Data Communications (IT28X97)\Project\Hermes\src\hermes\core\Hermes.py:19> exception=AttributeError("'str' object has no attribute 'encrypted_message'")>
+Traceback (most recent call last):
+  File "C:\Users\phili\AppData\Local\Programs\Python\Python313\Lib\asyncio\tasks.py", line 304, in __step_run_and_handle_result
+    result = coro.send(None)
+  File "C:\Users\phili\OneDrive - University of Johannesburg\BScHons Information Technology\Data Communications (IT28X97)\Project\Hermes\src\hermes\core\Hermes.py", line 20, in start
+  File "C:\Users\phili\OneDrive - University of Johannesburg\BScHons Information Technology\Data Communications (IT28X97)\Project\Hermes\src\hermes\net\TCPServer.py", line 23, in handle_requests
+    clear_msg: LightWeightMessage = message_parser(msg)
+                                    ~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\phili\OneDrive - University of Johannesburg\BScHons Information Technology\Data Communications (IT28X97)\Project\Hermes\src\hermes\core\Hermes.py", line 124, in get_lightweight_message_from_json
+    return LightWeightMessage(float(message_value.timestamp), message_value.sender, message_value.receiver, decrypted_msg)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\phili\OneDrive - University of Johannesburg\BScHons Information Technology\Data Communications (IT28X97)\Project\Hermes\src\hermes\core\KeyValueTools.py", line 33, in read_message
+    enc_message = msg.encrypted_message
+                  ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'encrypted_message'
+2025-05-02 00:42:49,244 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-2' coro=<Hermes.start() done, defined at C:\Users\phili\OneDrive - University of Johannesburg\BScHons Information Technology\Data Communications (IT28X97)\Project\Hermes\src\hermes\core\Hermes.py:19> exception=AttributeError("'str' object has no attribute 'encrypted_message'")>
+Traceback (most recent call last):
+  File "C:\Users\phili\AppData\Local\Programs\Python\Python313\Lib\asyncio\tasks.py", line 304, in __step_run_and_handle_result
+    result = coro.send(None)
+  File "C:\Users\phili\OneDrive - University of Johannesburg\BScHons Information Technology\Data Communications (IT28X97)\Project\Hermes\src\hermes\core\Hermes.py", line 20, in start
+  File "C:\Users\phili\OneDrive - University of Johannesburg\BScHons Information Technology\Data Communications (IT28X97)\Project\Hermes\src\hermes\net\TCPServer.py", line 23, in handle_requests
+    clear_msg: LightWeightMessage = message_parser(msg)
+                                    ~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\phili\OneDrive - University of Johannesburg\BScHons Information Technology\Data Communications (IT28X97)\Project\Hermes\src\hermes\core\Hermes.py", line 124, in get_lightweight_message_from_json
+    return LightWeightMessage(float(message_value.timestamp), message_value.sender, message_value.receiver, decrypted_msg)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\phili\OneDrive - University of Johannesburg\BScHons Information Technology\Data Communications (IT28X97)\Project\Hermes\src\hermes\core\KeyValueTools.py", line 33, in read_message
+    enc_message = msg.encrypted_message
+                  ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'encrypted_message'
+2025-05-02 00:42:59,124 - INFO - UDP Server started on 192.168.0.226:64110
+2025-05-02 00:43:12,496 - INFO - UDP Server started on 192.168.0.226:61013
+2025-05-02 00:43:28,288 - INFO - >>> Added contact: ID: 375275310822784830300469768138515362871685063868 ~ HOST: 192.168.0.226 ~ PORT: 64110 Last Seen: 2025-05-02 00:43:28.287223
+2025-05-02 00:43:28,298 - INFO - Sending FIND_NODE RPC to: 192.168.0.226:64110
+2025-05-02 00:43:28,306 - INFO - Received FIND_NODE request from 192.168.0.226:64106
+2025-05-02 00:43:28,310 - INFO - >>> Added contact: ID: 1106913095396107082477246618975550136030245906927 ~ HOST: 192.168.0.226 ~ PORT: 61013 Last Seen: 2025-05-02 00:43:28.308957
+2025-05-02 00:43:28,313 - INFO - Sending FIND_NODE_RESPONSE to 192.168.0.226:64106
+2025-05-02 00:43:28,319 - INFO - FIND_NODE returned 0 contacts from 192.168.0.226:64110
+2025-05-02 00:44:01,872 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:64110
+2025-05-02 00:44:01,878 - INFO - Received FIND_VALUE request from 192.168.0.226:61890
+2025-05-02 00:44:01,882 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:44:01,885 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:61890
+2025-05-02 00:44:01,892 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:64110
+2025-05-02 00:44:01,904 - INFO - Sending STORE RPC to: 192.168.0.226:64110
+2025-05-02 00:44:01,911 - INFO - Received STORE request from 192.168.0.226:61891
+2025-05-02 00:44:01,914 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:44:01,916 - INFO - Sending STORE_RESPONSE to 192.168.0.226:61891
+2025-05-02 00:44:01,922 - INFO - STORE successful to 192.168.0.226:64110
+2025-05-02 00:44:06,204 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:61013
+2025-05-02 00:44:06,211 - INFO - Received FIND_VALUE request from 192.168.0.226:61892
+2025-05-02 00:44:06,214 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:44:06,217 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:61892
+2025-05-02 00:44:06,223 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:61013
+2025-05-02 00:44:06,236 - INFO - Sending STORE RPC to: 192.168.0.226:61013
+2025-05-02 00:44:06,243 - INFO - Received STORE request from 192.168.0.226:61893
+2025-05-02 00:44:06,245 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:44:06,248 - INFO - Sending STORE_RESPONSE to 192.168.0.226:61893
+2025-05-02 00:44:06,254 - INFO - STORE successful to 192.168.0.226:61013
+2025-05-02 00:44:15,681 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:61013
+2025-05-02 00:44:15,686 - INFO - Received FIND_VALUE request from 192.168.0.226:55203
+2025-05-02 00:44:15,689 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:44:15,692 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:55203
+2025-05-02 00:44:15,696 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:61013
+2025-05-02 00:46:10,318 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:64110
+2025-05-02 00:46:10,322 - INFO - Received FIND_VALUE request from 192.168.0.226:65206
+2025-05-02 00:46:10,323 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:46:10,323 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:65206
+2025-05-02 00:46:10,327 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:64110
+2025-05-02 00:52:47,088 - INFO - UDP Server started on 192.168.0.226:64108
+2025-05-02 00:53:01,186 - INFO - UDP Server started on 192.168.0.226:64119
+2025-05-02 00:53:21,502 - INFO - >>> Added contact: ID: 363946008947453526915779603615527073356210669250 ~ HOST: 192.168.0.226 ~ PORT: 64108 Last Seen: 2025-05-02 00:53:21.501118
+2025-05-02 00:53:21,512 - INFO - Sending FIND_NODE RPC to: 192.168.0.226:64108
+2025-05-02 00:53:21,517 - INFO - Received FIND_NODE request from 192.168.0.226:64121
+2025-05-02 00:53:21,518 - INFO - >>> Added contact: ID: 1380441515230281102375992118363826476843220193119 ~ HOST: 192.168.0.226 ~ PORT: 64119 Last Seen: 2025-05-02 00:53:21.518594
+2025-05-02 00:53:21,519 - INFO - Sending FIND_NODE_RESPONSE to 192.168.0.226:64121
+2025-05-02 00:53:21,524 - INFO - FIND_NODE returned 0 contacts from 192.168.0.226:64108
+2025-05-02 00:53:30,084 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:64108
+2025-05-02 00:53:30,088 - INFO - Received FIND_VALUE request from 192.168.0.226:64122
+2025-05-02 00:53:30,089 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:53:30,089 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:64122
+2025-05-02 00:53:30,093 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:64108
+2025-05-02 00:53:30,106 - INFO - Sending STORE RPC to: 192.168.0.226:64108
+2025-05-02 00:53:30,111 - INFO - Received STORE request from 192.168.0.226:64123
+2025-05-02 00:53:30,112 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:53:30,112 - INFO - Sending STORE_RESPONSE to 192.168.0.226:64123
+2025-05-02 00:53:30,117 - INFO - STORE successful to 192.168.0.226:64108
+2025-05-02 00:53:37,539 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:64119
+2025-05-02 00:53:37,544 - INFO - Received FIND_VALUE request from 192.168.0.226:64133
+2025-05-02 00:53:37,548 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:53:37,551 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:64133
+2025-05-02 00:53:37,554 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:64119
+2025-05-02 00:53:37,558 - INFO - Sending STORE RPC to: 192.168.0.226:64119
+2025-05-02 00:53:37,562 - INFO - Received STORE request from 192.168.0.226:64134
+2025-05-02 00:53:37,565 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:53:37,567 - INFO - Sending STORE_RESPONSE to 192.168.0.226:64134
+2025-05-02 00:53:37,571 - INFO - STORE successful to 192.168.0.226:64119
+2025-05-02 00:54:05,048 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:64119
+2025-05-02 00:54:05,053 - INFO - Received FIND_VALUE request from 192.168.0.226:64135
+2025-05-02 00:54:05,057 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:54:05,060 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:64135
+2025-05-02 00:54:05,064 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:64119
+2025-05-02 00:54:08,041 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:64108
+2025-05-02 00:54:08,043 - INFO - Received FIND_VALUE request from 192.168.0.226:64136
+2025-05-02 00:54:08,044 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:54:08,045 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:64136
+2025-05-02 00:54:08,046 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:64108
+2025-05-02 00:54:11,442 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:64108
+2025-05-02 00:54:11,444 - INFO - Received FIND_VALUE request from 192.168.0.226:64137
+2025-05-02 00:54:11,444 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:54:11,445 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:64137
+2025-05-02 00:54:11,446 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:64108
+2025-05-02 00:54:11,450 - INFO - Sending STORE RPC to: 192.168.0.226:64108
+2025-05-02 00:54:11,451 - INFO - Received STORE request from 192.168.0.226:64138
+2025-05-02 00:54:11,451 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:54:11,452 - INFO - Sending STORE_RESPONSE to 192.168.0.226:64138
+2025-05-02 00:54:11,453 - INFO - STORE successful to 192.168.0.226:64108
+2025-05-02 00:54:47,533 - INFO - Sending STORE RPC to: 192.168.0.226:64108
+2025-05-02 00:54:47,535 - INFO - Received STORE request from 192.168.0.226:54770
+2025-05-02 00:54:47,536 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:54:47,536 - INFO - Sending STORE_RESPONSE to 192.168.0.226:54770
+2025-05-02 00:54:47,537 - INFO - STORE successful to 192.168.0.226:64108
+2025-05-02 00:55:02,368 - INFO - Sending STORE RPC to: 192.168.0.226:64108
+2025-05-02 00:55:02,370 - INFO - Received STORE request from 192.168.0.226:54780
+2025-05-02 00:55:02,371 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:55:02,372 - INFO - Sending STORE_RESPONSE to 192.168.0.226:54780
+2025-05-02 00:55:02,373 - INFO - STORE successful to 192.168.0.226:64108
+2025-05-02 00:55:24,308 - INFO - Sending STORE RPC to: 192.168.0.226:64108
+2025-05-02 00:55:24,309 - INFO - Received STORE request from 192.168.0.226:54781
+2025-05-02 00:55:24,310 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:55:24,311 - INFO - Sending STORE_RESPONSE to 192.168.0.226:54781
+2025-05-02 00:55:24,312 - INFO - STORE successful to 192.168.0.226:64108
+2025-05-02 00:55:38,814 - INFO - Sending STORE RPC to: 192.168.0.226:64108
+2025-05-02 00:55:38,816 - INFO - Received STORE request from 192.168.0.226:49568
+2025-05-02 00:55:38,817 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:55:38,817 - INFO - Sending STORE_RESPONSE to 192.168.0.226:49568
+2025-05-02 00:55:38,819 - INFO - STORE successful to 192.168.0.226:64108
+2025-05-02 00:55:52,783 - INFO - Sending STORE RPC to: 192.168.0.226:64108
+2025-05-02 00:55:52,784 - INFO - Received STORE request from 192.168.0.226:60181
+2025-05-02 00:55:52,785 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:55:52,785 - INFO - Sending STORE_RESPONSE to 192.168.0.226:60181
+2025-05-02 00:55:52,786 - INFO - STORE successful to 192.168.0.226:64108
+2025-05-02 00:55:52,790 - INFO - Sending STORE RPC to: 192.168.0.226:64108
+2025-05-02 00:55:52,791 - INFO - Received STORE request from 192.168.0.226:60182
+2025-05-02 00:55:52,792 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:55:52,792 - INFO - Sending STORE_RESPONSE to 192.168.0.226:60182
+2025-05-02 00:55:52,793 - INFO - STORE successful to 192.168.0.226:64108
+2025-05-02 00:55:56,056 - INFO - Sending STORE RPC to: 192.168.0.226:64108
+2025-05-02 00:55:56,057 - INFO - Received STORE request from 192.168.0.226:60183
+2025-05-02 00:55:56,058 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:55:56,058 - INFO - Sending STORE_RESPONSE to 192.168.0.226:60183
+2025-05-02 00:55:56,059 - INFO - STORE successful to 192.168.0.226:64108
+2025-05-02 00:55:56,063 - INFO - Sending STORE RPC to: 192.168.0.226:64108
+2025-05-02 00:55:56,064 - INFO - Received STORE request from 192.168.0.226:60184
+2025-05-02 00:55:56,064 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:55:56,065 - INFO - Sending STORE_RESPONSE to 192.168.0.226:60184
+2025-05-02 00:55:56,066 - INFO - STORE successful to 192.168.0.226:64108
+2025-05-02 00:55:56,901 - INFO - Sending STORE RPC to: 192.168.0.226:64108
+2025-05-02 00:55:56,903 - INFO - Received STORE request from 192.168.0.226:60185
+2025-05-02 00:55:56,903 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:55:56,904 - INFO - Sending STORE_RESPONSE to 192.168.0.226:60185
+2025-05-02 00:55:56,905 - INFO - STORE successful to 192.168.0.226:64108
+2025-05-02 00:55:56,908 - INFO - Sending STORE RPC to: 192.168.0.226:64108
+2025-05-02 00:55:56,910 - INFO - Received STORE request from 192.168.0.226:60186
+2025-05-02 00:55:56,910 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:55:56,911 - INFO - Sending STORE_RESPONSE to 192.168.0.226:60186
+2025-05-02 00:55:56,912 - INFO - STORE successful to 192.168.0.226:64108
+2025-05-02 00:55:57,624 - INFO - Sending STORE RPC to: 192.168.0.226:64108
+2025-05-02 00:55:57,625 - INFO - Received STORE request from 192.168.0.226:60187
+2025-05-02 00:55:57,626 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:55:57,626 - INFO - Sending STORE_RESPONSE to 192.168.0.226:60187
+2025-05-02 00:55:57,627 - INFO - STORE successful to 192.168.0.226:64108
+2025-05-02 00:55:57,631 - INFO - Sending STORE RPC to: 192.168.0.226:64108
+2025-05-02 00:55:57,632 - INFO - Received STORE request from 192.168.0.226:60188
+2025-05-02 00:55:57,633 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:55:57,633 - INFO - Sending STORE_RESPONSE to 192.168.0.226:60188
+2025-05-02 00:55:57,634 - INFO - STORE successful to 192.168.0.226:64108
+2025-05-02 00:55:58,272 - INFO - Sending STORE RPC to: 192.168.0.226:64108
+2025-05-02 00:55:58,274 - INFO - Received STORE request from 192.168.0.226:60189
+2025-05-02 00:55:58,274 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 00:55:58,275 - INFO - Sending STORE_RESPONSE to 192.168.0.226:60189
+2025-05-02 00:55:58,276 - INFO - STORE successful to 192.168.0.226:64108
+2025-05-02 00:59:25,012 - INFO - UDP Server started on 192.168.0.226:52059
+2025-05-02 00:59:32,371 - INFO - UDP Server started on 192.168.0.226:58257
+2025-05-02 00:59:44,385 - INFO - >>> Added contact: ID: 789880241426586217926292397075780818970551875831 ~ HOST: 192.168.0.226 ~ PORT: 52059 Last Seen: 2025-05-02 00:59:44.385526
+2025-05-02 00:59:44,386 - INFO - Sending FIND_NODE RPC to: 192.168.0.226:52059
+2025-05-02 00:59:44,388 - INFO - Received FIND_NODE request from 192.168.0.226:58268
+2025-05-02 00:59:44,389 - INFO - >>> Added contact: ID: 466849204432647029070707702991130593034459725076 ~ HOST: 192.168.0.226 ~ PORT: 58257 Last Seen: 2025-05-02 00:59:44.389128
+2025-05-02 00:59:44,389 - INFO - Sending FIND_NODE_RESPONSE to 192.168.0.226:58268
+2025-05-02 00:59:44,390 - INFO - FIND_NODE returned 0 contacts from 192.168.0.226:52059
+2025-05-02 01:00:00,819 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:52059
+2025-05-02 01:00:00,819 - INFO - Received FIND_VALUE request from 192.168.0.226:58269
+2025-05-02 01:00:00,820 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:00:00,820 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:58269
+2025-05-02 01:00:00,820 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:52059
+2025-05-02 01:00:00,821 - INFO - Sending STORE RPC to: 192.168.0.226:52059
+2025-05-02 01:00:00,822 - INFO - Received STORE request from 192.168.0.226:58270
+2025-05-02 01:00:00,822 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:00:00,822 - INFO - Sending STORE_RESPONSE to 192.168.0.226:58270
+2025-05-02 01:00:00,822 - INFO - STORE successful to 192.168.0.226:52059
+2025-05-02 01:00:05,326 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:58257
+2025-05-02 01:00:05,326 - INFO - Received FIND_VALUE request from 192.168.0.226:58271
+2025-05-02 01:00:05,326 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:00:05,327 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:58271
+2025-05-02 01:00:05,327 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:58257
+2025-05-02 01:00:05,328 - INFO - Sending STORE RPC to: 192.168.0.226:58257
+2025-05-02 01:00:05,329 - INFO - Received STORE request from 192.168.0.226:58272
+2025-05-02 01:00:05,329 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:00:05,329 - INFO - Sending STORE_RESPONSE to 192.168.0.226:58272
+2025-05-02 01:00:05,329 - INFO - STORE successful to 192.168.0.226:58257
+2025-05-02 01:00:23,145 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:52059
+2025-05-02 01:00:23,146 - INFO - Received FIND_VALUE request from 192.168.0.226:60751
+2025-05-02 01:00:23,146 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:00:23,146 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:60751
+2025-05-02 01:00:23,147 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:52059
+2025-05-02 01:00:41,298 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:58257
+2025-05-02 01:00:41,299 - INFO - Received FIND_VALUE request from 192.168.0.226:59548
+2025-05-02 01:00:41,300 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:00:41,300 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:59548
+2025-05-02 01:00:41,301 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:58257
+2025-05-02 01:00:47,628 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:52059
+2025-05-02 01:00:47,628 - INFO - Received FIND_VALUE request from 192.168.0.226:59549
+2025-05-02 01:00:47,629 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:00:47,629 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:59549
+2025-05-02 01:00:47,629 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:52059
+2025-05-02 01:00:47,632 - INFO - Sending STORE RPC to: 192.168.0.226:52059
+2025-05-02 01:00:47,633 - INFO - Received STORE request from 192.168.0.226:59550
+2025-05-02 01:00:47,633 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:00:47,633 - INFO - Sending STORE_RESPONSE to 192.168.0.226:59550
+2025-05-02 01:00:47,634 - INFO - STORE successful to 192.168.0.226:52059
+2025-05-02 01:00:52,419 - ERROR - Error when listening: 'str' object has no attribute 'encrypted_message'
+2025-05-02 01:00:52,420 - INFO - Sending STORE RPC to: 192.168.0.226:52059
+2025-05-02 01:00:52,420 - INFO - Received STORE request from 192.168.0.226:59551
+2025-05-02 01:00:52,420 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:00:52,421 - INFO - Sending STORE_RESPONSE to 192.168.0.226:59551
+2025-05-02 01:00:52,421 - INFO - STORE successful to 192.168.0.226:52059
+2025-05-02 01:03:21,308 - INFO - Sending STORE RPC to: 192.168.0.226:52059
+2025-05-02 01:03:21,312 - INFO - Received STORE request from 192.168.0.226:64107
+2025-05-02 01:03:21,314 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:03:21,315 - INFO - Sending STORE_RESPONSE to 192.168.0.226:64107
+2025-05-02 01:03:21,319 - INFO - STORE successful to 192.168.0.226:52059
+2025-05-02 01:03:24,457 - INFO - Sending STORE RPC to: 192.168.0.226:52059
+2025-05-02 01:03:24,461 - INFO - Received STORE request from 192.168.0.226:64108
+2025-05-02 01:03:24,462 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:03:24,464 - INFO - Sending STORE_RESPONSE to 192.168.0.226:64108
+2025-05-02 01:03:24,467 - INFO - STORE successful to 192.168.0.226:52059
+2025-05-02 01:03:46,231 - INFO - UDP Server started on 192.168.0.226:64119
+2025-05-02 01:03:57,692 - INFO - UDP Server started on 192.168.0.226:64613
+2025-05-02 01:04:20,166 - INFO - >>> Added contact: ID: 1318077293544995992180342976094280532203244212498 ~ HOST: 192.168.0.226 ~ PORT: 64119 Last Seen: 2025-05-02 01:04:20.165606
+2025-05-02 01:04:20,171 - INFO - Sending FIND_NODE RPC to: 192.168.0.226:64119
+2025-05-02 01:04:20,174 - INFO - Received FIND_NODE request from 192.168.0.226:64615
+2025-05-02 01:04:20,175 - INFO - >>> Added contact: ID: 973973231531063639371062845950876975877303461882 ~ HOST: 192.168.0.226 ~ PORT: 64613 Last Seen: 2025-05-02 01:04:20.174936
+2025-05-02 01:04:20,175 - INFO - Sending FIND_NODE_RESPONSE to 192.168.0.226:64615
+2025-05-02 01:04:20,177 - INFO - FIND_NODE returned 0 contacts from 192.168.0.226:64119
+2025-05-02 01:04:30,560 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:64119
+2025-05-02 01:04:30,562 - INFO - Received FIND_VALUE request from 192.168.0.226:49581
+2025-05-02 01:04:30,562 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:04:30,563 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:49581
+2025-05-02 01:04:30,564 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:64119
+2025-05-02 01:04:30,571 - INFO - Sending STORE RPC to: 192.168.0.226:64119
+2025-05-02 01:04:30,572 - INFO - Received STORE request from 192.168.0.226:49582
+2025-05-02 01:04:30,572 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:04:30,573 - INFO - Sending STORE_RESPONSE to 192.168.0.226:49582
+2025-05-02 01:04:30,574 - INFO - STORE successful to 192.168.0.226:64119
+2025-05-02 01:04:35,901 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:64613
+2025-05-02 01:04:35,904 - INFO - Received FIND_VALUE request from 192.168.0.226:49586
+2025-05-02 01:04:35,906 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:04:35,907 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:49586
+2025-05-02 01:04:35,909 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:64613
+2025-05-02 01:04:35,910 - INFO - Sending STORE RPC to: 192.168.0.226:64613
+2025-05-02 01:04:35,912 - INFO - Received STORE request from 192.168.0.226:49587
+2025-05-02 01:04:35,914 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:04:35,915 - INFO - Sending STORE_RESPONSE to 192.168.0.226:49587
+2025-05-02 01:04:35,917 - INFO - STORE successful to 192.168.0.226:64613
+2025-05-02 01:04:45,577 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:64119
+2025-05-02 01:04:45,578 - INFO - Received FIND_VALUE request from 192.168.0.226:62953
+2025-05-02 01:04:45,578 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:04:45,579 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:62953
+2025-05-02 01:04:45,579 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:64119
+2025-05-02 01:04:51,641 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:64613
+2025-05-02 01:04:51,642 - INFO - Received FIND_VALUE request from 192.168.0.226:62954
+2025-05-02 01:04:51,642 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:04:51,642 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:62954
+2025-05-02 01:04:51,643 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:64613
+2025-05-02 01:04:59,047 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:64119
+2025-05-02 01:04:59,048 - INFO - Received FIND_VALUE request from 192.168.0.226:60459
+2025-05-02 01:04:59,048 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:04:59,048 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:60459
+2025-05-02 01:04:59,049 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:64119
+2025-05-02 01:04:59,051 - INFO - Sending STORE RPC to: 192.168.0.226:64119
+2025-05-02 01:04:59,051 - INFO - Received STORE request from 192.168.0.226:60460
+2025-05-02 01:04:59,051 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:04:59,051 - INFO - Sending STORE_RESPONSE to 192.168.0.226:60460
+2025-05-02 01:04:59,052 - INFO - STORE successful to 192.168.0.226:64119
+2025-05-02 01:05:44,435 - INFO - UDP Server started on 192.168.0.226:52243
+2025-05-02 01:05:48,576 - INFO - UDP Server started on 192.168.0.226:52245
+2025-05-02 01:06:04,777 - INFO - >>> Added contact: ID: 23266944244739714903800860957783104139953040076 ~ HOST: 192.168.0.226 ~ PORT: 52243 Last Seen: 2025-05-02 01:06:04.777199
+2025-05-02 01:06:04,778 - INFO - Sending FIND_NODE RPC to: 192.168.0.226:52243
+2025-05-02 01:06:04,780 - INFO - Received FIND_NODE request from 192.168.0.226:52246
+2025-05-02 01:06:04,780 - INFO - >>> Added contact: ID: 616089703865272304369181420438107438557613742669 ~ HOST: 192.168.0.226 ~ PORT: 52245 Last Seen: 2025-05-02 01:06:04.780824
+2025-05-02 01:06:04,781 - INFO - Sending FIND_NODE_RESPONSE to 192.168.0.226:52246
+2025-05-02 01:06:04,781 - INFO - FIND_NODE returned 0 contacts from 192.168.0.226:52243
+2025-05-02 01:06:11,288 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:52243
+2025-05-02 01:06:11,288 - INFO - Received FIND_VALUE request from 192.168.0.226:60112
+2025-05-02 01:06:11,289 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:06:11,289 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:60112
+2025-05-02 01:06:11,289 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:52243
+2025-05-02 01:06:11,291 - INFO - Sending STORE RPC to: 192.168.0.226:52243
+2025-05-02 01:06:11,291 - INFO - Received STORE request from 192.168.0.226:60113
+2025-05-02 01:06:11,292 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:06:11,292 - INFO - Sending STORE_RESPONSE to 192.168.0.226:60113
+2025-05-02 01:06:11,292 - INFO - STORE successful to 192.168.0.226:52243
+2025-05-02 01:06:15,412 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:52245
+2025-05-02 01:06:15,413 - INFO - Received FIND_VALUE request from 192.168.0.226:60114
+2025-05-02 01:06:15,413 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:06:15,413 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:60114
+2025-05-02 01:06:15,414 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:52245
+2025-05-02 01:06:15,415 - INFO - Sending STORE RPC to: 192.168.0.226:52245
+2025-05-02 01:06:15,416 - INFO - Received STORE request from 192.168.0.226:60115
+2025-05-02 01:06:15,416 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:06:15,416 - INFO - Sending STORE_RESPONSE to 192.168.0.226:60115
+2025-05-02 01:06:15,416 - INFO - STORE successful to 192.168.0.226:52245
+2025-05-02 01:06:31,118 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:52243
+2025-05-02 01:06:31,119 - INFO - Received FIND_VALUE request from 192.168.0.226:60116
+2025-05-02 01:06:31,119 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:06:31,119 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:60116
+2025-05-02 01:06:31,120 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:52243
+2025-05-02 01:06:35,224 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:52245
+2025-05-02 01:06:35,225 - INFO - Received FIND_VALUE request from 192.168.0.226:60117
+2025-05-02 01:06:35,225 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:06:35,225 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:60117
+2025-05-02 01:06:35,226 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:52245
+2025-05-02 01:06:43,507 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:52243
+2025-05-02 01:06:43,508 - INFO - Received FIND_VALUE request from 192.168.0.226:60169
+2025-05-02 01:06:43,508 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:06:43,508 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:60169
+2025-05-02 01:06:43,509 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:52243
+2025-05-02 01:06:43,510 - INFO - Sending STORE RPC to: 192.168.0.226:52243
+2025-05-02 01:06:43,510 - INFO - Received STORE request from 192.168.0.226:60170
+2025-05-02 01:06:43,510 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:06:43,510 - INFO - Sending STORE_RESPONSE to 192.168.0.226:60170
+2025-05-02 01:06:43,511 - INFO - STORE successful to 192.168.0.226:52243
+2025-05-02 01:06:47,504 - INFO - Sending STORE RPC to: 192.168.0.226:52243
+2025-05-02 01:06:57,519 - ERROR - STORE timed out on 192.168.0.226:52243
+2025-05-02 01:07:08,052 - INFO - Received STORE request from 192.168.0.226:60171
+2025-05-02 01:07:08,052 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:07:08,053 - INFO - Sending STORE_RESPONSE to 192.168.0.226:60171
+2025-05-02 01:07:32,996 - INFO - Sending STORE RPC to: 192.168.0.226:52245
+2025-05-02 01:07:32,997 - INFO - Received STORE request from 192.168.0.226:62289
+2025-05-02 01:07:32,998 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:07:32,998 - INFO - Sending STORE_RESPONSE to 192.168.0.226:62289
+2025-05-02 01:07:32,999 - INFO - STORE successful to 192.168.0.226:52245
+2025-05-02 01:07:37,217 - INFO - Sending STORE RPC to: 192.168.0.226:52245
+2025-05-02 01:07:37,218 - INFO - Received STORE request from 192.168.0.226:62299
+2025-05-02 01:07:37,218 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:07:37,218 - INFO - Sending STORE_RESPONSE to 192.168.0.226:62299
+2025-05-02 01:07:37,219 - INFO - STORE successful to 192.168.0.226:52245
+2025-05-02 01:07:51,709 - INFO - Sending STORE RPC to: 192.168.0.226:52243
+2025-05-02 01:07:51,710 - INFO - Received STORE request from 192.168.0.226:58864
+2025-05-02 01:07:51,711 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:07:51,712 - INFO - Sending STORE_RESPONSE to 192.168.0.226:58864
+2025-05-02 01:07:51,712 - INFO - STORE successful to 192.168.0.226:52243
+2025-05-02 01:07:51,715 - INFO - Sending STORE RPC to: 192.168.0.226:52243
+2025-05-02 01:07:51,716 - INFO - Received STORE request from 192.168.0.226:58865
+2025-05-02 01:07:51,717 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:07:51,718 - INFO - Sending STORE_RESPONSE to 192.168.0.226:58865
+2025-05-02 01:07:51,718 - INFO - STORE successful to 192.168.0.226:52243
+2025-05-02 01:08:41,553 - INFO - Sending STORE RPC to: 192.168.0.226:52243
+2025-05-02 01:08:41,554 - INFO - Received STORE request from 192.168.0.226:50783
+2025-05-02 01:08:41,555 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:08:41,555 - INFO - Sending STORE_RESPONSE to 192.168.0.226:50783
+2025-05-02 01:08:41,556 - INFO - STORE successful to 192.168.0.226:52243
+2025-05-02 01:08:41,559 - INFO - Sending STORE RPC to: 192.168.0.226:52243
+2025-05-02 01:08:41,561 - INFO - Received STORE request from 192.168.0.226:50784
+2025-05-02 01:08:41,561 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:08:41,562 - INFO - Sending STORE_RESPONSE to 192.168.0.226:50784
+2025-05-02 01:08:41,563 - INFO - STORE successful to 192.168.0.226:52243
+2025-05-02 01:08:52,118 - INFO - Sending STORE RPC to: 192.168.0.226:52245
+2025-05-02 01:08:52,119 - INFO - Received STORE request from 192.168.0.226:50785
+2025-05-02 01:08:52,119 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:08:52,120 - INFO - Sending STORE_RESPONSE to 192.168.0.226:50785
+2025-05-02 01:08:52,121 - INFO - STORE successful to 192.168.0.226:52245
+2025-05-02 01:08:52,125 - INFO - Sending STORE RPC to: 192.168.0.226:52245
+2025-05-02 01:08:52,126 - INFO - Received STORE request from 192.168.0.226:50786
+2025-05-02 01:08:52,126 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:08:52,126 - INFO - Sending STORE_RESPONSE to 192.168.0.226:50786
+2025-05-02 01:08:52,127 - INFO - STORE successful to 192.168.0.226:52245
+2025-05-02 01:14:40,031 - INFO - UDP Server started on 192.168.0.226:49975
+2025-05-02 01:14:49,297 - INFO - >>> Added contact: ID: 23266944244739714903800860957783104139953040076 ~ HOST: 192.168.0.226 ~ PORT: 52243 Last Seen: 2025-05-02 01:14:49.296995
+2025-05-02 01:14:49,298 - INFO - Sending FIND_NODE RPC to: 192.168.0.226:52243
+2025-05-02 01:14:49,300 - INFO - Received FIND_NODE request from 192.168.0.226:58736
+2025-05-02 01:14:49,301 - INFO - >>> Added contact: ID: 1117319126990385846014503108657582792389760686748 ~ HOST: 192.168.0.226 ~ PORT: 49975 Last Seen: 2025-05-02 01:14:49.301188
+2025-05-02 01:14:49,301 - INFO - Sending FIND_NODE_RESPONSE to 192.168.0.226:58736
+2025-05-02 01:14:49,303 - INFO - FIND_NODE returned 1 contacts from 192.168.0.226:52243
+2025-05-02 01:14:49,303 - INFO - >>> Added contact: ID: 616089703865272304369181420438107438557613742669 ~ HOST: 192.168.0.226 ~ PORT: 52245 Last Seen: 2025-05-02 01:14:49.303367
+2025-05-02 01:14:52,728 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:52243
+2025-05-02 01:14:52,729 - INFO - Received FIND_VALUE request from 192.168.0.226:58737
+2025-05-02 01:14:52,730 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:14:52,731 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:58737
+2025-05-02 01:14:52,731 - INFO - FIND_VALUE returned 1 contacts from 192.168.0.226:52243
+2025-05-02 01:14:52,732 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:52245
+2025-05-02 01:14:52,733 - INFO - Received FIND_VALUE request from 192.168.0.226:58738
+2025-05-02 01:14:52,733 - INFO - >>> Added contact: ID: 1117319126990385846014503108657582792389760686748 ~ HOST: 192.168.0.226 ~ PORT: 49975 Last Seen: 2025-05-02 01:14:52.733680
+2025-05-02 01:14:52,734 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:58738
+2025-05-02 01:14:52,734 - INFO - FIND_VALUE returned 1 contacts from 192.168.0.226:52245
+2025-05-02 01:14:52,735 - INFO - Sending STORE RPC to: 192.168.0.226:52245
+2025-05-02 01:14:52,735 - INFO - Received STORE request from 192.168.0.226:58739
+2025-05-02 01:14:52,736 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:14:52,736 - INFO - Sending STORE_RESPONSE to 192.168.0.226:58739
+2025-05-02 01:14:52,736 - INFO - STORE successful to 192.168.0.226:52245
+2025-05-02 01:14:52,737 - INFO - Sending STORE RPC to: 192.168.0.226:52243
+2025-05-02 01:14:52,738 - INFO - Received STORE request from 192.168.0.226:58740
+2025-05-02 01:14:52,738 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:14:52,739 - INFO - Sending STORE_RESPONSE to 192.168.0.226:58740
+2025-05-02 01:14:52,739 - INFO - STORE successful to 192.168.0.226:52243
+2025-05-02 01:14:54,615 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:52243
+2025-05-02 01:14:54,616 - INFO - Received FIND_VALUE request from 192.168.0.226:58741
+2025-05-02 01:14:54,617 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:14:54,618 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:58741
+2025-05-02 01:14:54,619 - INFO - FIND_VALUE returned value from 192.168.0.226:52243
+2025-05-02 01:14:54,619 - INFO - Sending STORE RPC to: 192.168.0.226:52245
+2025-05-02 01:14:54,620 - INFO - Received STORE request from 192.168.0.226:58742
+2025-05-02 01:14:54,620 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:14:54,620 - INFO - Sending STORE_RESPONSE to 192.168.0.226:58742
+2025-05-02 01:14:54,621 - INFO - STORE successful to 192.168.0.226:52245
+2025-05-02 01:14:54,621 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:52243
+2025-05-02 01:14:54,622 - INFO - Received FIND_VALUE request from 192.168.0.226:58743
+2025-05-02 01:14:54,623 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:14:54,624 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:58743
+2025-05-02 01:14:54,624 - INFO - FIND_VALUE returned 1 contacts from 192.168.0.226:52243
+2025-05-02 01:14:54,625 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:52245
+2025-05-02 01:14:54,625 - INFO - Received FIND_VALUE request from 192.168.0.226:58744
+2025-05-02 01:14:54,626 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:14:54,626 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:58744
+2025-05-02 01:14:54,626 - INFO - FIND_VALUE returned 1 contacts from 192.168.0.226:52245
+2025-05-02 01:15:04,103 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:52245
+2025-05-02 01:15:04,104 - INFO - Received FIND_VALUE request from 192.168.0.226:58754
+2025-05-02 01:15:04,104 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:15:04,104 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:58754
+2025-05-02 01:15:04,105 - INFO - FIND_VALUE returned 1 contacts from 192.168.0.226:52245
+2025-05-02 01:15:04,107 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:49975
+2025-05-02 01:15:04,108 - INFO - Received FIND_VALUE request from 192.168.0.226:58755
+2025-05-02 01:15:04,108 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:15:04,108 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:58755
+2025-05-02 01:15:04,109 - INFO - FIND_VALUE returned 1 contacts from 192.168.0.226:49975
+2025-05-02 01:15:21,313 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:52243
+2025-05-02 01:15:21,314 - INFO - Received FIND_VALUE request from 192.168.0.226:54654
+2025-05-02 01:15:21,314 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:15:21,315 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:54654
+2025-05-02 01:15:21,316 - INFO - FIND_VALUE returned 1 contacts from 192.168.0.226:52243
+2025-05-02 01:15:21,316 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:49975
+2025-05-02 01:15:21,317 - INFO - Received FIND_VALUE request from 192.168.0.226:54655
+2025-05-02 01:15:21,317 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:15:21,317 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:54655
+2025-05-02 01:15:21,317 - INFO - FIND_VALUE returned 1 contacts from 192.168.0.226:49975
+2025-05-02 01:15:32,522 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:52243
+2025-05-02 01:15:32,523 - INFO - Received FIND_VALUE request from 192.168.0.226:53087
+2025-05-02 01:15:32,524 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:15:32,525 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:53087
+2025-05-02 01:15:32,525 - INFO - FIND_VALUE returned value from 192.168.0.226:52243
+2025-05-02 01:15:32,526 - INFO - Sending STORE RPC to: 192.168.0.226:52245
+2025-05-02 01:15:32,527 - INFO - Received STORE request from 192.168.0.226:53088
+2025-05-02 01:15:32,527 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:15:32,527 - INFO - Sending STORE_RESPONSE to 192.168.0.226:53088
+2025-05-02 01:15:32,527 - INFO - STORE successful to 192.168.0.226:52245
+2025-05-02 01:15:32,528 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:52243
+2025-05-02 01:15:32,529 - INFO - Received FIND_VALUE request from 192.168.0.226:53089
+2025-05-02 01:15:32,529 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:15:32,530 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:53089
+2025-05-02 01:15:32,530 - INFO - FIND_VALUE returned 1 contacts from 192.168.0.226:52243
+2025-05-02 01:15:32,531 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:52245
+2025-05-02 01:15:32,531 - INFO - Received FIND_VALUE request from 192.168.0.226:53090
+2025-05-02 01:15:32,531 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:15:32,531 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:53090
+2025-05-02 01:15:32,532 - INFO - FIND_VALUE returned 1 contacts from 192.168.0.226:52245
+2025-05-02 01:15:36,534 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:52243
+2025-05-02 01:15:36,535 - INFO - Received FIND_VALUE request from 192.168.0.226:53100
+2025-05-02 01:15:36,535 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:15:36,536 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:53100
+2025-05-02 01:15:36,537 - INFO - FIND_VALUE returned value from 192.168.0.226:52243
+2025-05-02 01:15:36,537 - INFO - Sending STORE RPC to: 192.168.0.226:52245
+2025-05-02 01:15:36,538 - INFO - Received STORE request from 192.168.0.226:53101
+2025-05-02 01:15:36,538 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:15:36,538 - INFO - Sending STORE_RESPONSE to 192.168.0.226:53101
+2025-05-02 01:15:36,538 - INFO - STORE successful to 192.168.0.226:52245
+2025-05-02 01:15:36,539 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:52243
+2025-05-02 01:15:36,540 - INFO - Received FIND_VALUE request from 192.168.0.226:53102
+2025-05-02 01:15:36,540 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:15:36,541 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:53102
+2025-05-02 01:15:36,541 - INFO - FIND_VALUE returned 1 contacts from 192.168.0.226:52243
+2025-05-02 01:15:36,542 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:52245
+2025-05-02 01:15:36,542 - INFO - Received FIND_VALUE request from 192.168.0.226:53103
+2025-05-02 01:15:36,542 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:15:36,543 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:53103
+2025-05-02 01:15:36,543 - INFO - FIND_VALUE returned 1 contacts from 192.168.0.226:52245
+2025-05-02 01:15:36,544 - INFO - Sending STORE RPC to: 192.168.0.226:52243
+2025-05-02 01:15:36,545 - INFO - Received STORE request from 192.168.0.226:53104
+2025-05-02 01:15:36,545 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:15:36,546 - INFO - Sending STORE_RESPONSE to 192.168.0.226:53104
+2025-05-02 01:15:36,546 - INFO - STORE successful to 192.168.0.226:52243
+2025-05-02 01:15:36,547 - INFO - Sending STORE RPC to: 192.168.0.226:52245
+2025-05-02 01:15:36,547 - INFO - Received STORE request from 192.168.0.226:53105
+2025-05-02 01:15:36,547 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:15:36,547 - INFO - Sending STORE_RESPONSE to 192.168.0.226:53105
+2025-05-02 01:15:36,547 - INFO - STORE successful to 192.168.0.226:52245
+2025-05-02 01:15:36,550 - INFO - Sending STORE RPC to: 192.168.0.226:52245
+2025-05-02 01:15:36,550 - INFO - Received STORE request from 192.168.0.226:53106
+2025-05-02 01:15:36,550 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:15:36,550 - INFO - Sending STORE_RESPONSE to 192.168.0.226:53106
+2025-05-02 01:15:36,550 - INFO - STORE successful to 192.168.0.226:52245
+2025-05-02 01:15:36,551 - INFO - Sending STORE RPC to: 192.168.0.226:52243
+2025-05-02 01:15:36,552 - INFO - Received STORE request from 192.168.0.226:53107
+2025-05-02 01:15:36,552 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:15:36,553 - INFO - Sending STORE_RESPONSE to 192.168.0.226:53107
+2025-05-02 01:15:36,553 - INFO - STORE successful to 192.168.0.226:52243
+2025-05-02 01:16:04,549 - INFO - UDP Server started on 192.168.0.226:57005
+2025-05-02 01:16:13,943 - INFO - UDP Server started on 192.168.0.226:58786
+2025-05-02 01:16:24,835 - INFO - >>> Added contact: ID: 1184214965032221740815934324197034129099939330849 ~ HOST: 192.168.0.226 ~ PORT: 57005 Last Seen: 2025-05-02 01:16:24.834948
+2025-05-02 01:16:24,836 - INFO - Sending FIND_NODE RPC to: 192.168.0.226:57005
+2025-05-02 01:16:24,838 - INFO - Received FIND_NODE request from 192.168.0.226:52958
+2025-05-02 01:16:24,838 - INFO - >>> Added contact: ID: 108911408691723018863846493668933789936277970971 ~ HOST: 192.168.0.226 ~ PORT: 58786 Last Seen: 2025-05-02 01:16:24.838386
+2025-05-02 01:16:24,838 - INFO - Sending FIND_NODE_RESPONSE to 192.168.0.226:52958
+2025-05-02 01:16:24,839 - INFO - FIND_NODE returned 0 contacts from 192.168.0.226:57005
+2025-05-02 01:16:27,805 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:57005
+2025-05-02 01:16:27,806 - INFO - Received FIND_VALUE request from 192.168.0.226:51464
+2025-05-02 01:16:27,806 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:16:27,806 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:51464
+2025-05-02 01:16:27,807 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:57005
+2025-05-02 01:16:27,808 - INFO - Sending STORE RPC to: 192.168.0.226:57005
+2025-05-02 01:16:27,809 - INFO - Received STORE request from 192.168.0.226:51465
+2025-05-02 01:16:27,809 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:16:27,809 - INFO - Sending STORE_RESPONSE to 192.168.0.226:51465
+2025-05-02 01:16:27,809 - INFO - STORE successful to 192.168.0.226:57005
+2025-05-02 01:16:34,987 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:58786
+2025-05-02 01:16:34,988 - INFO - Received FIND_VALUE request from 192.168.0.226:51466
+2025-05-02 01:16:34,988 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:16:34,988 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:51466
+2025-05-02 01:16:34,988 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:58786
+2025-05-02 01:16:34,990 - INFO - Sending STORE RPC to: 192.168.0.226:58786
+2025-05-02 01:16:34,990 - INFO - Received STORE request from 192.168.0.226:51467
+2025-05-02 01:16:34,990 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:16:34,990 - INFO - Sending STORE_RESPONSE to 192.168.0.226:51467
+2025-05-02 01:16:34,991 - INFO - STORE successful to 192.168.0.226:58786
+2025-05-02 01:16:37,716 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:58786
+2025-05-02 01:16:37,717 - INFO - Received FIND_VALUE request from 192.168.0.226:50133
+2025-05-02 01:16:37,717 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:16:37,717 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:50133
+2025-05-02 01:16:37,718 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:58786
+2025-05-02 01:16:43,073 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:57005
+2025-05-02 01:16:43,073 - INFO - Received FIND_VALUE request from 192.168.0.226:60814
+2025-05-02 01:16:43,074 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:16:43,074 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:60814
+2025-05-02 01:16:43,074 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:57005
+2025-05-02 01:16:46,538 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:57005
+2025-05-02 01:16:46,539 - INFO - Received FIND_VALUE request from 192.168.0.226:60815
+2025-05-02 01:16:46,539 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:16:46,539 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:60815
+2025-05-02 01:16:46,539 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:57005
+2025-05-02 01:16:46,541 - INFO - Sending STORE RPC to: 192.168.0.226:57005
+2025-05-02 01:16:46,541 - INFO - Received STORE request from 192.168.0.226:60816
+2025-05-02 01:16:46,541 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:16:46,541 - INFO - Sending STORE_RESPONSE to 192.168.0.226:60816
+2025-05-02 01:16:46,542 - INFO - STORE successful to 192.168.0.226:57005
+2025-05-02 01:16:46,544 - INFO - Sending STORE RPC to: 192.168.0.226:57005
+2025-05-02 01:16:46,545 - INFO - Received STORE request from 192.168.0.226:60817
+2025-05-02 01:16:46,545 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:16:46,545 - INFO - Sending STORE_RESPONSE to 192.168.0.226:60817
+2025-05-02 01:16:46,546 - INFO - STORE successful to 192.168.0.226:57005
+2025-05-02 01:16:52,493 - INFO - Sending STORE RPC to: 192.168.0.226:58786
+2025-05-02 01:16:52,494 - INFO - Received STORE request from 192.168.0.226:60818
+2025-05-02 01:16:52,494 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:16:52,494 - INFO - Sending STORE_RESPONSE to 192.168.0.226:60818
+2025-05-02 01:16:52,494 - INFO - STORE successful to 192.168.0.226:58786
+2025-05-02 01:16:52,497 - INFO - Sending STORE RPC to: 192.168.0.226:58786
+2025-05-02 01:16:52,498 - INFO - Received STORE request from 192.168.0.226:60819
+2025-05-02 01:16:52,498 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:16:52,498 - INFO - Sending STORE_RESPONSE to 192.168.0.226:60819
+2025-05-02 01:16:52,498 - INFO - STORE successful to 192.168.0.226:58786
+2025-05-02 01:17:03,116 - INFO - Sending STORE RPC to: 192.168.0.226:57005
+2025-05-02 01:17:03,117 - INFO - Received STORE request from 192.168.0.226:55589
+2025-05-02 01:17:03,117 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:17:03,117 - INFO - Sending STORE_RESPONSE to 192.168.0.226:55589
+2025-05-02 01:17:03,117 - INFO - STORE successful to 192.168.0.226:57005
+2025-05-02 01:17:03,120 - INFO - Sending STORE RPC to: 192.168.0.226:57005
+2025-05-02 01:17:03,120 - INFO - Received STORE request from 192.168.0.226:55590
+2025-05-02 01:17:03,120 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:17:03,120 - INFO - Sending STORE_RESPONSE to 192.168.0.226:55590
+2025-05-02 01:17:03,121 - INFO - STORE successful to 192.168.0.226:57005
+2025-05-02 01:23:38,207 - INFO - UDP Server started on 192.168.0.226:53053
+2025-05-02 01:23:46,267 - INFO - UDP Server started on 192.168.0.226:53055
+2025-05-02 01:23:58,826 - INFO - >>> Added contact: ID: 793176536409413678431353850241321632519631027081 ~ HOST: 192.168.0.226 ~ PORT: 53053 Last Seen: 2025-05-02 01:23:58.825641
+2025-05-02 01:23:58,831 - INFO - Sending FIND_NODE RPC to: 192.168.0.226:53053
+2025-05-02 01:23:58,836 - INFO - Received FIND_NODE request from 192.168.0.226:53056
+2025-05-02 01:23:58,838 - INFO - >>> Added contact: ID: 139566579583876690411400615013029938425334328504 ~ HOST: 192.168.0.226 ~ PORT: 53055 Last Seen: 2025-05-02 01:23:58.837342
+2025-05-02 01:23:58,840 - INFO - Sending FIND_NODE_RESPONSE to 192.168.0.226:53056
+2025-05-02 01:23:58,843 - INFO - FIND_NODE returned 0 contacts from 192.168.0.226:53053
+2025-05-02 01:24:01,735 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:53053
+2025-05-02 01:24:01,738 - INFO - Received FIND_VALUE request from 192.168.0.226:53059
+2025-05-02 01:24:01,740 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:24:01,741 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:53059
+2025-05-02 01:24:01,745 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:53053
+2025-05-02 01:24:01,751 - INFO - Sending STORE RPC to: 192.168.0.226:53053
+2025-05-02 01:24:01,754 - INFO - Received STORE request from 192.168.0.226:53060
+2025-05-02 01:24:01,755 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:24:01,757 - INFO - Sending STORE_RESPONSE to 192.168.0.226:53060
+2025-05-02 01:24:01,759 - INFO - STORE successful to 192.168.0.226:53053
+2025-05-02 01:24:06,085 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:53055
+2025-05-02 01:24:06,089 - INFO - Received FIND_VALUE request from 192.168.0.226:53062
+2025-05-02 01:24:06,091 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:24:06,092 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:53062
+2025-05-02 01:24:06,095 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:53055
+2025-05-02 01:24:06,102 - INFO - Sending STORE RPC to: 192.168.0.226:53055
+2025-05-02 01:24:06,105 - INFO - Received STORE request from 192.168.0.226:53063
+2025-05-02 01:24:06,106 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:24:06,107 - INFO - Sending STORE_RESPONSE to 192.168.0.226:53063
+2025-05-02 01:24:06,110 - INFO - STORE successful to 192.168.0.226:53055
+2025-05-02 01:24:09,366 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:53055
+2025-05-02 01:24:09,369 - INFO - Received FIND_VALUE request from 192.168.0.226:53069
+2025-05-02 01:24:09,371 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:24:09,372 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:53069
+2025-05-02 01:24:09,375 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:53055
+2025-05-02 01:24:12,386 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:53053
+2025-05-02 01:24:12,390 - INFO - Received FIND_VALUE request from 192.168.0.226:53861
+2025-05-02 01:24:12,392 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:24:12,394 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:53861
+2025-05-02 01:24:12,397 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:53053
+2025-05-02 01:24:27,950 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:53053
+2025-05-02 01:24:27,954 - INFO - Received FIND_VALUE request from 192.168.0.226:49453
+2025-05-02 01:24:27,955 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:24:27,957 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:49453
+2025-05-02 01:24:27,960 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:53053
+2025-05-02 01:24:27,967 - INFO - Sending STORE RPC to: 192.168.0.226:53053
+2025-05-02 01:24:27,970 - INFO - Received STORE request from 192.168.0.226:49454
+2025-05-02 01:24:27,972 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:24:27,973 - INFO - Sending STORE_RESPONSE to 192.168.0.226:49454
+2025-05-02 01:24:27,976 - INFO - STORE successful to 192.168.0.226:53053
+2025-05-02 01:24:27,985 - INFO - Sending STORE RPC to: 192.168.0.226:53053
+2025-05-02 01:24:27,988 - INFO - Received STORE request from 192.168.0.226:49455
+2025-05-02 01:24:27,989 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:24:27,991 - INFO - Sending STORE_RESPONSE to 192.168.0.226:49455
+2025-05-02 01:24:27,993 - INFO - STORE successful to 192.168.0.226:53053
+2025-05-02 01:24:44,224 - INFO - Sending STORE RPC to: 192.168.0.226:53055
+2025-05-02 01:24:44,229 - INFO - Received STORE request from 192.168.0.226:52387
+2025-05-02 01:24:44,230 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:24:44,232 - INFO - Sending STORE_RESPONSE to 192.168.0.226:52387
+2025-05-02 01:24:44,236 - INFO - STORE successful to 192.168.0.226:53055
+2025-05-02 01:24:44,257 - INFO - Sending STORE RPC to: 192.168.0.226:53055
+2025-05-02 01:24:53,943 - INFO - Received STORE request from 192.168.0.226:52388
+2025-05-02 01:24:53,946 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:24:53,949 - INFO - Sending STORE_RESPONSE to 192.168.0.226:52388
+2025-05-02 01:24:53,956 - INFO - STORE successful to 192.168.0.226:53055
+2025-05-02 01:25:03,499 - INFO - Sending STORE RPC to: 192.168.0.226:53053
+2025-05-02 01:25:03,505 - INFO - Received STORE request from 192.168.0.226:52399
+2025-05-02 01:25:03,508 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:25:03,510 - INFO - Sending STORE_RESPONSE to 192.168.0.226:52399
+2025-05-02 01:25:03,517 - INFO - STORE successful to 192.168.0.226:53053
+2025-05-02 01:25:03,534 - INFO - Sending STORE RPC to: 192.168.0.226:53053
+2025-05-02 01:25:03,540 - INFO - Received STORE request from 192.168.0.226:52400
+2025-05-02 01:25:03,543 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:25:03,546 - INFO - Sending STORE_RESPONSE to 192.168.0.226:52400
+2025-05-02 01:25:03,552 - INFO - STORE successful to 192.168.0.226:53053
+2025-05-02 01:25:35,466 - INFO - Sending STORE RPC to: 192.168.0.226:53053
+2025-05-02 01:25:35,471 - INFO - Received STORE request from 192.168.0.226:52598
+2025-05-02 01:25:35,474 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:25:35,477 - INFO - Sending STORE_RESPONSE to 192.168.0.226:52598
+2025-05-02 01:25:35,480 - INFO - STORE successful to 192.168.0.226:53053
+2025-05-02 01:25:45,980 - INFO - Sending STORE RPC to: 192.168.0.226:53053
+2025-05-02 01:25:45,985 - INFO - Received STORE request from 192.168.0.226:58136
+2025-05-02 01:25:45,988 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:25:45,990 - INFO - Sending STORE_RESPONSE to 192.168.0.226:58136
+2025-05-02 01:25:45,994 - INFO - STORE successful to 192.168.0.226:53053
+2025-05-02 01:25:55,349 - INFO - Sending STORE RPC to: 192.168.0.226:53055
+2025-05-02 01:25:55,350 - INFO - Received STORE request from 192.168.0.226:58137
+2025-05-02 01:25:55,351 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:25:55,352 - INFO - Sending STORE_RESPONSE to 192.168.0.226:58137
+2025-05-02 01:25:55,353 - INFO - STORE successful to 192.168.0.226:53055
+2025-05-02 01:26:02,627 - INFO - Sending STORE RPC to: 192.168.0.226:53055
+2025-05-02 01:26:02,629 - INFO - Received STORE request from 192.168.0.226:58138
+2025-05-02 01:26:02,629 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:26:02,630 - INFO - Sending STORE_RESPONSE to 192.168.0.226:58138
+2025-05-02 01:26:02,631 - INFO - STORE successful to 192.168.0.226:53055
+2025-05-02 01:30:17,269 - INFO - UDP Server started on 192.168.0.226:64108
+2025-05-02 01:30:33,025 - INFO - UDP Server started on 192.168.0.226:59802
+2025-05-02 01:30:38,940 - INFO - >>> Added contact: ID: 459675722502690238351450297832155955072244427750 ~ HOST: 192.168.0.226 ~ PORT: 64108 Last Seen: 2025-05-02 01:30:38.940844
+2025-05-02 01:30:38,941 - INFO - Sending FIND_NODE RPC to: 192.168.0.226:64108
+2025-05-02 01:30:38,944 - INFO - Received FIND_NODE request from 192.168.0.226:59805
+2025-05-02 01:30:38,944 - INFO - >>> Added contact: ID: 1189984797014692698485316283329072538080500072538 ~ HOST: 192.168.0.226 ~ PORT: 59802 Last Seen: 2025-05-02 01:30:38.944336
+2025-05-02 01:30:38,944 - INFO - Sending FIND_NODE_RESPONSE to 192.168.0.226:59805
+2025-05-02 01:30:38,945 - INFO - FIND_NODE returned 0 contacts from 192.168.0.226:64108
+2025-05-02 01:30:41,799 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:64108
+2025-05-02 01:30:41,800 - INFO - Received FIND_VALUE request from 192.168.0.226:64111
+2025-05-02 01:30:41,800 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:30:41,800 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:64111
+2025-05-02 01:30:41,801 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:64108
+2025-05-02 01:30:41,802 - INFO - Sending STORE RPC to: 192.168.0.226:64108
+2025-05-02 01:30:41,803 - INFO - Received STORE request from 192.168.0.226:64112
+2025-05-02 01:30:41,803 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:30:41,803 - INFO - Sending STORE_RESPONSE to 192.168.0.226:64112
+2025-05-02 01:30:41,804 - INFO - STORE successful to 192.168.0.226:64108
+2025-05-02 01:30:44,656 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:59802
+2025-05-02 01:30:44,657 - INFO - Received FIND_VALUE request from 192.168.0.226:64124
+2025-05-02 01:30:44,657 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:30:44,657 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:64124
+2025-05-02 01:30:44,658 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:59802
+2025-05-02 01:30:44,659 - INFO - Sending STORE RPC to: 192.168.0.226:59802
+2025-05-02 01:30:44,660 - INFO - Received STORE request from 192.168.0.226:64125
+2025-05-02 01:30:44,660 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:30:44,660 - INFO - Sending STORE_RESPONSE to 192.168.0.226:64125
+2025-05-02 01:30:44,661 - INFO - STORE successful to 192.168.0.226:59802
+2025-05-02 01:30:48,078 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:64108
+2025-05-02 01:30:48,079 - INFO - Received FIND_VALUE request from 192.168.0.226:64132
+2025-05-02 01:30:48,079 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:30:48,079 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:64132
+2025-05-02 01:30:48,080 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:64108
+2025-05-02 01:30:53,814 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:59802
+2025-05-02 01:30:53,815 - INFO - Received FIND_VALUE request from 192.168.0.226:57033
+2025-05-02 01:30:53,816 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:30:53,816 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:57033
+2025-05-02 01:30:53,816 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:59802
+2025-05-02 01:30:57,376 - INFO - Sending FIND_VALUE RPC to: 192.168.0.226:64108
+2025-05-02 01:30:57,377 - INFO - Received FIND_VALUE request from 192.168.0.226:57043
+2025-05-02 01:30:57,377 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:30:57,377 - INFO - Sending FIND_VALUE_RESPONSE to 192.168.0.226:57043
+2025-05-02 01:30:57,378 - INFO - FIND_VALUE returned NOTHING from 192.168.0.226:64108
+2025-05-02 01:30:57,379 - INFO - Sending STORE RPC to: 192.168.0.226:64108
+2025-05-02 01:30:57,380 - INFO - Received STORE request from 192.168.0.226:57044
+2025-05-02 01:30:57,380 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:30:57,380 - INFO - Sending STORE_RESPONSE to 192.168.0.226:57044
+2025-05-02 01:30:57,380 - INFO - STORE successful to 192.168.0.226:64108
+2025-05-02 01:31:07,674 - INFO - Sending STORE RPC to: 192.168.0.226:64108
+2025-05-02 01:31:16,994 - INFO - Received STORE request from 192.168.0.226:57046
+2025-05-02 01:31:16,994 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:31:16,994 - INFO - Sending STORE_RESPONSE to 192.168.0.226:57046
+2025-05-02 01:31:16,995 - INFO - STORE successful to 192.168.0.226:64108
+2025-05-02 01:31:23,900 - INFO - Sending STORE RPC to: 192.168.0.226:59802
+2025-05-02 01:31:23,901 - INFO - Received STORE request from 192.168.0.226:52457
+2025-05-02 01:31:23,901 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:31:23,901 - INFO - Sending STORE_RESPONSE to 192.168.0.226:52457
+2025-05-02 01:31:23,902 - INFO - STORE successful to 192.168.0.226:59802
+2025-05-02 01:31:23,904 - INFO - Sending STORE RPC to: 192.168.0.226:59802
+2025-05-02 01:31:23,907 - INFO - Received STORE request from 192.168.0.226:52458
+2025-05-02 01:31:23,907 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:31:23,907 - INFO - Sending STORE_RESPONSE to 192.168.0.226:52458
+2025-05-02 01:31:23,907 - INFO - STORE successful to 192.168.0.226:59802
+2025-05-02 01:31:28,979 - INFO - Sending STORE RPC to: 192.168.0.226:64108
+2025-05-02 01:31:28,980 - INFO - Received STORE request from 192.168.0.226:52459
+2025-05-02 01:31:28,980 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:31:28,981 - INFO - Sending STORE_RESPONSE to 192.168.0.226:52459
+2025-05-02 01:31:28,981 - INFO - STORE successful to 192.168.0.226:64108
+2025-05-02 01:31:28,985 - INFO - Sending STORE RPC to: 192.168.0.226:64108
+2025-05-02 01:31:28,986 - INFO - Received STORE request from 192.168.0.226:52460
+2025-05-02 01:31:28,986 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:31:28,986 - INFO - Sending STORE_RESPONSE to 192.168.0.226:52460
+2025-05-02 01:31:28,986 - INFO - STORE successful to 192.168.0.226:64108
+2025-05-02 01:31:34,561 - INFO - Sending STORE RPC to: 192.168.0.226:59802
+2025-05-02 01:31:34,562 - INFO - Received STORE request from 192.168.0.226:57420
+2025-05-02 01:31:34,562 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:31:34,562 - INFO - Sending STORE_RESPONSE to 192.168.0.226:57420
+2025-05-02 01:31:34,563 - INFO - STORE successful to 192.168.0.226:59802
+2025-05-02 01:31:34,566 - INFO - Sending STORE RPC to: 192.168.0.226:59802
+2025-05-02 01:31:34,567 - INFO - Received STORE request from 192.168.0.226:57421
+2025-05-02 01:31:34,568 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:31:34,568 - INFO - Sending STORE_RESPONSE to 192.168.0.226:57421
+2025-05-02 01:31:34,568 - INFO - STORE successful to 192.168.0.226:59802
+2025-05-02 01:31:39,457 - INFO - Sending STORE RPC to: 192.168.0.226:64108
+2025-05-02 01:31:39,458 - INFO - Received STORE request from 192.168.0.226:65532
+2025-05-02 01:31:39,458 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:31:39,459 - INFO - Sending STORE_RESPONSE to 192.168.0.226:65532
+2025-05-02 01:31:39,459 - INFO - STORE successful to 192.168.0.226:64108
+2025-05-02 01:31:39,463 - INFO - Sending STORE RPC to: 192.168.0.226:64108
+2025-05-02 01:31:39,464 - INFO - Received STORE request from 192.168.0.226:65533
+2025-05-02 01:31:39,464 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:31:39,464 - INFO - Sending STORE_RESPONSE to 192.168.0.226:65533
+2025-05-02 01:31:39,464 - INFO - STORE successful to 192.168.0.226:64108
+2025-05-02 01:31:41,786 - INFO - Sending STORE RPC to: 192.168.0.226:59802
+2025-05-02 01:31:41,787 - INFO - Received STORE request from 192.168.0.226:62494
+2025-05-02 01:31:41,787 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:31:41,787 - INFO - Sending STORE_RESPONSE to 192.168.0.226:62494
+2025-05-02 01:31:41,788 - INFO - STORE successful to 192.168.0.226:59802
+2025-05-02 01:31:41,791 - INFO - Sending STORE RPC to: 192.168.0.226:59802
+2025-05-02 01:31:41,793 - INFO - Received STORE request from 192.168.0.226:62495
+2025-05-02 01:31:41,793 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:31:41,793 - INFO - Sending STORE_RESPONSE to 192.168.0.226:62495
+2025-05-02 01:31:41,793 - INFO - STORE successful to 192.168.0.226:59802
+2025-05-02 01:31:43,463 - INFO - Sending STORE RPC to: 192.168.0.226:59802
+2025-05-02 01:31:43,463 - INFO - Received STORE request from 192.168.0.226:62496
+2025-05-02 01:31:43,464 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:31:43,464 - INFO - Sending STORE_RESPONSE to 192.168.0.226:62496
+2025-05-02 01:31:43,464 - INFO - STORE successful to 192.168.0.226:59802
+2025-05-02 01:31:43,467 - INFO - Sending STORE RPC to: 192.168.0.226:59802
+2025-05-02 01:31:43,467 - INFO - Received STORE request from 192.168.0.226:62497
+2025-05-02 01:31:43,467 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:31:43,467 - INFO - Sending STORE_RESPONSE to 192.168.0.226:62497
+2025-05-02 01:31:43,468 - INFO - STORE successful to 192.168.0.226:59802
+2025-05-02 01:31:52,458 - INFO - Sending STORE RPC to: 192.168.0.226:64108
+2025-05-02 01:31:52,459 - INFO - Received STORE request from 192.168.0.226:50223
+2025-05-02 01:31:52,459 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:31:52,459 - INFO - Sending STORE_RESPONSE to 192.168.0.226:50223
+2025-05-02 01:31:52,460 - INFO - STORE successful to 192.168.0.226:64108
+2025-05-02 01:31:52,463 - INFO - Sending STORE RPC to: 192.168.0.226:64108
+2025-05-02 01:31:52,464 - INFO - Received STORE request from 192.168.0.226:50224
+2025-05-02 01:31:52,465 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:31:52,465 - INFO - Sending STORE_RESPONSE to 192.168.0.226:50224
+2025-05-02 01:31:52,465 - INFO - STORE successful to 192.168.0.226:64108
+2025-05-02 01:31:54,777 - INFO - Sending STORE RPC to: 192.168.0.226:64108
+2025-05-02 01:31:54,777 - INFO - Received STORE request from 192.168.0.226:50225
+2025-05-02 01:31:54,777 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:31:54,777 - INFO - Sending STORE_RESPONSE to 192.168.0.226:50225
+2025-05-02 01:31:54,778 - INFO - STORE successful to 192.168.0.226:64108
+2025-05-02 01:31:54,781 - INFO - Sending STORE RPC to: 192.168.0.226:64108
+2025-05-02 01:31:54,782 - INFO - Received STORE request from 192.168.0.226:50226
+2025-05-02 01:31:54,782 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:31:54,782 - INFO - Sending STORE_RESPONSE to 192.168.0.226:50226
+2025-05-02 01:31:54,783 - INFO - STORE successful to 192.168.0.226:64108
+2025-05-02 01:31:56,721 - INFO - Sending STORE RPC to: 192.168.0.226:64108
+2025-05-02 01:31:56,722 - INFO - Received STORE request from 192.168.0.226:50227
+2025-05-02 01:31:56,722 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:31:56,722 - INFO - Sending STORE_RESPONSE to 192.168.0.226:50227
+2025-05-02 01:31:56,723 - INFO - STORE successful to 192.168.0.226:64108
+2025-05-02 01:31:56,726 - INFO - Sending STORE RPC to: 192.168.0.226:64108
+2025-05-02 01:31:56,727 - INFO - Received STORE request from 192.168.0.226:50228
+2025-05-02 01:31:56,727 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:31:56,727 - INFO - Sending STORE_RESPONSE to 192.168.0.226:50228
+2025-05-02 01:31:56,727 - INFO - STORE successful to 192.168.0.226:64108
+2025-05-02 01:31:57,686 - INFO - Sending STORE RPC to: 192.168.0.226:64108
+2025-05-02 01:31:57,687 - INFO - Received STORE request from 192.168.0.226:50229
+2025-05-02 01:31:57,687 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:31:57,687 - INFO - Sending STORE_RESPONSE to 192.168.0.226:50229
+2025-05-02 01:31:57,688 - INFO - STORE successful to 192.168.0.226:64108
+2025-05-02 01:31:57,691 - INFO - Sending STORE RPC to: 192.168.0.226:64108
+2025-05-02 01:31:57,691 - INFO - Received STORE request from 192.168.0.226:50230
+2025-05-02 01:31:57,691 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:31:57,691 - INFO - Sending STORE_RESPONSE to 192.168.0.226:50230
+2025-05-02 01:31:57,692 - INFO - STORE successful to 192.168.0.226:64108
+2025-05-02 01:32:04,780 - INFO - Sending STORE RPC to: 192.168.0.226:59802
+2025-05-02 01:32:04,781 - INFO - Received STORE request from 192.168.0.226:58205
+2025-05-02 01:32:04,781 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:32:04,781 - INFO - Sending STORE_RESPONSE to 192.168.0.226:58205
+2025-05-02 01:32:04,782 - INFO - STORE successful to 192.168.0.226:59802
+2025-05-02 01:32:04,785 - INFO - Sending STORE RPC to: 192.168.0.226:59802
+2025-05-02 01:32:04,786 - INFO - Received STORE request from 192.168.0.226:58206
+2025-05-02 01:32:04,786 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:32:04,787 - INFO - Sending STORE_RESPONSE to 192.168.0.226:58206
+2025-05-02 01:32:04,787 - INFO - STORE successful to 192.168.0.226:59802
+2025-05-02 01:32:34,989 - INFO - Sending STORE RPC to: 192.168.0.226:59802
+2025-05-02 01:32:34,990 - INFO - Received STORE request from 192.168.0.226:64701
+2025-05-02 01:32:34,990 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:32:34,990 - INFO - Sending STORE_RESPONSE to 192.168.0.226:64701
+2025-05-02 01:32:34,990 - INFO - STORE successful to 192.168.0.226:59802
+2025-05-02 01:32:34,993 - INFO - Sending STORE RPC to: 192.168.0.226:59802
+2025-05-02 01:32:34,994 - INFO - Received STORE request from 192.168.0.226:64702
+2025-05-02 01:32:34,994 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:32:34,994 - INFO - Sending STORE_RESPONSE to 192.168.0.226:64702
+2025-05-02 01:32:34,994 - INFO - STORE successful to 192.168.0.226:59802
+2025-05-02 01:32:41,664 - INFO - Sending STORE RPC to: 192.168.0.226:64108
+2025-05-02 01:32:41,664 - INFO - Received STORE request from 192.168.0.226:55428
+2025-05-02 01:32:41,665 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:32:41,665 - INFO - Sending STORE_RESPONSE to 192.168.0.226:55428
+2025-05-02 01:32:41,665 - INFO - STORE successful to 192.168.0.226:64108
+2025-05-02 01:32:41,668 - INFO - Sending STORE RPC to: 192.168.0.226:64108
+2025-05-02 01:32:41,669 - INFO - Received STORE request from 192.168.0.226:55429
+2025-05-02 01:32:41,669 - INFO - >>> Contact already in bucket, refreshing.
+2025-05-02 01:32:41,669 - INFO - Sending STORE_RESPONSE to 192.168.0.226:55429
+2025-05-02 01:32:41,670 - INFO - STORE successful to 192.168.0.226:64108

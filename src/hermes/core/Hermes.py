@@ -1,15 +1,22 @@
+import asyncio
 import json
 
 from hermes.core.KeyValueTools import KeyValueTools
 from hermes.core.KeyValues import *
 from hermes.core.Error import Error
 from hermes.kademlia.DHT import DHT
+from hermes.net.TCPServer import TCPServer
+
 
 class Hermes:
     def __init__(self, dht: DHT):
         self._nickname: str = None
         self._dht: DHT = dht
         self._msg_tools = KeyValueTools()
+        self._tcp_server = TCPServer()
+
+    async def start(self, host, listeners):
+        await self._tcp_server.handle_requests(host, self.get_lightweight_message_from_json, listeners)
 
     def connected(self) -> bool:
         return self._dht.router.node.bucket_list.get_num_contacts() > 0
@@ -63,6 +70,8 @@ class Hermes:
         msg_key, msg_val = self._msg_tools.create_message(message, self._nickname, recipient, remote_pk)
         # Store msg
         await self._dht.store(msg_key, json.dumps(asdict(msg_val)))
+        # Send the message over the TCP connection
+        await self._tcp_server.send_message(msg_val, val.ip_address, val.tcp_port)
 
         # Update the msgbox
         msg_box = self._msg_tools.update_message_box(msg_val, msg_box, msg_key)
@@ -106,10 +115,13 @@ class Hermes:
 
             if found:
                 msg_val = MessageValue.from_json(msg_val_raw)
-                decrypted_msg = self._msg_tools.read_message(msg_val, self._nickname)
-                returned_msgs.append(LightWeightMessage(msg_val.timestamp, msg_val.sender, msg_val.receiver, decrypted_msg))
+                returned_msgs.append(self.get_lightweight_message_from_json(msg_val))
 
         return returned_msgs, Error()
+
+    def get_lightweight_message_from_json(self, message_value: MessageValue) -> LightWeightMessage:
+        decrypted_msg = self._msg_tools.read_message(message_value, self._nickname)
+        return LightWeightMessage(float(message_value.timestamp), message_value.sender, message_value.receiver, decrypted_msg)
 
     def get_nickname(self):
         return self._nickname
@@ -131,7 +143,7 @@ class Hermes:
         if contact_value is not None:
             return Error(nickname_already_in_use=True, error_message="Nickname already in use.")
 
-        contact = ContactValue(nickname, self._dht.contact.host, self._dht.contact.port, self._msg_tools.public_key())
+        contact = ContactValue(nickname, self._dht.contact.host, self._dht.contact.port, self._msg_tools.public_key(), self._tcp_server.port)
 
         key = contact_key(nickname)
 

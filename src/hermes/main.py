@@ -21,11 +21,15 @@ logging.basicConfig(
     level=logging.INFO
 )
 
+# if os.name == 'nt':
+#     asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+
 async def full_run():
     print_logo()
 
     dht = None
     hermes = None
+    listeners = []
 
     # Use asyncio.Queue for commands
     command_queue = asyncio.Queue()
@@ -42,8 +46,19 @@ async def full_run():
 
     # Command handler loop
     while True:
-        print("> ", end="", flush=True)
+        text = "hermes> " if len(listeners) == 0 else ""
+        print(text, end="", flush=True)
         command = await command_queue.get()
+
+        if command[:5] == "cd ..":
+            if len(listeners) > 0:
+                listeners.pop()
+                continue
+
+        if len(listeners) > 0 and command.strip() != "":
+            await send(hermes, listeners[-1], command)
+            continue
+
         args = command.split(" ")
 
         if args[0] != "start" and dht is None:
@@ -54,7 +69,7 @@ async def full_run():
             if len(args) != 2:
                 print("usage: start <1-VM>  <0-otherwise>")
                 continue
-            dht, hermes = await start(int(args[1]) == 1)
+            dht, hermes = await start(int(args[1]) == 1, listeners)
             print("DHT Started.")
 
         if args[0] == "bootstrap":
@@ -72,11 +87,13 @@ async def full_run():
                 print("usage: send <nickname> <message>")
                 continue
             await send(hermes, args[1], " ".join(args[2:]))
-        elif args[0] == "read":
+        elif args[0] == "cd":
             if len(args) != 2:
-                print("usage: read <nickname>")
+                print("usage: cd <nickname>")
                 continue
-            await read(hermes, args[1])
+            if args[1] == '..':
+                continue
+            await read(hermes, args[1], listeners)
         elif args[0] == "logs":
             logs()
         elif args[0] == "clear":
@@ -94,14 +111,16 @@ async def full_run():
         elif command == "q":
             break
 
-async def start(vm: bool) -> (DHT, Hermes):
+async def start(vm: bool, listeners) -> (DHT, Hermes):
     # Setup this node
     ip = "192.168.56.1" if vm else "8.8.8.8"
     protocol = UDPProtocol(ip, 0)
     id = random.randint(0, 2 ** 160)
     dht = DHT(id, protocol, Storage(), (ip, 0))
-    asyncio.create_task(dht.start())
+    await dht.start()
     hermes = Hermes(dht)
+    asyncio.create_task(hermes.start(dht.contact.host, listeners))
+    await asyncio.sleep(1)
     return dht, hermes
 
 
@@ -125,19 +144,19 @@ async def send(hermes, nickname: str, message: str):
     err = await hermes.send_message(nickname, message)
     if err.has_error():
         print(err.error_message)
-    else:
-        print("Message sent successfully.")
 
-async def read(hermes, nickname: str):
+async def read(hermes, nickname: str, listeners: list[str]):
     msg, err = await hermes.get_messages_from_msg_box(nickname)
 
     if err.has_error():
         print(err.error_message)
         return
 
+    listeners.append(nickname)
+    print(f"hermes/{nickname}>  (cd .. to exit chatbox)")
     sorted_msg = sorted(msg, key=lambda x: x.timestamp)
     for m in sorted_msg:
-        print(f"{datetime.datetime.fromtimestamp(float(m.timestamp))} ({m.sender}): {m.message}")
+        print(f"{datetime.datetime.fromtimestamp(m.timestamp).strftime("%Y-%d-%b %H:%M")} ({m.sender}): {m.message}")
 
 def logs():
     with open("src/hermes/logs/hermes.log") as file:
@@ -197,8 +216,6 @@ async def test_run():
     await dht2.stop()
 
 async def main():
-    if os.name == "nt":
-        asyncio.set_event_loop_policy(asyncio.WindowsProactorEventLoopPolicy())
     await full_run()
 
 if __name__ == "__main__":
